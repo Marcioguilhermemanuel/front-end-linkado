@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin - Linkado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="image/FIVE.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6441ff',
+                        secondary: '#8e6cff',
+                        dark: '#1a1a2e',
+                        light: '#f4f4f9',
+                        success: '#28a745',
+                        danger: '#dc3545',
+                        warning: '#ffc107',
+                        info: '#17a2b8',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f7fa;
+        }
+        
+        .sidebar {
+            transition: all 0.3s;
+        }
+        
+        .stat-card {
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .status-new {
+            background: rgba(40, 167, 69, 0.15);
+            color: #28a745;
+        }
+        
+        .status-in_progress {
+            background: rgba(255, 193, 7, 0.15);
+            color: #ffc107;
+        }
+        
+        .status-completed {
+            background: rgba(100, 65, 255, 0.15);
+            color: #6441ff;
+        }
+        
+        .status-problem {
+            background: rgba(220, 53, 69, 0.15);
+            color: #dc3545;
+        }
+        
+        .logo-preview {
+            max-width: 200px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #eee;
+        }
+        
+        .link-item {
+            transition: all 0.2s;
+        }
+        
+        .link-item:hover {
+            background-color: #f0f0ff;
+        }
+        
+        .animate-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Painel Admin -->
+    <div id="adminPanel" class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div class="sidebar w-64 bg-dark text-white flex flex-col">
+            <div class="p-5 border-b border-gray-700">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-primary p-2 rounded-lg">
+                        <i class="fas fa-link text-white text-xl"></i>
+                    </div>
+                    <h1 class="text-xl font-bold">Linkado</h1>
+                </div>
+                <p class="text-gray-400 text-sm mt-1">Painel Administrativo</p>
+            </div>
+            
+            <nav class="flex-1 px-3 py-6">
+                <a href="#" class="admin-link active flex items-center p-3 rounded-lg transition duration-200 bg-primary/20 text-white" data-section="dashboard">
+                    <i class="fas fa-tachometer-alt mr-3"></i> Dashboard
+                </a>
+                <a href="#" class="admin-link flex items-center p-3 rounded-lg transition duration-200 text-gray-300 hover:bg-gray-700" data-section="submissions">
+                    <i class="fas fa-file-alt mr-3"></i> Envios
+                </a>
+                <a href="#" class="admin-link flex items-center p-3 rounded-lg transition duration-200 text-gray-300 hover:bg-gray-700" data-section="users">
+                    <i class="fas fa-users mr-3"></i> Usuários
+                </a>
+                <a href="#" class="admin-link flex items-center p-3 rounded-lg transition duration-200 text-gray-300 hover:bg-gray-700" data-section="settings">
+                    <i class="fas fa-cog mr-3"></i> Configurações
+                </a>
+            </nav>
+            
+            <div class="p-4 border-t border-gray-700">
+                <a href="#" id="logoutBtn" class="flex items-center p-3 rounded-lg transition duration-200 text-gray-300 hover:bg-gray-700">
+                    <i class="fas fa-sign-out-alt mr-3"></i> Sair
+                </a>
+            </div>
+        </div>
+        
+        <!-- Conteúdo Principal -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Header -->
+            <header class="bg-white shadow-sm">
+                <div class="flex justify-between items-center p-4">
+                    <div class="flex items-center">
+                        <button id="sidebarToggle" class="md:hidden mr-3 text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                        <h1 id="sectionTitle" class="text-lg font-semibold text-gray-900">Dashboard</h1>
+                    </div>
+                    
+                    <div class="flex items-center space-x-4">
+                        <div class="relative hidden md:block">
+                            <input 
+                                type="text" 
+                                placeholder="Buscar..."
+                                class="pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent w-64"
+                            >
+                            <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                        </div>
+                        
+                        <div class="relative">
+                            <button class="text-gray-500 hover:text-gray-700">
+                                <i class="fas fa-bell text-xl"></i>
+                                <span class="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full"></span>
+                            </button>
+                        </div>
+                        
+                        <div class="relative">
+                            <button id="userMenuButton" class="flex items-center space-x-2 focus:outline-none">
+                                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-semibold" id="userInitials">A</div>
+                                <span class="hidden md:inline text-gray-700" id="userName">Admin</span>
+                                <i class="fas fa-chevron-down text-gray-500 text-xs"></i>
+                            </button>
+                            
+                            <!-- Dropdown do usuário -->
+                            <div id="userDropdown" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50">
+                                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                                    <i class="fas fa-user mr-2"></i> Perfil
+                                </a>
+                                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                                    <i class="fas fa-cog mr-2"></i> Configurações
+                                </a>
+                                <div class="border-t my-2"></div>
+                                <a href="#" id="logoutDropdown" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">
+                                    <i class="fas fa-sign-out-alt mr-2"></i> Sair
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Conteúdo Dinâmico -->
+            <main class="flex-1 overflow-y-auto p-6 bg-gray-50">
+                <!-- Dashboard -->
+                <div id="dashboardSection">
+                    <!-- Cards de Estatísticas -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                        <div class="stat-card bg-white rounded-xl shadow-md p-6 border-l-4 border-primary">
+                            <div class="flex items-center">
+                                <div class="p-3 bg-primary/10 rounded-lg mr-4">
+                                    <i class="fas fa-file-alt text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500 text-sm">Total de Envios</p>
+                                    <h2 class="text-3xl font-bold text-gray-800" id="totalSubmissions">0</h2>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card bg-white rounded-xl shadow-md p-6 border-l-4 border-success">
+                            <div class="flex items-center">
+                                <div class="p-3 bg-success/10 rounded-lg mr-4">
+                                    <i class="fas fa-check-circle text-success text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500 text-sm">Envios Hoje</p>
+                                    <h2 class="text-3xl font-bold text-gray-800" id="todaySubmissions">0</h2>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card bg-white rounded-xl shadow-md p-6 border-l-4 border-warning">
+                            <div class="flex items-center">
+                                <div class="p-3 bg-warning/10 rounded-lg mr-4">
+                                    <i class="fas fa-hourglass-half text-warning text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500 text-sm">Pendentes</p>
+                                    <h2 class="text-3xl font-bold text-gray-800" id="pendingSubmissions">0</h2>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-card bg-white rounded-xl shadow-md p-6 border-l-4 border-danger">
+                            <div class="flex items-center">
+                                <div class="p-3 bg-danger/10 rounded-lg mr-4">
+                                    <i class="fas fa-exclamation-triangle text-danger text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-gray-500 text-sm">Com Problemas</p>
+                                    <h2 class="text-3xl font-bold text-gray-800" id="problemSubmissions">0</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gráfico e Tabela -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                        <!-- Gráfico (placeholder) -->
+                        <div class="bg-white rounded-xl shadow-md p-6">
+                            <h3 class="text-lg font-medium text-gray-900 mb-4">Envios por Dia</h3>
+                            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-full h-64 flex items-center justify-center text-gray-500">
+                                <i class="fas fa-chart-bar text-4xl"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Últimos Envios -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <div class="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
+                                <h3 class="text-lg font-medium text-gray-900">Últimos Envios</h3>
+                                <a href="#" class="text-primary hover:text-primary-dark text-sm">Ver todos</a>
+                            </div>
+                            <div class="overflow-x-auto">
+                                <table class="min-w-full divide-y divide-gray-200">
+                                    <thead class="bg-gray-50">
+                                        <tr>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Pacote</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data</th>
+                                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="bg-white divide-y divide-gray-200" id="recentSubmissions">
+                                        <!-- Dados serão preenchidos por JavaScript -->
+                                        <tr>
+                                            <td colspan="4" class="px-6 py-4 text-center">
+                                                <div class="flex justify-center">
+                                                    <div class="animate-pulse flex space-x-4">
+                                                        <div class="rounded-full bg-gray-200 h-12 w-12"></div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tabela Completa -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div class="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
+                            <h3 class="text-lg font-medium text-gray-900">Todos os Envios</h3>
+                            <div class="flex space-x-3">
+                                <div class="relative">
+                                    <select class="appearance-none border border-gray-300 rounded-lg px-4 py-2 pr-8 focus:ring-2 focus:ring-primary focus:border-transparent">
+                                        <option>Todos os Status</option>
+                                        <option>Novo</option>
+                                        <option>Em Progresso</option>
+                                        <option>Completo</option>
+                                        <option>Problema</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <button class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg transition duration-300 flex items-center">
+                                    <i class="fas fa-download mr-2"></i> Exportar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Contato</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Pacote</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Instagram</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-200" id="allSubmissions">
+                                    <!-- Dados serão preenchidos por JavaScript -->
+                                    <tr>
+                                        <td colspan="7" class="px-6 py-4 text-center">
+                                            <div class="flex justify-center">
+                                                <div class="animate-pulse flex space-x-4">
+                                                    <div class="rounded-full bg-gray-200 h-12 w-12"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="px-6 py-4 border-t border-gray-200 flex justify-between items-center">
+                            <div class="text-sm text-gray-700">
+                                Mostrando <span id="startItem">1</span> a <span id="endItem">10</span> de <span id="totalItems">0</span> resultados
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="px-3 py-1 rounded border border-gray-300 bg-white text-gray-700 disabled:opacity-50">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <button class="px-3 py-1 rounded border border-gray-300 bg-white text-gray-700 disabled:opacity-50">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Seção de Envios (inicialmente oculta) -->
+                <div id="submissionsSection" class="hidden">
+                    <!-- Conteúdo da seção de envios -->
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Modal de Detalhes -->
+    <div id="submissionModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col">
+            <div class="bg-primary text-white p-6 flex justify-between items-center">
+                <h2 class="text-xl font-bold">Detalhes do Envio</h2>
+                <button id="closeModal" class="text-white text-2xl">&times;</button>
+            </div>
+            <div class="p-6 overflow-y-auto" id="modalContent">
+                <!-- Conteúdo será preenchido por JavaScript -->
+            </div>
+            <div class="border-t border-gray-200 p-4 bg-gray-50 flex justify-end">
+                <button class="px-4 py-2 bg-gray-300 rounded-lg mr-3">Fechar</button>
+                <button class="px-4 py-2 bg-primary text-white rounded-lg">Imprimir</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+   // Elementos DOM
+    const adminPanel = document.getElementById('adminPanel');
+    const logoutBtn = document.getElementById('logoutBtn');
+    const logoutDropdown = document.getElementById('logoutDropdown');
+    const sidebarToggle = document.getElementById('sidebarToggle');
+    const userMenuButton = document.getElementById('userMenuButton');
+    const userDropdown = document.getElementById('userDropdown');
+    
+    // Elementos do painel
+    const userName = document.getElementById('userName');
+    const userInitials = document.getElementById('userInitials');
+    const sectionTitle = document.getElementById('sectionTitle');
+    const adminLinks = document.querySelectorAll('.admin-link');
+    
+    // Elementos de conteúdo
+    const dashboardSection = document.getElementById('dashboardSection');
+    const submissionsSection = document.getElementById('submissionsSection');
+    const submissionModal = document.getElementById('submissionModal');
+    const modalContent = document.getElementById('modalContent');
+    const closeModal = document.getElementById('closeModal');
+    
+    // Elementos de dados
+    const totalSubmissions = document.getElementById('totalSubmissions');
+    const todaySubmissions = document.getElementById('todaySubmissions');
+    const pendingSubmissions = document.getElementById('pendingSubmissions');
+    const problemSubmissions = document.getElementById('problemSubmissions');
+    const recentSubmissions = document.getElementById('recentSubmissions');
+    const allSubmissions = document.getElementById('allSubmissions');
+    
+    // Função auxiliar para autenticação
+    function getAuthHeaders() {
+        const token = localStorage.getItem('authToken') || ''; // Obtido após login
+        return {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+        };
+    }
+
+    // Função para mensagens de erro amigáveis
+    function getFriendlyErrorMessage(status) {
+        switch (status) {
+            case 401: return 'Credenciais inválidas. Faça login novamente.';
+            case 403: return 'Acesso negado. Você não tem permissão.';
+            case 404: return 'Recurso não encontrado.';
+            case 500: return 'Erro no servidor. Tente novamente mais tarde.';
+            default: return 'Ocorreu um erro inesperado.';
+        }
+    }
+
+    // Função para formatar data
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('pt-BR') + ' ' + date.toLocaleTimeString('pt-BR');
+    }
+
+    // Função para renderizar loader
+    function renderLoader(message) {
+        return `
+            <div class="flex justify-center">
+                <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12"></div>
+            </div>
+            <p class="mt-2 text-center text-gray-500">${message}</p>
+        `;
+    }
+
+    // Função para obter texto do status
+    function getStatusText(status) {
+        switch(status) {
+            case 'new': return 'Novo';
+            case 'in_progress': return 'Em Progresso';
+            case 'completed': return 'Completo';
+            case 'problem': return 'Problema';
+            default: return status;
+        }
+    }
+
+    // Função para obter classe do status
+    function getStatusClass(status) {
+        switch(status) {
+            case 'new': return 'status-new';
+            case 'in_progress': return 'status-in_progress';
+            case 'completed': return 'status-completed';
+            case 'problem': return 'status-problem';
+            default: return '';
+        }
+    }
+
+    // Função para buscar envios
+    async function fetchSubmissions(page = 1, limit = 10) {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 10000);
+
+        try {
+            recentSubmissions.innerHTML = renderLoader('Carregando envios recentes...');
+            allSubmissions.innerHTML = renderLoader('Carregando todos os envios...');
+
+            const response = await fetch(`/api/admin/submissions?page=${page}&limit=${limit}`, {
+                headers: getAuthHeaders(),
+                signal: controller.signal
+            });
+            clearTimeout(timeoutId);
+
+            if (!response.ok) {
+                throw new Error(getFriendlyErrorMessage(response.status));
+            }
+
+            const data = await response.json();
+            if (!Array.isArray(data)) {
+                throw new Error('Formato de dados inválido: esperado um array');
+            }
+
+            return data;
+        } catch (error) {
+            console.error('Erro ao buscar envios:', error);
+            recentSubmissions.innerHTML = `
+                <tr>
+                    <td colspan="4" class="px-6 py-8 text-center">
+                        <div class="text-red-500">
+                            <i class="fas fa-exclamation-triangle text-3xl mb-2"></i>
+                            <p>Erro ao carregar envios</p>
+                            <p class="text-sm mt-2">${error.name === 'AbortError' ? 'A requisição demorou muito.' : error.message}</p>
+                            <button id="retryRecentBtn" class="mt-4 px-4 py-2 bg-primary text-white rounded-lg">
+                                Tentar novamente
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `;
+            allSubmissions.innerHTML = `
+                <tr>
+                    <td colspan="7" class="px-6 py-8 text-center">
+                        <div class="text-red-500">
+                            <i class="fas fa-exclamation-triangle text-3xl mb-2"></i>
+                            <p>Erro ao carregar envios</p>
+                            <p class="text-sm mt-2">${error.name === 'AbortError' ? 'A requisição demorou muito.' : error.message}</p>
+                            <button id="retryAllBtn" class="mt-4 px-4 py-2 bg-primary text-white rounded-lg">
+                                Tentar novamente
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `;
+            document.getElementById('retryRecentBtn')?.addEventListener('click', loadDashboardData);
+            document.getElementById('retryAllBtn')?.addEventListener('click', loadDashboardData);
+            return [];
+        }
+    }
+
+    // Função para buscar detalhes de um envio
+    async function fetchSubmissionDetails(id) {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 10000);
+
+        try {
+            modalContent.innerHTML = renderLoader('Carregando detalhes...');
+            const response = await fetch(`/api/admin/submissions/${id}`, {
+                headers: getAuthHeaders(),
+                signal: controller.signal
+            });
+            clearTimeout(timeoutId);
+
+            if (!response.ok) {
+                throw new Error(getFriendlyErrorMessage(response.status));
+            }
+
+            const data = await response.json();
+            if (!data || typeof data !== 'object') {
+                throw new Error('Formato de dados inválido: esperado um objeto');
+            }
+
+            return data;
+        } catch (error) {
+            console.error('Erro ao buscar detalhes:', error);
+            modalContent.innerHTML = `
+                <div class="text-red-500 text-center">
+                    <i class="fas fa-exclamation-triangle text-3xl mb-2"></i>
+                    <p>Erro ao carregar detalhes</p>
+                    <p class="text-sm mt-2">${error.name === 'AbortError' ? 'A requisição demorou muito.' : error.message}</p>
+                    <button id="retryDetailsBtn" class="mt-4 px-4 py-2 bg-primary text-white rounded-lg">
+                        Tentar novamente
+                    </button>
+                </div>
+            `;
+            document.getElementById('retryDetailsBtn')?.addEventListener('click', () => showSubmissionDetails(id));
+            return null;
+        }
+    }
+
+    // Função para excluir um envio
+    async function deleteSubmission(id) {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 10000);
+
+        try {
+            const response = await fetch(`/api/admin/submissions/${id}`, {
+                method: 'DELETE',
+                headers: getAuthHeaders(),
+                signal: controller.signal
+            });
+            clearTimeout(timeoutId);
+
+            if (!response.ok) {
+                throw new Error(getFriendlyErrorMessage(response.status));
+            }
+
+            alert('Envio excluído com sucesso!');
+            loadDashboardData();
+        } catch (error) {
+            console.error('Erro ao excluir envio:', error);
+            alert(`Erro ao excluir envio: ${error.name === 'AbortError' ? 'A requisição demorou muito.' : error.message}`);
+        }
+    }
+
+    // Função para atualizar status
+    async function updateSubmissionStatus(id, status) {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 10000);
+
+        try {
+            const response = await fetch(`/api/admin/submissions/${id}`, {
+                method: 'PATCH',
+                headers: getAuthHeaders(),
+                body: JSON.stringify({ status })
+            });
+            clearTimeout(timeoutId);
+
+            if (!response.ok) {
+                throw new Error(getFriendlyErrorMessage(response.status));
+            }
+
+            alert('Status atualizado com sucesso!');
+            loadDashboardData();
+        } catch (error) {
+            console.error('Erro ao atualizar status:', error);
+            alert(`Erro ao atualizar status: ${error.name === 'AbortError' ? 'A requisição demorou muito.' : error.message}`);
+        }
+    }
+
+    // Função para fazer logout
+    async function logout() {
+        try {
+            await fetch('/api/auth/logout', {
+                method: 'POST',
+                headers: getAuthHeaders(),
+                credentials: 'include'
+            });
+            localStorage.removeItem('authToken');
+            window.location.href = '/admin-login.html';
+        } catch (error) {
+            console.error('Erro no logout:', error);
+            alert('Erro ao fazer logout');
+        }
+    }
+    
+    // Verificar autenticação ao carregar a página
+    async function checkAuth() {
+        try {
+            const res = await fetch('/api/auth/me', { 
+                headers: getAuthHeaders(),
+                credentials: 'include' 
+            });
+            
+            if (!res.ok) {
+                throw new Error('Não autenticado');
+            }
+
+            const data = await res.json();
+            userName.textContent = data.name || 'Admin';
+            userInitials.textContent = (data.name ? data.name.charAt(0).toUpperCase() : 'A');
+            loadDashboardData();
+        } catch (err) {
+            console.log('Usuário não autenticado');
+            window.location.href = '/admin-login.html';
+        }
+    }
+
+    // Função para carregar dados do dashboard
+    async function loadDashboardData() {
+        try {
+            const submissions = await fetchSubmissions();
+            if (!submissions.length) {
+                totalSubmissions.textContent = '0';
+                todaySubmissions.textContent = '0';
+                pendingSubmissions.textContent = '0';
+                problemSubmissions.textContent = '0';
+                recentSubmissions.innerHTML = `
+                    <tr>
+                        <td colspan="4" class="px-6 py-8 text-center">
+                            <div class="text-gray-500">
+                                <i class="fas fa-inbox text-3xl mb-2"></i>
+                                <p>Nenhum envio encontrado</p>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+                allSubmissions.innerHTML = `
+                    <tr>
+                        <td colspan="7" class="px-6 py-8 text-center">
+                            <div class="text-gray-500">
+                                <i class="fas fa-inbox text-3xl mb-2"></i>
+                                <p>Nenhum envio encontrado</p>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            // Calcular estatísticas
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+            const todaySubs = submissions.filter(sub => {
+                const subDate = new Date(sub.createdAt);
+                return subDate >= today;
+            });
+            const pending = submissions.filter(sub => sub.status === 'in_progress');
+            const problem = submissions.filter(sub => sub.status === 'problem');
+
+            totalSubmissions.textContent = submissions.length;
+            todaySubmissions.textContent = todaySubs.length;
+            pendingSubmissions.textContent = pending.length;
+            problemSubmissions.textContent = problem.length;
+
+            // Renderizar envios recentes (limite de 4)
+            recentSubmissions.innerHTML = submissions.slice(0, 4).map(sub => `
+                <tr class="hover:bg-gray-50 cursor-pointer" onclick="showSubmissionDetails('${sub._id}')">
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm font-medium text-gray-900">${sub.nome}</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm text-gray-500 capitalize">${sub.plano}</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm text-gray-500">${formatDate(sub.createdAt)}</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="status-badge ${getStatusClass(sub.status)}">
+                            ${getStatusText(sub.status)}
+                        </span>
+                    </td>
+                </tr>
+            `).join('');
+
+            // Renderizar todos os envios
+            allSubmissions.innerHTML = submissions.map(sub => `
+                <tr class="hover:bg-gray-50">
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm font-medium text-gray-900">${sub.nome}</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm text-gray-500">${sub.contato}</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm text-gray-500 capitalize">${sub.plano}</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm text-gray-500">${sub.instagram}</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm text-gray-500">${formatDate(sub.createdAt)}</div>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <span class="status-badge ${getStatusClass(sub.status)}">
+                            ${getStatusText(sub.status)}
+                        </span>
+                    </td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm">
+                        <button class="text-primary hover:text-primary-dark mr-3" onclick="showSubmissionDetails('${sub._id}')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="text-danger hover:text-danger-dark" onclick="deleteSubmission('${sub._id}')">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+
+        } catch (error) {
+            console.error('Erro ao carregar dados:', error);
+            alert('Erro ao carregar dados do dashboard');
+        }
+    }
+    
+    // Função para mostrar detalhes do envio
+    async function showSubmissionDetails(id) {
+        const submission = await fetchSubmissionDetails(id);
+        if (!submission) return;
+
+        modalContent.innerHTML = `
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Informações Básicas</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm text-gray-500">Nome Completo</p>
+                            <p class="font-medium">${submission.nome}</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Contato</p>
+                            <p class="font-medium">${submission.contato}</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Pacote</p>
+                            <p class="font-medium capitalize">${submission.plano}</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Instagram</p>
+                            <p class="font-medium">${submission.instagram}</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500">Data de Envio</p>
+                            <p class="font-medium">${formatDate(submission.createdAt)}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-medium text-gray-900 mb-2">Detalhes Adicionais</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm text-gray-500">Status</p>
+                            <select id="statusSelect" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="new" ${submission.status === 'new' ? 'selected' : ''}>Novo</option>
+                                <option value="in_progress" ${submission.status === 'in_progress' ? 'selected' : ''}>Em Progresso</option>
+                                <option value="completed" ${submission.status === 'completed' ? 'selected' : ''}>Completo</option>
+                                <option value="problem" ${submission.status === 'problem' ? 'selected' : ''}>Problema</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <p class="text-sm text-gray-500">Links</p>
+                            <div class="bg-gray-50 rounded-lg p-3 max-h-40 overflow-y-auto">
+                                <ul class="space-y-2">
+                                    ${submission.links?.map(link => `
+                                        <li class="link-item p-2 rounded-md">
+                                            <a href="${link}" target="_blank" class="text-primary hover:text-primary-dark break-all">${link}</a>
+                                        </li>
+                                    `).join('') || '<li>Nenhum link disponível</li>'}
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <p class="text-sm text-gray-500">Observações</p>
+                            <p class="bg-gray-50 rounded-lg p-3">${submission.observacoes || 'Nenhuma observação'}</p>
+                        </div>
+                        
+                        ${submission.logo ? `
+                            <div>
+                                <p class="text-sm text-gray-500">Logo</p>
+                                <img src="/Uploads/${submission.logo}" alt="Logo" class="logo-preview">
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        // Adicionar listener para atualizar status
+        document.getElementById('statusSelect').addEventListener('change', async (e) => {
+            const newStatus = e.target.value;
+            await updateSubmissionStatus(id, newStatus);
+        });
+
+        // Mostrar modal
+        submissionModal.classList.remove('hidden');
+    }
+    
+    // Event listeners
+    logoutBtn.addEventListener('click', logout);
+    logoutDropdown.addEventListener('click', logout);
+    
+    closeModal.addEventListener('click', () => {
+        submissionModal.classList.add('hidden');
+    });
+    
+    userMenuButton.addEventListener('click', () => {
+        userDropdown.classList.toggle('hidden');
+    });
+    
+    // Fechar dropdown ao clicar fora
+    document.addEventListener('click', (e) => {
+        if (!userMenuButton.contains(e.target)) {
+            userDropdown.classList.add('hidden');
+        }
+    });
+    
+    // Navegação entre seções
+    adminLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Remover classe ativa de todos os links
+            adminLinks.forEach(l => l.classList.remove('active', 'bg-primary/20', 'text-white'));
+            adminLinks.forEach(l => l.classList.add('text-gray-300', 'hover:bg-gray-700'));
+            
+            // Adicionar classe ativa ao link clicado
+            link.classList.add('active', 'bg-primary/20', 'text-white');
+            link.classList.remove('text-gray-300', 'hover:bg-gray-700');
+            
+            // Obter a seção a ser exibida
+            const section = link.getAttribute('data-section');
+            sectionTitle.textContent = link.textContent.trim();
+            
+            // Esconder todas as seções
+            dashboardSection.classList.add('hidden');
+            submissionsSection.classList.add('hidden');
+            
+            // Mostrar a seção correspondente
+            if (section === 'dashboard') {
+                dashboardSection.classList.remove('hidden');
+            } else if (section === 'submissions') {
+                submissionsSection.classList.remove('hidden');
+            }
+        });
+    });
+    
+    // Toggle sidebar em dispositivos móveis
+    sidebarToggle.addEventListener('click', () => {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.toggle('hidden');
+        sidebar.classList.toggle('md:flex');
+    });
+
+    // Verificar autenticação ao carregar a página
+    checkAuth();
+</script>
+</body>
+</html>

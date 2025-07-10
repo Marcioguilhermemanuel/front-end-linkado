@@ -1,0 +1,207 @@
+/* Seção Benefícios */
+.benefits-section {
+  padding: 8rem 5%;
+  background: linear-gradient(135deg, #f9fbfd 0%, #edf2f7 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.benefits-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M1200 0L0 0 0 120 1200 120 1200 0Z" fill="%23ffffff"></path></svg>')
+    no-repeat center bottom;
+  background-size: cover;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.benefit-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.benefit-card:nth-child(1) {
+  animation: fadeInUp 0.8s forwards 0.3s;
+}
+
+.benefit-card:nth-child(2) {
+  animation: fadeInUp 0.8s forwards 0.5s;
+}
+
+.benefit-card:nth-child(3) {
+  animation: fadeInUp 0.8s forwards 0.7s;
+}
+
+.benefit-card.featured {
+  border: 2px solid var(--primary);
+  transform: translateY(-10px);
+}
+
+.featured-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--secondary);
+  color: var(--white);
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(255, 107, 53, 0.3);
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.benefit-card.featured:hover {
+  transform: translateY(-15px);
+}
+
+.benefit-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+
+.benefit-icon svg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  color: var(--primary);
+}
+
+.icon-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(94, 53, 177, 0.1);
+  border-radius: 50%;
+  transform: scale(0.8);
+  transition: var(--transition);
+}
+
+.benefit-card:hover .icon-bg {
+  transform: scale(1);
+  background: rgba(94, 53, 177, 0.15);
+}
+
+.benefit-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark);
+}
+
+.benefit-card p {
+  color: #78909c;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.benefit-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--primary);
+  font-weight: 500;
+  padding-top: 1.5rem;
+  border-top: 1px dashed #cfd8dc;
+}
+
+.benefit-highlight i {
+  font-size: 1.2rem;
+}
+
+.benefits-extra {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.9s;
+}
+
+.extra-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.extra-card:hover {
+  transform: translateY(-5px);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.extra-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1rem;
+  background: rgba(94, 53, 177, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.extra-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.extra-card p {
+  color: #78909c;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .benefits-section {
+    padding: 5rem 5%;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-card.featured {
+    transform: none;
+  }
+
+  .benefit-card:hover {
+    transform: none;
+  }
+}

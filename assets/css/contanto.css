@@ -1,0 +1,458 @@
+/* DESIGN ULTRA-PREMIUM */
+.conversao-exclusiva {
+  position: relative;
+  margin: 8rem 0;
+  perspective: 1000px;
+}
+
+.moldura-holografica {
+  background: linear-gradient(145deg, rgba(20, 20, 40, 0.8), rgba(40, 20, 60, 0.9));
+  backdrop-filter: blur(25px);
+  border-radius: 30px;
+  padding: 4rem;
+  border: 1px solid rgba(100, 65, 255, 0.3);
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.4),
+    inset 0 0 30px rgba(100, 65, 255, 0.1);
+  transform-style: preserve-3d;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.moldura-holografica::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    transparent,
+    transparent,
+    rgba(100, 65, 255, 0.1),
+    transparent,
+    transparent
+  );
+  transform: rotate(30deg);
+  animation: brilho-holografico 8s infinite linear;
+}
+
+.cabecalho-conversao {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.badge-exclusivo {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff4d4d, #f9cb28);
+  color: #000;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(249, 203, 40, 0.3);
+}
+
+.brilho-animado {
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  animation: brilho 3s infinite;
+}
+
+.titulo-destaque {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.texto-gradiente {
+  background: linear-gradient(45deg, #6441ff, #ff4d4d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: block;
+  font-weight: 800;
+}
+
+.texto-fino {
+  font-weight: 300;
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.subtitulo-elegante {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.formulario-3d {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.campo-flutuante {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.campo-flutuante input,
+.campo-flutuante textarea {
+  width: 100%;
+  padding: 1.5rem 1rem 0.5rem 3rem;
+  background: rgba(30, 25, 50, 0.6);
+  border: none;
+  border-bottom: 1px solid rgba(100, 65, 255, 0.3);
+  color: white;
+  font-size: 1.1rem;
+  transition: all 0.4s ease;
+  border-radius: 5px 5px 0 0;
+}
+
+.campo-flutuante textarea {
+  min-height: 120px;
+  padding-top: 2rem;
+  resize: none;
+}
+
+.campo-flutuante label {
+  position: absolute;
+  top: 1.2rem;
+  left: 3rem;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.campo-flutuante input:focus,
+.campo-flutuante textarea:focus {
+  outline: none;
+  background: rgba(40, 35, 70, 0.8);
+  border-bottom-color: rgba(100, 65, 255, 0.8);
+}
+
+.campo-flutuante input:focus + label,
+.campo-flutuante textarea:focus + label,
+.campo-flutuante input:not(:placeholder-shown) + label,
+.campo-flutuante textarea:not(:placeholder-shown) + label {
+  top: 0.5rem;
+  left: 3rem;
+  font-size: 0.8rem;
+  color: rgba(100, 65, 255, 0.8);
+}
+
+.traco-destaque {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6441ff, #ff4d4d);
+  transition: width 0.4s ease;
+}
+
+.campo-flutuante input:focus ~ .traco-destaque,
+.campo-flutuante textarea:focus ~ .traco-destaque {
+  width: 100%;
+}
+
+.icone-campo {
+  position: absolute;
+  left: 1rem;
+  top: 1.2rem;
+  color: rgba(100, 65, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.campo-flutuante input:focus ~ .icone-campo,
+.campo-flutuante textarea:focus ~ .icone-campo {
+  color: #6441ff;
+  transform: scale(1.1);
+}
+
+.seletor-premium {
+  margin-bottom: 3rem;
+}
+
+.seletor-premium label {
+  display: block;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.opcoes-plano {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.plano-option {
+  background: rgba(30, 25, 50, 0.6);
+  border: 1px solid rgba(100, 65, 255, 0.2);
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.plano-option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(100, 65, 255, 0.2);
+}
+
+.plano-option.ativo {
+  background: rgba(100, 65, 255, 0.1);
+  border-color: rgba(100, 65, 255, 0.5);
+  box-shadow: 0 5px 30px rgba(100, 65, 255, 0.3);
+}
+
+.icone-plano {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(45deg, #6441ff, #ff4d4d);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.plano-option h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.plano-option p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.preco-destaque {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 1rem 0;
+}
+
+.selo-plano {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: linear-gradient(45deg, #ff4d4d, #f9cb28);
+  color: black;
+  padding: 0.3rem 1rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 20px;
+  transform: rotate(15deg);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.upload-assinatura {
+  margin-bottom: 2.5rem;
+}
+
+.upload-assinatura label {
+  display: block;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.area-upload {
+  border: 2px dashed rgba(100, 65, 255, 0.3);
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.area-upload:hover {
+  border-color: rgba(100, 65, 255, 0.6);
+  background: rgba(100, 65, 255, 0.05);
+}
+
+.conteudo-upload i {
+  font-size: 3rem;
+  color: rgba(100, 65, 255, 0.5);
+  margin-bottom: 1rem;
+}
+
+.conteudo-upload p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.conteudo-upload p span {
+  color: #6441ff;
+  font-weight: 600;
+}
+
+.conteudo-upload small {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.area-upload input[type='file'] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.preview-assinatura {
+  display: none;
+  margin-top: 1rem;
+}
+
+.preview-assinatura img {
+  max-width: 150px;
+  max-height: 150px;
+  border-radius: 10px;
+  border: 1px solid rgba(100, 65, 255, 0.3);
+}
+
+.contador-caracteres {
+  text-align: right;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 0.5rem;
+}
+
+.botao-assinatura {
+  background: linear-gradient(45deg, #6441ff, #ff4d4d);
+  color: white;
+  border: none;
+  padding: 1.5rem 3rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3rem auto 2rem;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(100, 65, 255, 0.4);
+}
+
+.botao-assinatura:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(100, 65, 255, 0.6);
+}
+
+.botao-assinatura .texto-botao {
+  position: relative;
+  z-index: 2;
+}
+
+.efeito-luz {
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  animation: brilho 3s infinite;
+  opacity: 0.5;
+}
+
+.icone-botao {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.botao-assinatura:hover .icone-botao {
+  transform: translateX(5px);
+}
+
+.garantia-assinatura {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
+
+.garantia-assinatura i {
+  color: #4caf50;
+}
+
+@keyframes brilho-holografico {
+  0% {
+    transform: translate(-30%, -30%) rotate(30deg);
+  }
+  100% {
+    transform: translate(30%, 30%) rotate(30deg);
+  }
+}
+
+@keyframes brilho {
+  0% {
+    left: -60%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+@media (max-width: 768px) {
+  .moldura-holografica {
+    padding: 3rem 1.5rem;
+  }
+
+  .titulo-destaque {
+    font-size: 2.2rem;
+  }
+
+  .opcoes-plano {
+    grid-template-columns: 1fr;
+  }
+
+  .campo-flutuante {
+    margin-bottom: 2rem;
+  }
+}

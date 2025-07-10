@@ -1,0 +1,270 @@
+/* Seção Planos */
+.pricing-section {
+  padding: 8rem 5%;
+  background-color: var(--white);
+  position: relative;
+}
+
+.pricing-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="%23f5f7fa" d="M0,0 L100,0 L100,100 L0,100 Z"></path></svg>')
+    no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem auto;
+  position: relative;
+  z-index: 1;
+}
+
+.pricing-card {
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.pricing-card:nth-child(1) {
+  animation: fadeInUp 0.8s forwards 0.3s;
+}
+.pricing-card:nth-child(2) {
+  animation: fadeInUp 0.8s forwards 0.5s;
+}
+.pricing-card:nth-child(3) {
+  animation: fadeInUp 0.8s forwards 0.7s;
+}
+
+.pricing-card.featured {
+  transform: scale(1.05);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 15px;
+  right: -5px;
+  background: var(--secondary);
+  color: var(--white);
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(255, 107, 53, 0.3);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 10% 50%);
+  padding-left: 1.8rem;
+}
+
+.pricing-header {
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.plan-tag {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.plan-price {
+  margin: 1.5rem 0;
+  color: var(--dark);
+}
+
+.plan-price .currency {
+  font-size: 1.5rem;
+  vertical-align: top;
+  line-height: 3rem;
+}
+
+.plan-price .amount {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0.2rem;
+}
+
+.plan-price .period {
+  font-size: 1rem;
+  color: #78909c;
+}
+
+.plan-description {
+  color: #78909c;
+  font-size: 1.05rem;
+}
+
+.pricing-features {
+  padding: 2rem;
+}
+
+.pricing-features ul {
+  list-style: none;
+}
+
+.pricing-features li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  color: #546e7a;
+}
+
+.pricing-features i {
+  color: var(--success);
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+}
+
+.pricing-footer {
+  padding: 0 2rem 2rem;
+  text-align: center;
+}
+
+.pricing-footer-note {
+  max-width: 800px;
+  margin: 3rem auto 0;
+  padding: 1.5rem;
+  background: rgba(94, 53, 177, 0.05);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.9s;
+}
+
+.note-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.pricing-footer-note p {
+  color: #546e7a;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 992px) {
+  .pricing-card.featured {
+    transform: none;
+  }
+
+  .pricing-card:hover,
+  .pricing-card.featured:hover {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 5rem 5%;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+
+  .pricing-footer-note {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Estilos CSS para as animações personalizadas */
+[data-aos='fade-in'] {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+[data-aos='fade-in'].aos-animate {
+  opacity: 1;
+}
+
+[data-aos='fade-down'] {
+  transform: translateY(-30px);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos='fade-up'] {
+  transform: translateY(30px);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos='fade-left'] {
+  transform: translateX(-30px);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos='fade-right'] {
+  transform: translateX(30px);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos='zoom-in'] {
+  transform: scale(0.8);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+/* Efeito especial para os botões */
+[data-aos='ease-out-back'] {
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Garante que os elementos ficam invisíveis antes da animação */
+[data-aos] {
+  visibility: hidden;
+}
+
+[data-aos].aos-animate {
+  visibility: visible;
+  transform: none;
+  opacity: 1;
+}
+
+/* Otimização para performance */
+[data-aos] {
+  will-change: transform, opacity;
+}

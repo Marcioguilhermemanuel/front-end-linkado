@@ -1,0 +1,103 @@
+:root {
+  --primary: #013655;
+  --secondary: #ff999b;
+  --light: #ffefff;
+  --accent: #ff5a5f;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffefff 0%, #ffffff 100%);
+  min-height: 100vh;
+  color: var(--primary);
+  overflow-x: hidden;
+}
+
+.profile-bg {
+  background: linear-gradient(45deg, var(--primary) 0%, #005a8d 100%);
+}
+
+.link-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 153, 155, 0.2);
+}
+
+.link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(1, 54, 85, 0.15);
+  background: white;
+}
+
+.social-icon {
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.floating {
+  animation: floating 6s ease-in-out infinite;
+}
+
+.floating-2 {
+  animation: floating 5s ease-in-out infinite 0.5s;
+}
+
+.floating-3 {
+  animation: floating 4s ease-in-out infinite 1s;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 153, 155, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(255, 153, 155, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 153, 155, 0);
+  }
+}
+
+.title-font {
+  font-family: "Playfair Display", serif;
+}
+
+.wave-divider {
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+}
+
+.wave-divider svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-pattern {
+  background-image: radial-gradient(var(--secondary) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.1;
+}

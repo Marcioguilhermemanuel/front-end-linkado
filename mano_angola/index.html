@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mano - Produtos que amas, entregues em minutos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/image/FIVE.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ee2737',
+                        secondary: '#ff6b7a',
+                        dark: '#1a1a1a'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="font-poppins flex flex-col items-center justify-center py-8 px-4">
+    <div class="w-full max-w-md">
+        <!-- Profile Card -->
+        <div class="profile-card p-6 mb-8 text-center pulse">
+            <div class="flex justify-center mb-4">
+                <div class="relative">
+                    <img id="profile-img" src="assets/image/logo.jpg" alt="Logo Mano"
+                        class="w-32 h-32 rounded-full border-4 border-white shadow-lg mx-auto floating">
+                    <div
+                        class="absolute bottom-0 right-0 bg-primary rounded-full w-10 h-10 flex items-center justify-center border-4 border-white">
+                        <i class="fas fa-bolt text-white text-lg"></i>
+                    </div>
+                </div>
+            </div>
+            <h1 class="text-2xl font-bold text-gray-800 mb-2">MANO</h1>
+            <p class="text-gray-600 mb-4">Produtos que amas, entregues em minutos 🚀</p>
+
+            <div class="bg-primary/10 rounded-xl py-3 px-4 border border-primary/20">
+                <p class="text-primary font-medium"><i class="fas fa-truck mr-2"></i>Entrega rápida em Luanda</p>
+            </div>
+        </div>
+
+        <!-- Links -->
+        <div class="space-y-4 mb-8">
+            <a href="https://play.google.com/store/apps/details?id=co.eddress.mano" target="_blank"
+                class="link-btn block bg-primary text-white rounded-xl py-4 px-6 text-center font-medium shadow-lg relative overflow-hidden">
+                <div class="flex items-center justify-center">
+                    <div class="icon-wrapper w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mr-3">
+                        <i class="fab fa-google-play text-xl"></i>
+                    </div>
+                    <span>Baixa app aqui!</span>
+                </div>
+            </a>
+
+            <a href="https://shop.manoapp.com/pt?source_caller=ui&shortlink=b66wd31x&Placement=Instagram%20bio&c=230525_AO_LINKINBIO_A%20Biologica&pid=Social_instagram&deep_link_value=mano%3A%2F%2Fshops%2F16&af_xp=social&af_force_deeplink=true"
+                target="_blank"
+                class="link-btn block bg-white border border-gray-200 rounded-xl py-4 px-6 text-center font-medium shadow-lg hover:bg-primary/5 relative overflow-hidden">
+                <div class="flex items-center justify-center">
+                    <div class="icon-wrapper w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-store text-primary"></i>
+                    </div>
+                    <span class="text-gray-800">A Biologica</span>
+                </div>
+            </a>
+
+            <a href="https://shop.manoapp.com/pt?source_caller=ui&shortlink=vnhgyji6&Placement=Instagram%20bio&c=230525_AO_LINKINBIO_La%20Bibliotheque%20TalatonaTalatona&pid=Social_instagram&af_xp=social&af_force_deeplink=true"
+                target="_blank"
+                class="link-btn block bg-white border border-gray-200 rounded-xl py-4 px-6 text-center font-medium shadow-lg hover:bg-primary/5 relative overflow-hidden">
+                <div class="flex items-center justify-center">
+                    <div class="icon-wrapper w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-book text-primary"></i>
+                    </div>
+                    <span class="text-gray-800">La Bibliothèque</span>
+                </div>
+            </a>
+
+            <a href="https://shop.manoapp.com/pt" target="_blank"
+                class="link-btn block bg-white border border-gray-200 rounded-xl py-4 px-6 text-center font-medium shadow-lg hover:bg-primary/5 relative overflow-hidden">
+                <div class="flex items-center justify-center">
+                    <div class="icon-wrapper w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-fire text-primary"></i>
+                    </div>
+                    <span class="text-gray-800">Tudo no Carvão</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex justify-center space-x-6 mb-8">
+            <a href="https://www.facebook.com/go.manoangola/" target="_blank" class="social-icon">
+                <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center shadow-lg">
+                    <i class="fab fa-facebook-f text-white text-xl"></i>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/mano_angola/" target="_blank" class="social-icon">
+                <div
+                    class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center shadow-lg">
+                    <i class="fab fa-instagram text-white text-xl"></i>
+                </div>
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w-full max-w-md mx-auto py-6 px-4 text-center">
+            <div class="flex flex-col items-center">
+                <div class="flex items-center justify-center mb-3">
+                    <a href="https://linkado.click" target="_blank"
+                        class="inline-flex items-center gap-2 font-medium text-indigo-700 hover:text-indigo-900 transition-all group">
+                        <div class="bg-indigo-100 group-hover:bg-indigo-200 p-2 rounded-lg transition-colors">
+                            <img src="/assets/image/FIVE.png" alt="Logo Linkado" class="w-6 h-6 object-contain" />
+                        </div>
+                        <span class="font-bold text-lg tracking-tight">linkado.click</span>
+                    </a>
+                </div>
+
+                <p class="text-gray-600 mb-3 text-sm italic max-w-xs">
+                    O link que conecta, converte e cresce.
+                </p>
+
+                <div class="text-sm text-gray-500">
+                    © <span id="current-year"></span> Todos os direitos reservados
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Atualiza o ano automaticamente
+            document.getElementById("current-year").textContent = new Date().getFullYear();
+        </script>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

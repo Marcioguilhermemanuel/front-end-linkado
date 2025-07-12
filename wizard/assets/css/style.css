@@ -1,0 +1,87 @@
+:root {
+  --primary: #0162b1;
+  --secondary: #ffffff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+  min-height: 100vh;
+  background-attachment: fixed;
+}
+
+.card {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(1, 98, 177, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(1, 98, 177, 0.2);
+}
+
+.service-icon {
+  background-color: rgba(1, 98, 177, 0.1);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.social-btn {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  padding: 15px 20px;
+  font-weight: 500;
+}
+
+.social-btn:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.expandable-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.logo-container {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.wave-divider {
+  height: 150px;
+  overflow: hidden;
+}
+
+.wave-divider svg {
+  height: 100%;
+  width: 100%;
+}
+
+.wave-divider .shape-fill {
+  fill: #0162b1;
+}

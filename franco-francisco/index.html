@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franco Francisco | Consultor Financeiro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="shortcut icon" href="assets/image/FIVE.png" type="image/x-icon">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066CC',
+                        secondary: '#002E5D',
+                        accent: '#F2A900',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .link-card {
+            transition: all 0.3s ease;
+        }
+        
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body class="font-sans min-h-screen flex flex-col items-center p-6">
+    <div class="container max-w-2xl mx-auto">
+        <header class="flex flex-col items-center mb-8 mt-10">
+            <div class="relative mb-4">
+                <img src="assets/image/IMG_20250314_074727_122.webp" alt="Franco Francisco" class="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-white shadow-lg object-cover">
+                <div class="absolute bottom-0 right-0 bg-accent rounded-full p-1 border-2 border-white">
+                    <i class="fas fa-check text-white"></i>
+                </div>
+            </div>
+            <h1 class="text-2xl md:text-3xl font-bold text-secondary">Franco Francisco</h1>
+            <p class="text-gray-600 text-center max-w-md mt-2">Consultor Financeiro | Apresentador | Criador de Conteúdo</p>
+            <div class="flex space-x-4 mt-4">
+                <a href="https://www.instagram.com/franco_francisco_oficial?igsh=MWVodHoxdDlxemJraA==" target="_blank" aria-label="Instagram" class="social-icon text-gray-700 hover:text-pink-600">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="https://youtube.com/@financasneutras?si=B4FlbyZxjexy9Nv1" target="_blank" aria-label="YouTube" class="social-icon text-gray-700 hover:text-red-600">
+                    <i class="fab fa-youtube text-xl"></i>
+                </a>
+                <a href="https://www.tiktok.com/@franco.francisco37?_t=ZM-8vXEOt62KgP&_r=1" target="_blank" aria-label="LinkedIn" class="social-icon text-gray-700 hover:text-blue-600">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/franco-francisco-bb654b284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="Twitter" class="social-icon text-gray-700 hover:text-blue-400">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+        </header>
+
+        <main class="space-y-4">
+            <!-- Links -->
+            <a href="https://wa.link/bl4cac" class="link-card flex items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg w-full">
+                <div class="bg-primary p-3 rounded-lg mr-4">
+                    <i class="fas fa-calendar-alt text-white"></i>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-gray-800">Agende uma Consultoria</h2>
+                    <p class="text-gray-600 text-sm">Consultoria financeira personalizada</p>
+                </div>
+                <i class="fas fa-chevron-right ml-auto text-gray-400"></i>
+            </a>
+
+            <a href="#" class="link-card flex items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg w-full">
+                <div class="bg-accent p-3 rounded-lg mr-4">
+                    <i class="fas fa-book text-white"></i>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-gray-800">E-book Gratuito</h2>
+                    <p class="text-gray-600 text-sm">Brevemente disponível
+
+                    </p>
+                </div>
+                <i class="fas fa-chevron-right ml-auto text-gray-400"></i>
+            </a>
+
+            <a href="https://youtube.com/@financasneutras?si=B4FlbyZxjexy9Nv1" class="link-card flex items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg w-full">
+                <div class="bg-secondary p-3 rounded-lg mr-4">
+                    <i class="fas fa-play text-white"></i>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-gray-800">Canal no YouTube</h2>
+                    <p class="text-gray-600 text-sm">Dicas e análises financeiras semanais</p>
+                </div>
+                <i class="fas fa-chevron-right ml-auto text-gray-400"></i>
+            </a>
+
+            <a href="https://wa.link/rn1y66" class="link-card flex items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg w-full">
+                <div class="bg-green-500 p-3 rounded-lg mr-4">
+                    <i class="fab fa-whatsapp text-white"></i>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-gray-800">WhatsApp Business</h2>
+                    <p class="text-gray-600 text-sm">Entre em contato diretamente</p>
+                </div>
+                <i class="fas fa-chevron-right ml-auto text-gray-400"></i>
+            </a>
+
+            <a href="#" class="link-card flex items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg w-full">
+                <div class="bg-blue-600 p-3 rounded-lg mr-4">
+                    <i class="fas fa-podcast text-white"></i>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-gray-800">Finanças Neutras</h2>
+                    <p class="text-gray-600 text-sm">Ouça todas as terças e quintas, das 17h às 18h, na STTOP FM 107.3 MHz!</p>
+                </div>
+                <i class="fas fa-chevron-right ml-auto text-gray-400"></i>
+            </a>
+
+            <a href="#" class="link-card flex items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg w-full">
+                <div class="bg-red-600 p-3 rounded-lg mr-4">
+                    <i class="fas fa-graduation-cap text-white"></i>
+                </div>
+                <div>
+                    <h2 class="font-semibold text-gray-800">Curso de Investimentos</h2>
+                    <p class="text-gray-600 text-sm">Brevemente disponível</p>
+                </div>
+                <i class="fas fa-chevron-right ml-auto text-gray-400"></i>
+            </a>
+        </main>
+
+        <div class="mt-8 text-center">
+            <p class="text-sm text-gray-600 mb-2">Assine minha newsletter</p>
+            <form id="newsletter-form" class="flex flex-col sm:flex-row gap-2">
+                <input 
+                    type="email" 
+                    placeholder="Seu melhor e-mail" 
+                    class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary flex-grow"
+                    required
+                    aria-label="Email para newsletter"
+                >
+                <button 
+                    type="submit" 
+                    class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-lg transition-colors duration-300"
+                >
+                    Assinar
+                </button>
+            </form>
+        </div>
+
+        <footer class="w-full max-w-md mx-auto py-6 px-4 text-center">
+  <div class="flex flex-col items-center">
+    <div class="flex items-center justify-center mb-3">
+      <a 
+        href="https://linkado.click" 
+        target="_blank" 
+        class="inline-flex items-center gap-2 font-medium text-indigo-700 hover:text-indigo-900 transition-all group"
+      >
+        <div class="bg-indigo-100 group-hover:bg-indigo-200 p-2 rounded-lg transition-colors">
+          <img 
+            src="/assets/image/FIVE.png" 
+            alt="Logo Linkado" 
+            class="w-6 h-6 object-contain"
+          />
+        </div>
+        <span class="font-bold text-lg tracking-tight">linkado.click</span>
+      </a>
+    </div>
+
+    <p class="text-gray-600 mb-3 text-sm italic max-w-xs">
+      O link que conecta, converte e cresce.
+    </p>
+
+    <div class="text-sm text-gray-500">
+      © <span id="current-year"></span> Todos os direitos reservados
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Atualiza o ano automaticamente
+  document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
+
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

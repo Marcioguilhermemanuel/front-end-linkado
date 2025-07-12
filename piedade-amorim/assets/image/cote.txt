@@ -1,0 +1,638 @@
+const { PrismaClient } = require("@prisma/client");
+
+const prisma = novo PrismaClient();
+
+função assíncrona main() {
+  tentar {
+    const mousesCategory = await prisma.category.create({
+      dados: {
+        nome: "Ratos",
+        lesma: "ratos",
+        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/mouses.png",
+      },
+    });
+
+    constantes mouses = [
+      {
+        nome: "Logitech MX Master 3s",
+        slug: "logitech-mx-master-3s",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_mx-master-3s.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_mx-master-3s.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_mx-master-3s.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_mx-master-3s.png",
+        ],
+        Preço base: 650,
+        categoryId: mousesCategory.id,
+        descontoPercentual: 10, // 10% de desconto
+      },
+      {
+        nome: "Logitech Pro X Superlight",
+        slug: "logitech-pro-x-superlight",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-superlight.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-superlight.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-superlight.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-superlight.png",
+        ],
+        Preço base: 750,
+        categoryId: mousesCategory.id,
+        descontoPorcentagem: 5, // 5% de desconto
+      },
+      {
+        nome: "Logitech G305 Lightspeed",
+        slug: "logitech-g305-lightspeed",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-lightspeed.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-lightspeed.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-lightspeed.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-lightspeed.png",
+        ],
+        Preço base: 300,
+        categoryId: mousesCategory.id,
+        descontoPercentual: 15, // 15% de desconto
+      },
+      {
+        nome: "Hyperx Pulsefire Dart",
+        slug: "hyperx-pulsefire-dart",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_hyperx-dart.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_hyperx-dart.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_hyperx-dart.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_hyperx-dart.png",
+        ],
+        Preço base: 600,
+        categoryId: mousesCategory.id,
+        descontoPercentual: 10, // 10% de desconto
+      },
+      {
+        nome: "Razer Deathadder V2 Pro",
+        slug: "razer-deathadder-v2-pro",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_razer-deathadder.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_razer-deathadder.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_razer-deathadder.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_razer-deathadder.png",
+        ],
+        Preço base: 350,
+        categoryId: mousesCategory.id,
+        descontoPorcentagem: 0,
+      },
+    ];
+
+    aguarde prisma.product.createMany({
+      dados: ratos,
+    });
+
+    const keyboardsCategory = await prisma.category.create({
+      dados: {
+        nome: "Teclados",
+        slug: "teclados",
+        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/keyboards.png",
+      },
+    });
+
+    teclados constantes = [
+      {
+        nome: "Logitech MX Keys Mini",
+        slug: "logitech-mx-keys-mini",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-mx-keys-mini.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-mx-keys-mini.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-mx-keys-mini.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-mx-keys-mini.png",
+        ],
+        Preço base: 650,
+        categoryId: keyboardsCategory.id,
+        descontoPercentual: 10, // 10% de desconto
+      },
+      {
+        nome: "Logitech MX Keys S",
+        slug: "logitech-mx-keys-s",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-mx-keys-s.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-mx-keys-s.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-mx-keys-s.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-mx-keys-s.png",
+        ],
+        Preço base: 750,
+        categoryId: keyboardsCategory.id,
+        descontoPercentual: 10, // 10% de desconto
+      },
+      {
+        nome: "Logitech Pop Keys",
+        slug: "logitech-pop-keys",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-pop-keys.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-pop-keys.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-pop-keys.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-pop-keys.png",
+        ],
+        Preço base: 440,
+        categoryId: keyboardsCategory.id,
+        Porcentagem de desconto: 5, // 10% de desconto
+      },
+      {
+        nome: "Logitech MX Mechanical",
+        slug: "logitech-mx-mecânico",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-mx-mechanical.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-mx-mechanical.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-mx-mechanical.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-mx-mechanical.png",
+        ],
+        Preço base: 700,
+        categoryId: keyboardsCategory.id,
+        Porcentagem de desconto: 15, // 10% de desconto
+      },
+      {
+        nome: "Epomaker TH80",
+        slug: "epomaker-th80",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_epomaker-th80.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_epomaker-th80.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_epomaker-th80.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_epomaker-th80.png",
+        ],
+        Preço base: 500,
+        categoryId: keyboardsCategory.id,
+        Porcentagem de desconto: 5, // 10% de desconto
+      },
+      {
+        nome: "Redragon Gamer Ashe",
+        lesma: "redragon-gamer-ashe",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_redragon-gamer-ashe.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_redragon-gamer-ashe.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_redragon-gamer-ashe.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_redragon-gamer-ashe.png",
+        ],
+        Preço base: 400,
+        categoryId: keyboardsCategory.id,
+        Porcentagem de desconto: 25, // 10% de desconto
+      },
+    ];
+
+    aguarde prisma.product.createMany({
+      dados: teclados,
+    });
+
+    const headphonesCategory = await prisma.category.create({
+      dados: {
+        nome: "Fones",
+        slug: "fones de ouvido",
+        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/headphones.png",
+      },
+    });
+
+    fones de ouvido const = [
+      {
+        nome: "Logitech Zone Vibe 100",
+        slug: "logitech-zone-vibe-100",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-vibe.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-vibe.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-vibe.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-vibe.png",
+        ],
+        Preço base: 750,
+        categoryId: fones de ouvidoCategoria.id,
+        descontoPercentual: 10, // 10% de desconto
+      },
+      {
+        nome: "Logitech Pro X 2 Lightspeed",
+        slug: "logitech-pro-x-2-lightspeed",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-lightspeed-phone.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-lightspeed-phone.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-lightspeed-phone.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-lightspeed-phone.png",
+        ],
+        Preço base: 1200,
+        categoryId: fones de ouvidoCategoria.id,
+        Porcentagem de desconto: 5, // 10% de desconto
+      },
+      {
+        nome: "Logitech Astro A30",
+        slug: "logitech-astro-a30",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-astro-a30.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-astro-a30.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-astro-a30.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-astro-a30.png",
+        ],
+        Preço base: 1500,
+        categoryId: fones de ouvidoCategoria.id,
+        Porcentagem de desconto: 15, // 10% de desconto
+      },
+      {
+        nome: "Fones de ouvido com fio Logitech Zone",
+        slug: "fones de ouvido com fio logitech-zone",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-earbuds.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-earbuds.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-earbuds.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-earbuds.png",
+        ],
+        Preço base: 550,
+        categoryId: fones de ouvidoCategoria.id,
+        Porcentagem de desconto: 5, // 10% de desconto
+      },
+      {
+        nome: "Hyperx Cloud Stinger 2",
+        slug: "hyperx-cloud-stinger-2",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_hyperx-stinger.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_hyperx-stinger.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_hyperx-stinger.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_hyperx-stinger.png",
+        ],
+        Preço base: 250,
+        categoryId: fones de ouvidoCategoria.id,
+        descontoPercentual: 0, // 10% de desconto
+      },
+      {
+        nome: "Razer Kraken X",
+        lesma: "razer-kraken-x",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_razer-kraken.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_razer-kraken.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_razer-kraken.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_razer-kraken.png",
+        ],
+        Preço base: 200,
+        categoryId: fones de ouvidoCategoria.id,
+        descontoPercentual: 0, // 10% de desconto
+      },
+    ];
+
+    aguarde prisma.product.createMany({
+      dados: fones de ouvido,
+    });
+
+    const mousepadsCategory = await prisma.category.create({
+      dados: {
+        nome: "Mousepads",
+        slug: "mousepads",
+        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/mousepads.png",
+      },
+    });
+
+    mousepads const = [
+      {
+        nome: "Logitech Powerplay",
+        slug: "logitech-powerplay",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-powerplay.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-powerplay.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-powerplay.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-powerplay.png",
+        ],
+        Preço base: 950,
+        categoryId: mousepadsCategory.id,
+        descontoPercentual: 10, // 10% de desconto
+      },
+      {
+        nome: "Tapete de mesa Logitech",
+        slug: "tapete-de-mesa-logitech",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-desk-mat.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-desk-mat.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-desk-mat.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-desk-mat.png",
+        ],
+        Preço base: 150,
+        categoryId: mousepadsCategory.id,
+        descontoPercentual: 0, // 10% de desconto
+      },
+      {
+        nome: "Logitech G740",
+        slug: "logitech-g740",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-g740.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-g740.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-g740.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-g740.png",
+        ],
+        Preço base: 200,
+        categoryId: mousepadsCategory.id,
+        Porcentagem de desconto: 5, // 10% de desconto
+      },
+      {
+        nome: "Logitech Mousepad Studio Series",
+        slug: "logitech-mousepad-studio-series",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-studio-series.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-studio-series.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-studio-series.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-studio-series.png",
+        ],
+        Preço base: 250,
+        categoryId: mousepadsCategory.id,
+        Porcentagem de desconto: 15, // 10% de desconto
+      },
+      {
+        nome: "Force One Skyhawk Dark",
+        slug: "força-um-skyhawk-escuro",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_force-dark.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_force-dark.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_force-dark.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_force-dark.png",
+        ],
+        Preço base: 300,
+        categoryId: mousepadsCategory.id,
+        descontoPercentual: 10, // 10% de desconto
+      },
+      {
+        nome: "Force One Skyhawk Snow",
+        slug: "força-um-skyhawk-neve",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_force-snow.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_force-snow.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_force-snow.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_force-snow.png",
+        ],
+        Preço base: 300,
+        categoryId: mousepadsCategory.id,
+        Porcentagem de desconto: 5, // 10% de desconto
+      },
+    ];
+
+    aguarde prisma.product.createMany({
+      dados: mousepads,
+    });
+
+    const monitorsCategory = await prisma.category.create({
+      dados: {
+        nome: "Monitores",
+        slug: "monitores",
+        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/monitors.png",
+      },
+    });
+
+    monitores constantes = [
+      {
+        nome: "Dell S2421HN",
+        slug: "dell-s2421hn",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-S2421HN.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-S2421HN.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-S2421HN.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-S2421HN.png",
+        ],
+        Preço base: 1500,
+        categoryId: monitoresCategoria.id,
+        Porcentagem de desconto: 15, // 10% de desconto
+      },
+      {
+        nome: "Dell P2422H",
+        slug: "dell-p2422h",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-P2422H.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-P2422H.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-P2422H.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-P2422H.png",
+        ],
+        Preço base: 2000,
+        categoryId: monitoresCategoria.id,
+        Porcentagem de desconto: 5, // 10% de desconto
+      },
+      {
+        nome: "Dell P2723QE",
+        slug: "dell-p2723qe",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-P2723QE.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-P2723QE.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-P2723QE.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-P2723QE.png",
+        ],
+        Preço base: 2500,
+        categoryId: monitoresCategoria.id,
+        descontoPercentual: 0, // 10% de desconto
+      },
+      {
+        nome: "Dell S3422DWG",
+        slug: "dell-s3422dwg",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-S3422DWG.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-S3422DWG.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-S3422DWG.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-S3422DWG.png",
+        ],
+        Preço base: 3200,
+        categoryId: monitoresCategoria.id,
+        descontoPercentual: 0, // 10% de desconto
+      },
+      {
+        nome: "Dell S3222DGM",
+        slug: "dell-s3222dgm",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-S3222DGM.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-S3222DGM.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-S3222DGM.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-S3222DGM.png",
+        ],
+        Preço base: 3500,
+        categoryId: monitoresCategoria.id,
+        descontoPercentual: 0, // 10% de desconto
+      },
+      {
+        nome: "Dell AW2524HF",
+        slug: "dell-aw2524hf",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_dell-AW2524HF.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_dell-AW2524HF.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_dell-AW2524HF.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_dell-AW2524HF.png",
+        ],
+        Preço base: 4200,
+        categoryId: monitoresCategoria.id,
+        descontoPercentual: 10, // 10% de desconto
+      },
+    ];
+
+    aguarde prisma.product.createMany({
+      dados: monitores,
+    });
+
+    const speakersCategory = aguarde prisma.category.create({
+      dados: {
+        nome: "Palestrantes",
+        slug: "alto-falantes",
+        imageUrl: "https://fsw-store.s3.sa-east-1.amazonaws.com/speakers.png",
+      },
+    });
+
+    alto-falantes constantes = [
+      {
+        nome: "Logitech Surround Sound Z607",
+        slug: "logitech-surround-sound-z607",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-surround-z607.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-surround-z607.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-surround-z607.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-surround-z607.png",
+        ],
+        Preço base: 1200,
+        categoryId: speakersCategory.id,
+        Porcentagem de desconto: 5, // 10% de desconto
+      },
+      {
+        nome: "Logitech Dock",
+        slug: "logitech-dock",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_logi-dock.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_logi-dock.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_logi-dock.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_logi-dock.png",
+        ],
+        Preço base: 4500,
+        categoryId: speakersCategory.id,
+        Porcentagem de desconto: 15, // 10% de desconto
+      },
+      {
+        nome: "Alto-falantes Sony SA-Z9R",
+        slug: "sony-sa-z9r-alto-falantes",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_sony-SA-Z9R.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_sony-SA-Z9R.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_sony-SA-Z9R.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_sony-SA-Z9R.png",
+        ],
+        Preço base: 4000,
+        categoryId: speakersCategory.id,
+        descontoPercentual: 10, // 10% de desconto
+      },
+      {
+        nome: "Sony XB43 Extra Bass",
+        slug: "sony-xb43-extra-bass",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_sony-extra-bass.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_sony-extra-bass.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_sony-extra-bass.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_sony-extra-bass.png",
+        ],
+        Preço base: 3200,
+        categoryId: speakersCategory.id,
+        descontoPercentual: 0, // 10% de desconto
+      },
+      {
+        nome: "Sony XB23 Extra Bass",
+        slug: "sony-xb23-extra-bass",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_sony-XB23.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_sony-XB23.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_sony-XB23.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_sony-XB23.png",
+        ],
+        Preço base: 3500,
+        categoryId: speakersCategory.id,
+        descontoPercentual: 0, // 10% de desconto
+      },
+      {
+        nome: "Barra de som Sony HT-S200F",
+        slug: "sony-ht-s200f-soundbar",
+        descrição:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id malesuada elit, eget vulputate justo. Sed sollicitudin velit dolor, ut gravida odio iaculis a.\nNulla risus justo, tempor eu felis eu, efficitur pulvinar risus. Sed viverra, nisi id egestas convallis, massa lorem convallis magna, vel convallis mi turpis nec ante. Mecenas posuere lacus id gravida dignissim.\nUt pellentesque ornare erat, vitae blandit ex pulvinar sit amet. lobortis. Proin bibendum est facilisis nulla tristique vestibulum. Etiam placerat tortor sit amet lacinia volutpat. Curabitur lectus turpis, faucibus vitae tortor in, lacinia tristique neque.",
+        URLs de imagem: [
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/01_sony-S200F.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/02_sony-S200F.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/03_sony-S200F.png",
+          "https://fsw-store.s3.sa-east-1.amazonaws.com/04_sony-S200F.png",
+        ],
+        Preço base: 2500,
+        categoryId: speakersCategory.id,
+        descontoPercentual: 0, // 10% de desconto
+      },
+    ];
+
+    aguarde prisma.product.createMany({
+      dados: alto-falantes,
+    });
+
+    console.log("Seed concluído com sucesso");
+  } pegar (erro) {
+    console.error("Erro ao iniciar o banco de dados:", erro);
+  } finalmente {
+    aguarde prisma.$disconnect();
+  }
+}
+
+principal()
+  .então(async() => {
+    aguarde prisma.$disconnect();
+  })
+  .catch(async (e) => {
+    console.error(e);
+    aguarde prisma.$disconnect();
+    processo.exit(1);
+  });

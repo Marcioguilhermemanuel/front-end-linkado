@@ -1,33 +1,96 @@
 :root {
-  --primary: #013655;
-  --secondary: #ff999b;
-  --light: #ffefff;
-  --accent: #ff5a5f;
+  --primary-green: #019a2d;
+  --light-green: #e6f7eb;
+  --dark-green: #006d1f;
+  --white: #f8f8f8;
+  --light-gray: #f0f0f0;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #ffefff 0%, #ffffff 100%);
+  background-color: var(--white);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f8f8f8"/><path d="M0,0 Q50,20 100,0 L100,100 Q50,80 0,100 Z" fill="%23e6f7eb" opacity="0.5"/></svg>');
+  background-size: cover;
+  background-attachment: fixed;
+  color: #333;
   min-height: 100vh;
-  color: var(--primary);
-  overflow-x: hidden;
 }
 
-.profile-bg {
-  background: linear-gradient(45deg, var(--primary) 0%, #005a8d 100%);
+.header-bg {
+  background: linear-gradient(rgba(1, 154, 45, 0.85), rgba(0, 109, 31, 0.9)),
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200"><rect width="400" height="200" fill="%23019a2d"/><path d="M0,100 Q100,50 200,100 T400,100 L400,200 L0,200 Z" fill="%23006d1f" opacity="0.6"/><circle cx="100" cy="50" r="10" fill="%23ffffff" opacity="0.2"/><circle cx="300" cy="80" r="15" fill="%23ffffff" opacity="0.2"/><path d="M50,150 Q150,120 250,150 T350,130" stroke="%23ffffff" stroke-width="3" fill="none" opacity="0.3"/></svg>');
+  background-size: cover;
+  background-position: center;
+  border-bottom-left-radius: 30% 15%;
+  border-bottom-right-radius: 30% 15%;
+  position: relative;
+  overflow: hidden;
+}
+
+.corn-icon {
+  position: absolute;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.2);
+  z-index: 0;
 }
 
 .link-card {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 153, 155, 0.2);
+  border-left: 4px solid var(--primary-green);
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .link-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(1, 54, 85, 0.15);
-  background: white;
+  box-shadow: 0 10px 15px rgba(1, 154, 45, 0.15);
+  border-left: 4px solid var(--dark-green);
+}
+
+.seasonal-highlight {
+  background: linear-gradient(to right, var(--light-green), white);
+  border-radius: 12px;
+  border: 1px solid rgba(1, 154, 45, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.seasonal-highlight::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background: var(--primary-green);
+}
+
+.whatsapp-btn {
+  background: linear-gradient(to right, #25d366, #128c7e);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(18, 140, 126, 0.4);
+}
+
+.map-btn {
+  background: linear-gradient(
+    to right,
+    var(--primary-green),
+    var(--dark-green)
+  );
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.map-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(1, 154, 45, 0.4);
 }
 
 .social-icon {
@@ -38,16 +101,24 @@ body {
   transform: scale(1.2);
 }
 
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(1, 154, 45, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(1, 154, 45, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(1, 154, 45, 0);
+  }
+}
+
 .floating {
-  animation: floating 6s ease-in-out infinite;
-}
-
-.floating-2 {
-  animation: floating 5s ease-in-out infinite 0.5s;
-}
-
-.floating-3 {
-  animation: floating 4s ease-in-out infinite 1s;
+  animation: floating 3s ease-in-out infinite;
 }
 
 @keyframes floating {
@@ -55,49 +126,16 @@ body {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-15px);
+    transform: translateY(-10px);
   }
   100% {
     transform: translateY(0px);
   }
 }
 
-.pulse {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(255, 153, 155, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 15px rgba(255, 153, 155, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(255, 153, 155, 0);
-  }
-}
-
-.title-font {
-  font-family: "Playfair Display", serif;
-}
-
-.wave-divider {
-  position: relative;
-  height: 100px;
-  overflow: hidden;
-}
-
-.wave-divider svg {
+.leaf {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.bg-pattern {
-  background-image: radial-gradient(var(--secondary) 1px, transparent 1px);
-  background-size: 20px 20px;
+  color: var(--primary-green);
   opacity: 0.1;
+  z-index: 0;
 }

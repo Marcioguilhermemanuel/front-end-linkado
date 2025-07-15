@@ -1,12 +1,50 @@
-/conceito-realize    /conceito-realize/index.html    200
-/cudiodia            /cudiodia/index.html            200
-/cold_studio         /cold_studio/index.html         200
-/jurema-quiosa       /jurema-quiosa/index.html       200
-/clinica-fontviva    /clinica-fontviva/index.html    200
-/franco-francisco    /franco-francisco/index.html    200
-/destino-sortudo     /destino-sortudo/index.html     200
-/piedade-amorim      /piedade-amorim/index.html      200
-/mano_angola         /mano_angola/index.html         200
-/mdc_gang            /mdc_gang/index.html            200
-/nadira-andrane      /nadira-andrane/index.html      200
-/wizard              /wizard/index.html              200
+# Forçar HTTPS e redirecionamento permanente
+http://linkado.click/*  https://linkado.click/:splat  301!
+
+# Regras principais com trailing slash opcional e cache
+/mdc_gang              /mdc_gang/index.html          200
+/mdc_gang/             /mdc_gang/index.html          200
+/mdc_gang/*            Cache-Control: public, max-age=86400
+
+/cudiodia              /cudiodia/index.html          200
+/cudiodia/             /cudiodia/index.html          200
+/cudiodia/*            Cache-Control: public, max-age=86400
+
+/cold_studio           /cold_studio/index.html       200
+/cold_studio/          /cold_studio/index.html       200
+/cold_studio/*         Cache-Control: public, max-age=86400
+
+/jurema-quiosa         /jurema-quiosa/index.html     200
+/jurema-quiosa/        /jurema-quiosa/index.html     200
+/jurema-quiosa/*       Cache-Control: public, max-age=86400
+
+/clinica-fontviva      /clinica-fontviva/index.html  200
+/clinica-fontviva/     /clinica-fontviva/index.html  200
+/clinica-fontviva/*    Cache-Control: public, max-age=86400
+
+/franco-francisco      /franco-francisco/index.html  200
+/franco-francisco/     /franco-francisco/index.html  200
+/franco-francisco/*    Cache-Control: public, max-age=86400
+
+/destino-sortudo       /destino-sortudo/index.html   200
+/destino-sortudo/      /destino-sortudo/index.html   200
+/destino-sortudo/*     Cache-Control: public, max-age=86400
+
+/piedade-amorim        /piedade-amorim/index.html    200
+/piedade-amorim/       /piedade-amorim/index.html    200
+/piedade-amorim/*      Cache-Control: public, max-age=86400
+
+/mano_angola           /mano_angola/index.html       200
+/mano_angola/          /mano_angola/index.html       200
+/mano_angola/*         Cache-Control: public, max-age=86400
+
+/nadira-andrane        /nadira-andrane/index.html    200
+/nadira-andrane/       /nadira-andrane/index.html    200
+/nadira-andrane/*      Cache-Control: public, max-age=86400
+
+/wizard                /wizard/index.html            200
+/wizard/               /wizard/index.html            200
+/wizard/*              Cache-Control: public, max-age=86400
+
+# Página 404 personalizada para rotas não encontradas
+/*                     /404.html                    404

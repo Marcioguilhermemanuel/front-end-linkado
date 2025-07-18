@@ -42,6 +42,10 @@ http://linkado.click/*  https://linkado.click/:splat  301!
 /nadira-andrane/       /nadira-andrane/index.html    200
 /nadira-andrane/*      Cache-Control: public, max-age=86400
 
+/prosario             /prosario/index.html    200
+/prosario/            /prosario/index.html    200
+/prosario/*           Cache-Control: public, max-age=86400
+
 /wizard                /wizard/index.html            200
 /wizard/               /wizard/index.html            200
 /wizard/*              Cache-Control: public, max-age=86400

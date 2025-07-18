@@ -1,0 +1,68 @@
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.btn-hover {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  animation: pulse 1.5s infinite;
+}
+.social-icon {
+  transition: all 0.3s ease;
+}
+.social-icon:hover {
+  transform: rotate(10deg) scale(1.2);
+}
+.service-icon {
+  transition: all 0.3s ease;
+}
+.service-icon:hover {
+  transform: scale(1.2);
+  color: #f7093a;
+}
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.tag {
+  animation: pulse 2s infinite;
+}
+.testimonial-card {
+  perspective: 1000px;
+}
+.testimonial-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.testimonial-card:hover .testimonial-inner {
+  transform: rotateY(180deg);
+}
+.testimonial-front,
+.testimonial-back {
+  backface-visibility: hidden;
+}
+.testimonial-back {
+  transform: rotateY(180deg);
+}

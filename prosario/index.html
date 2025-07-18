@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosário Consultoria | Soluções Empresariais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/image/five.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f7093a',
+                        secondary: '#131d58',
+                        accent: '#f7093a',
+                        light: '#f8f9fa',
+                        dark: '#1a202c'
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen font-body flex flex-col items-center py-8 px-4">
+    <div class="max-w-lg w-full mx-auto">
+        <!-- Header com logo e nome da empresa -->
+        <header class="text-center mb-8">
+            <div class="bg-white rounded-full p-2 shadow-lg w-32 h-32 mx-auto mb-4 flex items-center justify-center overflow-hidden border-4 border-white ring-4 ring-primary ring-opacity-30">
+                <img src="assets/image/logo.jpg" 
+                     alt="Logo Prosário Consultoria" 
+                     class="w-full h-full object-cover rounded-full">
+            </div>
+            <h1 class="text-3xl font-bold font-heading text-secondary">Prosário Consultoria</h1>
+            <p class="text-gray-600 mt-2">Soluções estratégicas para o seu negócio</p>
+        </header>
+        
+        <!-- Botões principais -->
+        <div class="space-y-4 mb-8">
+            <a href="https://wa.me/?text=Olá! Gostaria de agendar uma consulta empresarial." 
+               class="block bg-primary text-white rounded-xl py-4 px-6 text-center font-medium text-lg shadow-lg btn-hover relative overflow-hidden group">
+                <span class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <span class="relative z-10 flex items-center justify-center">
+                    <i class="fas fa-calendar-check mr-3"></i> Agendar Consulta Empresarial
+                </span>
+                <span class="tag absolute -top-2 -right-2 bg-secondary text-white text-xs font-bold py-1 px-2 rounded-full">
+                    <i class="fas fa-star mr-1"></i> PRIORITÁRIO
+                </span>
+            </a>
+            
+            <a href="https://wa.me/?text=Olá! Quero saber mais sobre a próxima Masterclass." 
+               class="block bg-gradient-to-r from-secondary to-primary text-white rounded-xl py-4 px-6 text-center font-medium text-lg shadow-lg btn-hover relative overflow-hidden group">
+                <span class="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                <span class="relative z-10 flex items-center justify-center">
+                    <i class="fas fa-graduation-cap mr-3"></i> Inscrever-se na Masterclass
+                </span>
+                <span class="tag absolute -top-2 -right-2 bg-primary text-white text-xs font-bold py-1 px-2 rounded-full">
+                    <i class="fas fa-fire mr-1"></i> VAGAS LIMITADAS
+                </span>
+            </a>
+        </div>
+        
+        <!-- Serviços com ícones -->
+        <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+            <h2 class="text-xl font-bold font-heading text-secondary mb-4 text-center">Nossos Serviços</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="flex flex-col items-center text-center p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="service-icon text-2xl bg-secondary text-white rounded-full w-12 h-12 flex items-center justify-center mb-2">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="font-bold text-secondary">Mentoria para Recém-Formados</h3>
+                </div>
+                <div class="flex flex-col items-center text-center p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="service-icon text-2xl bg-secondary text-white rounded-full w-12 h-12 flex items-center justify-center mb-2">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="font-bold text-secondary">Conformidade Laboral</h3>
+                </div>
+                <div class="flex flex-col items-center text-center p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="service-icon text-2xl bg-secondary text-white rounded-full w-12 h-12 flex items-center justify-center mb-2">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="font-bold text-secondary">Formação Intensiva</h3>
+                </div>
+                <div class="flex flex-col items-center text-center p-4 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors">
+                    <div class="service-icon text-2xl bg-secondary text-white rounded-full w-12 h-12 flex items-center justify-center mb-2">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="font-bold text-secondary">Processos de Reforma</h3>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botões de conteúdo e contato -->
+        <div class="space-y-4 mb-8">
+            <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MzI3NDU2Nzk5MTQ5OTA2?story_media_id=3459901165627664950_40804514929&igsh=MnZ2OTc2eGNla3l1" 
+               class="block bg-white text-secondary rounded-xl py-4 px-6 text-center font-medium text-lg shadow-md btn-hover border border-gray-200 hover:border-primary">
+                <i class="fas fa-edit mr-2"></i> Dicas Práticas
+            </a>
+            
+            <a href="https://wa.link/stnl06" 
+               class="block bg-white text-secondary rounded-xl py-4 px-6 text-center font-medium text-lg shadow-md btn-hover border border-gray-200 hover:border-primary">
+                <i class="fas fa-headset mr-2"></i> Fale com a Nossa Equipa
+            </a>
+        </div>
+        
+        <!-- Depoimento -->
+        <div class="testimonial-card bg-gradient-to-r from-secondary to-primary text-white rounded-2xl shadow-xl p-6 mb-8 relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-24 h-24 bg-white bg-opacity-10 rounded-full"></div>
+            <div class="absolute -bottom-8 -left-8 w-20 h-20 bg-white bg-opacity-10 rounded-full"></div>
+            
+            <div class="relative z-10">
+                <div class="flex justify-center mb-4">
+                    <i class="fas fa-quote-left text-3xl text-white text-opacity-50"></i>
+                </div>
+                <p class="text-center italic mb-4">
+                    "A mentoria da Prosário mudou a minha perspetiva de carreira. O conhecimento prático e as conexões que obtive foram essenciais para minha ascensão profissional!"
+                </p>
+                <p class="text-center font-bold">— Ana Silva, Gestora de RH</p>
+            </div>
+        </div>
+        
+        <!-- Redes sociais -->
+        <div class="flex justify-center space-x-6 mb-8">
+            <a href="https://www.instagram.com/prosarioconsultoria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+               class="social-icon bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
+                <i class="fab fa-instagram text-2xl"></i>
+            </a>
+            <a href="https://www.tiktok.com/@prosarioconsultoria?is_from_webapp=1&sender_device=pc" 
+               class="social-icon bg-black text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
+                <i class="fab fa-tiktok text-xl"></i>
+            </a>
+            <a href="https://wa.link/stnl06" 
+               class="social-icon bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
+                <i class="fab fa-whatsapp text-2xl"></i>
+            </a>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="w-full max-w-md mx-auto py-6 px-4 text-center">
+            <div class="flex flex-col items-center">
+                <div class="flex items-center justify-center mb-3">
+                    <a href="https://linkado.click" target="_blank"
+                        class="inline-flex items-center gap-2 font-medium text-indigo-700 hover:text-indigo-900 transition-all group">
+                        <div class="bg-indigo-100 group-hover:bg-indigo-200 p-2 rounded-lg transition-colors">
+                            <img src="/assets/image/FIVE.png" alt="Logo Linkado"
+                                class="w-6 h-6 object-contain" />
+                        </div>
+                        <span class="font-bold text-lg tracking-tight">linkado.click</span>
+                    </a>
+                </div>
+
+                <p class="text-gray-600 mb-3 text-sm italic max-w-xs">
+                    O link que conecta, converte e cresce.
+                </p>
+
+                <div class="text-sm text-gray-500">
+                    © <span id="current-year"></span> Todos os direitos reservados
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Atualiza o ano automaticamente
+            document.getElementById("current-year").textContent = new Date().getFullYear();
+        </script>
+    </div>
+    
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

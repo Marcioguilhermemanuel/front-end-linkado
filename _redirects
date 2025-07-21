@@ -1,57 +1,83 @@
-# Forçar HTTPS
-http://linkado.click/*  https://linkado.click/:splat  301!
+# =========================================================
+# REDIRECIONAMENTOS GLOBAIS (OBRIGATÓRIOS PARA SEO)
+# =========================================================
 
-# Página raiz
+# Redirecionar www para non-www
+https://www.linkado.click/* https://linkado.click/:splat 301!
+
+# Redirecionar HTTP para HTTPS
+http://linkado.click/* https://linkado.click/:splat 301!
+
+# =========================================================
+# PÁGINA RAIZ
+# =========================================================
 /                       /index.html                   200
 
-# Regras para cada perfil (canonical SEM trailing slash)
+# =========================================================
+# REGRAS PARA CADA PERFIL (CANONICAL SEM TRAILING SLASH)
+# =========================================================
+
+# MDC Gang
 /mdc_gang               /mdc_gang/index.html          200
 /mdc_gang/              /mdc_gang                     301
 /mdc_gang/*             Cache-Control: public, max-age=86400
 
+# Cudio Dia
 /cudiodia               /cudiodia/index.html          200
 /cudiodia/              /cudiodia                     301
 /cudiodia/*             Cache-Control: public, max-age=86400
 
+# Cold Studio
 /cold_studio            /cold_studio/index.html       200
 /cold_studio/           /cold_studio                  301
 /cold_studio/*          Cache-Control: public, max-age=86400
 
+# Jurema Quiosa
 /jurema-quiosa          /jurema-quiosa/index.html     200
 /jurema-quiosa/         /jurema-quiosa                301
 /jurema-quiosa/*        Cache-Control: public, max-age=86400
 
+# Clinica Fontviva
 /clinica-fontviva       /clinica-fontviva/index.html  200
 /clinica-fontviva/      /clinica-fontviva             301
 /clinica-fontviva/*     Cache-Control: public, max-age=86400
 
+# Franco Francisco
 /franco-francisco       /franco-francisco/index.html  200
 /franco-francisco/      /franco-francisco             301
 /franco-francisco/*     Cache-Control: public, max-age=86400
 
+# Destino Sortudo
 /destino-sortudo        /destino-sortudo/index.html   200
 /destino-sortudo/       /destino-sortudo              301
 /destino-sortudo/*      Cache-Control: public, max-age=86400
 
+# Piedade Amorim
 /piedade-amorim         /piedade-amorim/index.html    200
 /piedade-amorim/        /piedade-amorim               301
 /piedade-amorim/*       Cache-Control: public, max-age=86400
 
+# Mano Angola
 /mano_angola            /mano_angola/index.html       200
 /mano_angola/           /mano_angola                  301
 /mano_angola/*          Cache-Control: public, max-age=86400
 
+# Nadira Andrane
 /nadira-andrane         /nadira-andrane/index.html    200
 /nadira-andrane/        /nadira-andrane               301
 /nadira-andrane/*       Cache-Control: public, max-age=86400
 
+# Prosario
 /prosario               /prosario/index.html          200
 /prosario/              /prosario                     301
 /prosario/*             Cache-Control: public, max-age=86400
 
+# Wizard
 /wizard                 /wizard/index.html            200
-/wizard/                /wizard                      301
+/wizard/                /wizard                       301
 /wizard/*               Cache-Control: public, max-age=86400
 
-# Página 404
+# =========================================================
+# PÁGINA DE ERRO 404 PERSONALIZADA
+# =========================================================
 /*                      /404.html                    404

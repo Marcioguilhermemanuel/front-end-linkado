@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /404.html
+Crawl-delay: 2
 
-Sitemap: https://www.linkado.click/sitemap.xml
+Sitemap: https://linkado.click/sitemap.xml

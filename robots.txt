@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.linkado.click.app/sitemap.xml
+Sitemap: https://www.linkado.click/sitemap.xml

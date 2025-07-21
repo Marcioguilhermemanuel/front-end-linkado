@@ -1,54 +1,64 @@
-# Forçar HTTPS e redirecionamento permanente
+# Forçar HTTPS (obrigatório para SEO)
 http://linkado.click/*  https://linkado.click/:splat  301!
 
-# Regras principais com trailing slash opcional e cache
-/mdc_gang              /mdc_gang/index.html          200
-/mdc_gang/             /mdc_gang/index.html          200
-/mdc_gang/*            Cache-Control: public, max-age=86400
+# Canonicalização:
+# - Sempre usar SEM trailing slash (/mdc_gang)
+# - Redirecionar versões COM trailing slash para canonical (301)
+/mdc_gang               /mdc_gang/index.html          200
+/mdc_gang/              /mdc_gang                     301
+/mdc_gang/*             Cache-Control: public, max-age=86400
+
+# Repetir padrão para todas as páginas:
+/cudiodia               /cudiodia/index.html          200
+/cudiodia/              /cudiodia                     301
+/cudiodia/*             Cache-Control: public, max-age=86400
+
+/cold_studio            /cold_studio/index.html       200
+/cold_studio/           /cold_studio                  301
+/cold_studio/*          Cache-Control: public, max-age=86400
 
 /cudiodia              /cudiodia/index.html          200
-/cudiodia/             /cudiodia/index.html          200
+/cudiodia/             /cudiodia/index.html          301
 /cudiodia/*            Cache-Control: public, max-age=86400
 
-/cold_studio           /cold_studio/index.html       200
-/cold_studio/          /cold_studio/index.html       200
-/cold_studio/*         Cache-Control: public, max-age=86400
-
 /jurema-quiosa         /jurema-quiosa/index.html     200
-/jurema-quiosa/        /jurema-quiosa/index.html     200
+/jurema-quiosa/        /jurema-quiosa/index.html     301
 /jurema-quiosa/*       Cache-Control: public, max-age=86400
 
 /clinica-fontviva      /clinica-fontviva/index.html  200
-/clinica-fontviva/     /clinica-fontviva/index.html  200
+/clinica-fontviva/     /clinica-fontviva/index.html  301
 /clinica-fontviva/*    Cache-Control: public, max-age=86400
 
 /franco-francisco      /franco-francisco/index.html  200
-/franco-francisco/     /franco-francisco/index.html  200
+/franco-francisco/     /franco-francisco/index.html  301
 /franco-francisco/*    Cache-Control: public, max-age=86400
 
 /destino-sortudo       /destino-sortudo/index.html   200
-/destino-sortudo/      /destino-sortudo/index.html   200
+/destino-sortudo/      /destino-sortudo/index.html   301
 /destino-sortudo/*     Cache-Control: public, max-age=86400
 
 /piedade-amorim        /piedade-amorim/index.html    200
-/piedade-amorim/       /piedade-amorim/index.html    200
+/piedade-amorim/       /piedade-amorim/index.html    301
 /piedade-amorim/*      Cache-Control: public, max-age=86400
 
 /mano_angola           /mano_angola/index.html       200
-/mano_angola/          /mano_angola/index.html       200
+/mano_angola/          /mano_angola/index.html       301
 /mano_angola/*         Cache-Control: public, max-age=86400
 
 /nadira-andrane        /nadira-andrane/index.html    200
-/nadira-andrane/       /nadira-andrane/index.html    200
+/nadira-andrane/       /nadira-andrane/index.html    301
 /nadira-andrane/*      Cache-Control: public, max-age=86400
 
 /prosario             /prosario/index.html    200
-/prosario/            /prosario/index.html    200
+/prosario/            /prosario/index.html    301
 /prosario/*           Cache-Control: public, max-age=86400
 
 /wizard                /wizard/index.html            200
-/wizard/               /wizard/index.html            200
+/wizard/               /wizard/index.html            301
 /wizard/*              Cache-Control: public, max-age=86400
 
-# Página 404 personalizada para rotas não encontradas
-/*                     /404.html                    404
+# Página raiz (essential!)
+/                       /index.html                   200
+
+# 404 personalizado (apenas para caminhos não existentes)
+/*                      /404.html                    404

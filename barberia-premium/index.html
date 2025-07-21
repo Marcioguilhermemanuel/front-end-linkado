@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Premium | Corte & Estilo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="assets/image/five.png" type="image/x-icon">
+    <link rel="canonical" href="https://linkado.click/barberia-premium" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'barber-gold': '#D4AF37',
+                        'barber-burgundy': '#800020',
+                        'barber-charcoal': '#333333',
+                        'barber-leather': '#3C2F2F',
+                        'barber-wood': '#5D4037'
+                    }
+                }
+            }
+        }
+    </script>
+    
+</head>
+<body class="relative">
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen flex flex-col items-center justify-center px-4 py-16 relative">
+        <div class="text-center relative z-10 max-w-4xl">
+            <div class="flex justify-center mb-6">
+                <div class="barber-icon rounded-full p-4">
+                    <div class="flex items-center justify-center">
+                        <div class="barber-pole"></div>
+                        <div class="ml-6">
+                            <i class="fas fa-cut text-5xl text-barber-gold"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">
+                BARBEARIA <span class="text-barber-gold">PREMIUM</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto text-gray-300">
+                Onde tradição encontra estilo. Cortes de cabelo e barba com excelência, em um ambiente exclusivo.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <div class="bg-barber-gold px-4 py-2 rounded-full">
+                    <p class="text-barber-charcoal font-bold">Seg - Sex: 9h - 20h</p>
+                </div>
+                <div class="bg-barber-gold px-4 py-2 rounded-full">
+                    <p class="text-barber-charcoal font-bold">Sáb: 9h - 18h</p>
+                </div>
+            </div>
+            
+            <div class="whatsapp-btn bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-full text-xl transition-all duration-300 inline-block mb-12">
+                <a href="https://wa.me/5511946043956" target="_blank" class="flex items-center justify-center gap-3">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    AGENDAR CORTE
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center z-10">
+            <a href="#services" class="floating-btn animate-bounce bg-barber-gold text-barber-charcoal p-3 rounded-full">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+    
+    <!-- Serviços e Preços -->
+    <section id="services" class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    NOSSOS <span class="text-barber-gold">SERVIÇOS</span>
+                </h2>
+                <div class="w-32 h-1 bg-barber-gold mx-auto mb-6"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Serviços premium com atenção aos detalhes e acabamento impecável. Utilizamos os melhores produtos do mercado.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Corte Social -->
+                <div class="service-card rounded-xl p-6 relative overflow-hidden">
+                    <div class="price-tag">R$ 65</div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-barber-gold flex items-center justify-center mr-4">
+                            <i class="fas fa-cut text-xl text-barber-charcoal"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">CORTE SOCIAL</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Corte de cabelo moderno e personalizado com acabamento perfeito, utilizando técnicas profissionais.
+                    </p>
+                    <ul class="mb-6 text-gray-400">
+                        <li class="flex items-center mb-2">
+                            <i class="fas fa-check-circle text-barber-gold mr-2"></i>
+                            Lavagem e hidratação
+                        </li>
+                        <li class="flex items-center mb-2">
+                            <i class="fas fa-check-circle text-barber-gold mr-2"></i>
+                            Corte com tesoura e máquina
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-barber-gold mr-2"></i>
+                            Estilização final
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5511946043956" class="bg-barber-gold text-barber-charcoal font-bold py-2 px-4 rounded-full inline-block hover:bg-opacity-90 transition">
+                        Agendar agora
+                    </a>
+                </div>
+                
+                <!-- Barba Completa -->
+                <div class="service-card rounded-xl p-6 relative overflow-hidden">
+                    <div class="price-tag">R$ 50</div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-barber-gold flex items-center justify-center mr-4">
+                            <i class="fas fa-air-freshener text-xl text-barber-charcoal"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">BARBA COMPLETA</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Modelagem e acabamento de barba com toalha quente, óleos essenciais e finalização premium.
+                    </p>
+                    <ul class="mb-6 text-gray-400">
+                        <li class="flex items-center mb-2">
+                            <i class="fas fa-check-circle text-barber-gold mr-2"></i>
+                            Toalha quente relaxante
+                        </li>
+                        <li class="flex items-center mb-2">
+                            <i class="fas fa-check-circle text-barber-gold mr-2"></i>
+                            Modelagem e acabamento
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-barber-gold mr-2"></i>
+                            Hidratação e finalização
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5511946043956" class="bg-barber-gold text-barber-charcoal font-bold py-2 px-4 rounded-full inline-block hover:bg-opacity-90 transition">
+                        Agendar agora
+                    </a>
+                </div>
+                
+                <!-- Corte + Barba -->
+                <div class="service-card rounded-xl p-6 relative overflow-hidden">
+                    <div class="price-tag">R$ 100</div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-barber-gold flex items-center justify-center mr-4">
+                            <i class="fas fa-crown text-xl text-barber-charcoal"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">CORTE & BARBA</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Pacote completo com corte de cabelo premium e barba completa. Experiência de barbeiro premium.
+                    </p>
+                    <ul class="mb-6 text-gray-400">
+                        <li class="flex items-center mb-2">
+                            <i class="fas fa-check-circle text-barber-gold mr-2"></i>
+                            Corte personalizado
+                        </li>
+                        <li class="flex items-center mb-2">
+                            <i class="fas fa-check-circle text-barber-gold mr-2"></i>
+                            Barba completa
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-barber-gold mr-2"></i>
+                            Massagem relaxante
+                        </li>
+                    </ul>
+                    <a href="https://wa.me/5511946043956" class="bg-barber-gold text-barber-charcoal font-bold py-2 px-4 rounded-full inline-block hover:bg-opacity-90 transition">
+                        Agendar agora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Galeria de Trabalhos -->
+    <section class="py-16 px-4 bg-barber-charcoal">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    GALERIA DE <span class="text-barber-gold">TRABALHOS</span>
+                </h2>
+                <div class="w-32 h-1 bg-barber-gold mx-auto mb-6"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Confira alguns de nossos trabalhos recentes. Cada corte é uma obra de arte.
+                </p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Corte moderno" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Barba bem feita" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1599351431408-433ef72fe40b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Estilo clássico" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1595475884562-073c30d45670?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Detalhe de barba" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1532710093739-9470acff878f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Corte degradê" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Estilo moderno" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Depoimentos -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    O QUE NOSSOS <span class="text-barber-gold">CLIENTES DIZEM</span>
+                </h2>
+                <div class="w-32 h-1 bg-barber-gold mx-auto mb-6"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-700 mr-4 flex items-center justify-center">
+                            <span class="text-xl font-bold">M</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Marcos Silva</h4>
+                            <div class="flex text-barber-gold">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 italic">
+                        "Melhor barbearia da região! Corte impecável e atendimento de primeira. Ambiente premium que faz toda diferença."
+                    </p>
+                </div>
+                
+                <div class="testimonial-card rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-700 mr-4 flex items-center justify-center">
+                            <span class="text-xl font-bold">R</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ricardo Oliveira</h4>
+                            <div class="flex text-barber-gold">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 italic">
+                        "Sempre fui muito bem atendido. Os profissionais são qualificados e entendem exatamente o que o cliente deseja."
+                    </p>
+                </div>
+                
+                <div class="testimonial-card rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-700 mr-4 flex items-center justify-center">
+                            <span class="text-xl font-bold">L</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Leonardo Costa</h4>
+                            <div class="flex text-barber-gold">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 italic">
+                        "Ambiente sofisticado e serviços de alta qualidade. Vale cada centavo! Já indiquei para todos os meus amigos."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Links de Contato -->
+    <section class="py-16 px-4 bg-barber-charcoal">
+        <div class="max-w-2xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    NOSSA <span class="text-barber-gold">PRESENÇA</span>
+                </h2>
+                <div class="w-32 h-1 bg-barber-gold mx-auto mb-6"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Siga-nos nas redes sociais e fique por dentro de promoções, novidades e dicas de estilo.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <a href="https://wa.me/5511946043956" target="_blank" class="social-btn bg-green-600 hover:bg-green-700 rounded-xl p-6 text-center flex flex-col items-center">
+                    <i class="fab fa-whatsapp text-5xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">WhatsApp</h3>
+                    <p>Agende seu horário</p>
+                </a>
+                
+                <a href="https://instagram.com" target="_blank" class="social-btn bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-xl p-6 text-center flex flex-col items-center">
+                    <i class="fab fa-instagram text-5xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Instagram</h3>
+                    <p>Fotos e novidades</p>
+                </a>
+                
+                <a href="https://tiktok.com" target="_blank" class="social-btn bg-black hover:bg-gray-900 rounded-xl p-6 text-center flex flex-col items-center">
+                    <i class="fab fa-tiktok text-5xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">TikTok</h3>
+                    <p>Vídeos e dicas</p>
+                </a>
+                
+                <a href="https://facebook.com" target="_blank" class="social-btn bg-blue-600 hover:bg-blue-700 rounded-xl p-6 text-center flex flex-col items-center">
+                    <i class="fab fa-facebook text-5xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Facebook</h3>
+                    <p>Comunidade</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="w-full max-w-md mx-auto py-6 px-4 text-center">
+  <div class="flex flex-col items-center">
+    <div class="flex items-center justify-center mb-3">
+      <a 
+        href="https://linkado.click" 
+        target="_blank" 
+        class="inline-flex items-center gap-2 font-medium text-indigo-700 hover:text-indigo-900 transition-all group"
+      >
+        <div class="bg-indigo-100 group-hover:bg-indigo-200 p-2 rounded-lg transition-colors">
+          <img 
+            src="/assets/image/FIVE.png" 
+            alt="Logo Linkado" 
+            class="w-6 h-6 object-contain"
+          />
+        </div>
+        <span class="font-bold text-lg tracking-tight">linkado.click</span>
+      </a>
+    </div>
+
+    <p class="text-gray-600 mb-3 text-sm italic max-w-xs">
+      O link que conecta, converte e cresce.
+    </p>
+
+    <div class="text-sm text-gray-500">
+      © <span id="current-year"></span> Todos os direitos reservados
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Atualiza o ano automaticamente
+  document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
+    
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

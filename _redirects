@@ -22,6 +22,12 @@ http://linkado.click/* https://linkado.click/:splat 301!
 /mdc_gang/              /mdc_gang                     301
 /mdc_gang/*             Cache-Control: public, max-age=86400
 
+
+# Barberia Premium
+/barberia-premium               /barberia-premium/index.html          200
+/barberia-premium/              /barberia-premium                     301
+/mdc_gang/*             Cache-Control: public, max-age=86400
+
 # Cudio Dia
 /cudiodia               /cudiodia/index.html          200
 /cudiodia/              /cudiodia                     301
@@ -71,6 +77,11 @@ http://linkado.click/* https://linkado.click/:splat 301!
 /prosario               /prosario/index.html          200
 /prosario/              /prosario                     301
 /prosario/*             Cache-Control: public, max-age=86400
+
+# sabor arte
+/sabor-arte               /sabor-arte/index.html          200
+/sabor-arte/              /sabor-arte                     301
+/sabor-arte/*             Cache-Control: public, max-age=86400
 
 # Wizard
 /wizard                 /wizard/index.html            200

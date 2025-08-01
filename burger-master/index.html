@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burguer Master - Hamburgueria Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/image/five.png" type="image/x-icon">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#FF8C00',
+                        'secondary': '#E63946',
+                        'dark': '#1D1F21',
+                        'light': '#F8F9FA',
+                        'accent': '#FCA311'
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+</head>
+<body class="font-sans text-light">
+    <!-- Header -->
+    <header class="py-6 px-4 md:px-8 max-w-4xl mx-auto">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="bg-primary p-2 rounded-lg mr-3">
+                    <i class="fas fa-hamburger text-2xl text-dark"></i>
+                </div>
+                <h1 class="text-2xl font-bold">BURGER <span class="text-primary">MASTER</span></h1>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="hidden md:block">
+                    <a href="#catalogo" class="text-light hover:text-primary transition">Cardápio</a>
+                    <a href="#contato" class="ml-4 text-light hover:text-primary transition">Contato</a>
+                </div>
+                <button class="bg-primary text-dark font-bold py-2 px-4 rounded-full hover:bg-accent transition">
+                    <i class="fas fa-shopping-cart mr-2"></i>Pedir Agora
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-12 px-4 max-w-4xl mx-auto text-center">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-10 md:mb-0 slide-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">OS MELHORES <span class="text-primary">HAMBÚRGUERES</span> DA CIDADE</h2>
+                <p class="text-gray-300 mb-6 text-lg">Ingredientes premium, combinações exclusivas e sabor inigualável. Experimente a excelência em cada mordida!</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://wa.me/244946043956" target="_blank" class="btn-primary py-3 px-8 rounded-full font-bold text-lg inline-block pulse">
+                        <i class="fab fa-whatsapp mr-2"></i>FAZER PEDIDO
+                    </a>
+                    <a href="#catalogo" class="bg-dark border border-primary py-3 px-8 rounded-full font-bold text-lg inline-block hover:bg-primary/10 transition">
+                        VER CARDÁPIO
+                    </a>
+                </div>
+                
+                <div class="mt-8 flex justify-center space-x-6">
+                    <a href="#" class="social-icon bg-dark w-12 h-12 rounded-full flex items-center justify-center hover:bg-primary transition">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="social-icon bg-dark w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="social-icon bg-dark w-12 h-12 rounded-full flex items-center justify-center hover:bg-black transition">
+                        <i class="fab fa-tiktok text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 relative floating-burger">
+                <div class="relative">
+                    <div class="absolute -top-6 -right-6 w-24 h-24 bg-primary rounded-full opacity-20 animate-ping"></div>
+                    <div class="absolute -bottom-6 -left-6 w-20 h-20 bg-secondary rounded-full opacity-20 animate-ping"></div>
+                    <div class="relative">
+                        <div class="w-64 h-64 mx-auto bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                            <div class="w-56 h-56 bg-dark rounded-full flex items-center justify-center">
+                                <div class="relative">
+                                    <div class="absolute -inset-4 bg-primary/30 rounded-full animate-pulse"></div>
+                                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500" alt="Hambúrguer Premium" class="w-40 h-40 object-cover rounded-xl">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="catalogo" class="py-12 px-4 max-w-4xl mx-auto">
+        <div class="text-center mb-12 slide-in">
+            <h2 class="text-3xl font-bold mb-2">NOSSO <span class="text-primary">CARDÁPIO</span></h2>
+            <p class="text-gray-400">Temos opções para todos os gostos. Preços em Kz.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Item 1 -->
+            <div class="card bg-dark/50 backdrop-blur-sm rounded-xl p-6 slide-in delay-1">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">Master Burger</h3>
+                        <p class="text-gray-400 text-sm mb-3">Carne 200g, queijo cheddar, bacon, alface, tomate</p>
+                    </div>
+                    <div class="bg-primary text-dark font-bold py-1 px-3 rounded-full">3.500 Kz</div>
+                </div>
+                <div class="h-40 bg-gray-700 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                    <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+                </div>
+                <button class="btn-primary w-full py-3 rounded-lg font-bold">
+                    ADICIONAR AO CARRINHO
+                </button>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="card bg-dark/50 backdrop-blur-sm rounded-xl p-6 slide-in delay-2">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">Cheese Bacon</h3>
+                        <p class="text-gray-400 text-sm mb-3">Carne 180g, queijo prato, bacon crocante</p>
+                    </div>
+                    <div class="bg-primary text-dark font-bold py-1 px-3 rounded-full">3.200 Kz</div>
+                </div>
+                <div class="h-40 bg-gray-700 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                    <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+                </div>
+                <button class="btn-primary w-full py-3 rounded-lg font-bold">
+                    ADICIONAR AO CARRINHO
+                </button>
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="card bg-dark/50 backdrop-blur-sm rounded-xl p-6 slide-in delay-3">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">Chicken Supreme</h3>
+                        <p class="text-gray-400 text-sm mb-3">Filé de frango, queijo, alface, maionese especial</p>
+                    </div>
+                    <div class="bg-primary text-dark font-bold py-1 px-3 rounded-full">2.900 Kz</div>
+                </div>
+                <div class="h-40 bg-gray-700 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                    <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+                </div>
+                <button class="btn-primary w-full py-3 rounded-lg font-bold">
+                    ADICIONAR AO CARRINHO
+                </button>
+            </div>
+            
+            <!-- Item 4 -->
+            <div class="card bg-dark/50 backdrop-blur-sm rounded-xl p-6 slide-in delay-4">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">Vegetariano</h3>
+                        <p class="text-gray-400 text-sm mb-3">Hambúrguer de grão de bico, legumes grelhados</p>
+                    </div>
+                    <div class="bg-primary text-dark font-bold py-1 px-3 rounded-full">3.100 Kz</div>
+                </div>
+                <div class="h-40 bg-gray-700 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                    <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+                </div>
+                <button class="btn-primary w-full py-3 rounded-lg font-bold">
+                    ADICIONAR AO CARRINHO
+                </button>
+            </div>
+            
+            <!-- Item 5 -->
+            <div class="card bg-dark/50 backdrop-blur-sm rounded-xl p-6 slide-in delay-5">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">Double Master</h3>
+                        <p class="text-gray-400 text-sm mb-3">Duas carnes 200g, duplo queijo, duplo bacon</p>
+                    </div>
+                    <div class="bg-primary text-dark font-bold py-1 px-3 rounded-full">4.800 Kz</div>
+                </div>
+                <div class="h-40 bg-gray-700 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                    <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+                </div>
+                <button class="btn-primary w-full py-3 rounded-lg font-bold">
+                    ADICIONAR AO CARRINHO
+                </button>
+            </div>
+            
+            <!-- Item 6 -->
+            <div class="card bg-dark/50 backdrop-blur-sm rounded-xl p-6 slide-in delay-6">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">Barbecue Ranch</h3>
+                        <p class="text-gray-400 text-sm mb-3">Carne 200g, molho barbecue, ranch, cebola caramelizada</p>
+                    </div>
+                    <div class="bg-primary text-dark font-bold py-1 px-3 rounded-full">3.600 Kz</div>
+                </div>
+                <div class="h-40 bg-gray-700 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                    <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+                </div>
+                <button class="btn-primary w-full py-3 rounded-lg font-bold">
+                    ADICIONAR AO CARRINHO
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Section -->
+    <section class="py-12 px-4 max-w-4xl mx-auto">
+        <div class="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
+            <div class="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full"></div>
+            <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-white/10 rounded-full"></div>
+            
+            <div class="relative z-10">
+                <h3 class="text-3xl font-bold mb-4">PROMOÇÃO ESPECIAL!</h3>
+                <p class="text-xl mb-6">Combo Master Burger + Batatas + Refrigerante por apenas <span class="font-bold">5.500 Kz</span></p>
+                <a href="https://wa.me/244946043956" class="bg-dark text-light font-bold py-3 px-8 rounded-full inline-block hover:bg-black transition">
+                    <i class="fab fa-whatsapp mr-2"></i>PEDIR AGORA
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-12 px-4 max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-2">ENTRE EM <span class="text-primary">CONTATO</span></h2>
+            <p class="text-gray-400">Estamos sempre prontos para atendê-lo</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="card bg-dark/50 backdrop-blur-sm rounded-xl p-6 text-center">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-phone-alt text-primary text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Telefone</h3>
+                <p class="text-gray-400 mb-4">Ligue para fazer seu pedido</p>
+                <a href="tel:+244946043956" class="text-primary font-bold text-lg">+244 946 043 956</a>
+            </div>
+            
+            <div class="card bg-dark/50 backdrop-blur-sm rounded-xl p-6 text-center">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fab fa-whatsapp text-primary text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">WhatsApp</h3>
+                <p class="text-gray-400 mb-4">Faça seu pedido pelo WhatsApp</p>
+                <a href="https://wa.me/244946043956" target="_blank" class="btn-primary py-2 px-6 rounded-full font-bold inline-block">
+                    ABRIR CHAT
+                </a>
+            </div>
+            
+            <div class="card bg-dark/50 backdrop-blur-sm rounded-xl p-6 text-center">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-map-marker-alt text-primary text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Localização</h3>
+                <p class="text-gray-400 mb-4">Venha nos visitar</p>
+                <a href="#" class="text-primary font-bold text-lg">Av. dos Burgers, 123</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-4xl mx-auto py-8 px-4 text-center">
+        <div class="flex flex-col items-center">
+            <div class="flex items-center justify-center mb-3">
+                <a href="https://linkado.click" target="_blank"
+                    class="inline-flex items-center gap-2 font-medium text-primary hover:text-accent transition-all group">
+                    <div class="bg-primary/10 group-hover:bg-primary/20 p-2 rounded-lg transition-colors">
+                        <i class="fas fa-link text-xl text-primary"></i>
+                    </div>
+                    <span class="font-bold text-lg tracking-tight">linkado.click</span>
+                </a>
+            </div>
+
+            <p class="text-gray-500 mb-3 text-sm italic max-w-xs">
+                O link que conecta, converte e cresce.
+            </p>
+
+            <div class="text-sm text-gray-500">
+                © <span id="current-year"></span> Burger Master - Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

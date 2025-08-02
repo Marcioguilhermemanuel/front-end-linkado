@@ -1,18 +1,19 @@
-
 // Atualiza o ano automaticamente
-document.getElementById("current-year").textContent = new Date().getFullYear();
-
-// Adiciona efeito de clique nos cards
-document.querySelectorAll('.link-card').forEach(card => {
-    card.addEventListener('mousedown', () => {
-        card.style.transform = 'translateY(0)';
-    });
-
-    card.addEventListener('mouseup', () => {
-        card.style.transform = 'translateY(-5px)';
-    });
-
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0)';
-    });
-});
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+        
+        // Animação de destaque para o WhatsApp
+        const highlight = document.querySelector('.pulse');
+        setInterval(() => {
+            highlight.classList.toggle('pulse');
+            setTimeout(() => highlight.classList.toggle('pulse'), 100);
+        }, 5000);
+        
+        // Efeito de carregamento para o logo
+        const logo = document.getElementById('logo-placeholder');
+        setTimeout(() => {
+            logo.style.opacity = '0.7';
+            setTimeout(() => {
+                logo.style.transition = 'opacity 0.5s ease';
+                logo.style.opacity = '1';
+            }, 300);
+        }, 1000);

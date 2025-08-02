@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Junju | Criadora de Conteúdos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="shortcut icon" href="assets/image/five.png" type="image/x-icon"><link rel="canonical" href="https://linkado.click/ana_junju" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandPrimary: '#013b5d',
+                        brandSecondary: '#fff5ff',
+                        brandDark: '#01273d',
+                        brandLight: '#e6f7ff'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif']
+                    },
+                    boxShadow: {
+                        '3d': '0 20px 50px -10px rgba(1, 59, 93, 0.3)',
+                        'inner-light': 'inset 0 2px 4px 0 rgba(255, 255, 255, 0.3)'
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body class="font-poppins text-gray-800">
+    <!-- Efeito de partículas -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Padrão de fundo -->
+    <div class="hero-pattern"></div>
+
+    <!-- Watermark -->
+    <div class="watermark">AJ</div>
+
+    <div class="min-h-screen flex flex-col items-center py-12 px-4">
+        <!-- Container Principal -->
+        <div class="w-full max-w-2xl z-10">
+            <!-- Cabeçalho -->
+            <header class="text-center mb-12 relative">
+                <!-- Moldura animada e perfil -->
+                <div class="profile-container floating">
+                    <div class="profile-frame"></div>
+                    <div class="profile-img bg-gray-200 border-2 border-dashed rounded-full overflow-hidden">
+                        <img src="assets/image/logo.jpg" alt="Ana Junju"
+                            class="w-full h-full object-cover rounded-full">
+                    </div>
+                </div>
+
+                <!-- Nome e Descrição -->
+                <h1 class="text-4xl md:text-5xl font-bold text-brandPrimary mb-3 tracking-tight">Ana Junju</h1>
+                <p class="text-xl md:text-2xl font-semibold text-gray-600 mb-4">Criadora de Conteúdos</p>
+
+                <!-- Slogan -->
+                <div class="mb-6">
+                    <p class="text-brandPrimary font-bold text-lg md:text-xl italic tagline">Só Deus no Comando! 🙏❤️
+                    </p>
+                </div>
+
+                <!-- Bio -->
+                <div class="glass-card p-6 mb-8 mx-auto max-w-lg">
+                    <p class="bio-text text-center text-gray-700 font-medium leading-relaxed">
+                        Conteúdos inspiradores com propósito. Conecte-se comigo através das minhas redes sociais e vamos
+                        juntos nessa jornada!
+                    </p>
+                </div>
+            </header>
+
+            <!-- Mini Estatísticas -->
+            <div class="social-stats mb-8">
+                <div class="stat-card">
+                    <div class="text-brandPrimary text-3xl font-bold mb-1">173K+</div>
+                    <div class="text-sm text-gray-600">Seguidores</div>
+                </div>
+                <div class="stat-card">
+                    <div class="text-brandPrimary text-3xl font-bold mb-1">2M+</div>
+                    <div class="text-sm text-gray-600">Visualizações</div>
+                </div>
+                <div class="stat-card">
+                    <div class="text-brandPrimary text-3xl font-bold mb-1">500+</div>
+                    <div class="text-sm text-gray-600">Parcerias</div>
+                </div>
+                <div class="stat-card">
+                    <div class="text-brandPrimary text-3xl font-bold mb-1">98%</div>
+                    <div class="text-sm text-gray-600">Engajamento</div>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="space-y-6 mb-16">
+                <!-- WhatsApp (Destaque) -->
+                <a href="https://wa.me/946043956" target="_blank"
+                    class="block glass-card transform transition-all hover:shadow-3d">
+                    <div class="whatsapp-btn text-white p-6 rounded-2xl flex items-center justify-between">
+                        <div class="flex items-center space-x-5">
+                            <div class="bg-white bg-opacity-30 p-4 rounded-xl">
+                                <i class="fab fa-whatsapp text-3xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-2xl">Publicidade e Parcerias</h3>
+                                <p class="opacity-90">Entre em contato pelo WhatsApp</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-arrow-right text-2xl opacity-80"></i>
+                    </div>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/ana.junju?igsh=enVmbmo1bTRncTdh" target="_blank"
+                    class="block glass-card transform transition-all hover:shadow-3d">
+                    <div class="instagram-btn social-btn text-white p-6 rounded-2xl flex items-center justify-between">
+                        <div class="flex items-center space-x-5">
+                            <div class="bg-white bg-opacity-30 p-4 rounded-xl">
+                                <i class="fab fa-instagram text-3xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-2xl">Instagram</h3>
+                                <p class="opacity-90">Siga-me no Instagram</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-arrow-right text-2xl opacity-80"></i>
+                    </div>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/profile.php?id=61554283467022" target="_blank"
+                    class="block glass-card transform transition-all hover:shadow-3d">
+                    <div class="facebook-btn social-btn text-white p-6 rounded-2xl flex items-center justify-between">
+                        <div class="flex items-center space-x-5">
+                            <div class="bg-white bg-opacity-30 p-4 rounded-xl">
+                                <i class="fab fa-facebook-f text-3xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-2xl">Facebook</h3>
+                                <p class="opacity-90">Curta nossa página</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-arrow-right text-2xl opacity-80"></i>
+                    </div>
+                </a>
+
+                <!-- TikTok -->
+                <a href="https://www.tiktok.com/@annajunju?_t=ZM-8yXYU1D6HBN&_r=1" target="_blank"
+                    class="block glass-card transform transition-all hover:shadow-3d">
+                    <div class="tiktok-btn social-btn text-white p-6 rounded-2xl flex items-center justify-between">
+                        <div class="flex items-center space-x-5">
+                            <div class="bg-white bg-opacity-30 p-4 rounded-xl">
+                                <i class="fab fa-tiktok text-3xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-2xl">TikTok</h3>
+                                <p class="opacity-90">Assista nossos vídeos</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-arrow-right text-2xl opacity-80"></i>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Footer (não alterado) -->
+            <footer class="w-full max-w-md mx-auto py-6 px-4 text-center">
+                <div class="flex flex-col items-center">
+                    <div class="flex items-center justify-center mb-3">
+                        <a href="https://linkado.click" target="_blank"
+                            class="inline-flex items-center gap-2 font-medium text-indigo-700 hover:text-indigo-900 transition-all group">
+                            <div class="bg-indigo-100 group-hover:bg-indigo-200 p-2 rounded-lg transition-colors">
+                                <img src="/assets/image/FIVE.png" alt="Logo Linkado" class="w-6 h-6 object-contain" />
+                            </div>
+                            <span class="font-bold text-lg tracking-tight">linkado.click</span>
+                        </a>
+                    </div>
+
+                    <p class="text-gray-600 mb-3 text-sm italic max-w-xs">
+                        O link que conecta, converte e cresce.
+                    </p>
+
+                    <div class="text-sm text-gray-500">
+                        © <span id="current-year"></span> Todos os direitos reservados
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

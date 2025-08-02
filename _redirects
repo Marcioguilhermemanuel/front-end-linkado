@@ -17,6 +17,11 @@ http://linkado.click/* https://linkado.click/:splat 301!
 # REGRAS PARA CADA PERFIL (CANONICAL SEM TRAILING SLASH)
 # =========================================================
 
+# Ana Junju
+/ana_junju               /ana_junju/index.html          200
+/ana_junju/              /ana_junju                     301
+/ana_junju/*             Cache-Control: public, max-age=86400
+
 # MDC Gang
 /mdc_gang               /mdc_gang/index.html          200
 /mdc_gang/              /mdc_gang                     301
@@ -37,6 +42,11 @@ http://linkado.click/* https://linkado.click/:splat 301!
 /cold_studio            /cold_studio/index.html       200
 /cold_studio/           /cold_studio                  301
 /cold_studio/*          Cache-Control: public, max-age=86400
+
+# Eu Meduzu
+/eu_meduzu            /eu_meduzu/index.html       200
+/eu_meduzu/           /eu_meduzu                  301
+/eu_meduzu/*          Cache-Control: public, max-age=86400
 
 # Jurema Quiosa
 /jurema-quiosa          /jurema-quiosa/index.html     200
@@ -72,6 +82,11 @@ http://linkado.click/* https://linkado.click/:splat 301!
 /nadira-andrane         /nadira-andrane/index.html    200
 /nadira-andrane/        /nadira-andrane               301
 /nadira-andrane/*       Cache-Control: public, max-age=86400
+
+# Nao Ta Bom
+/naotabom         /naotabom/index.html    200
+/naotabom/        /naotabom               301
+/naotabom/*       Cache-Control: public, max-age=86400
 
 # Prosario
 /prosario               /prosario/index.html          200

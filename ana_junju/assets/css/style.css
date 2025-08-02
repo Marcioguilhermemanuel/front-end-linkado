@@ -1,0 +1,286 @@
+:root {
+  --brand-primary: #013b5d;
+  --brand-secondary: #fff5ff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, var(--brand-secondary) 0%, #e6f7ff 100%);
+  min-height: 100vh;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+.hero-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+      circle at 10% 20%,
+      rgba(1, 59, 93, 0.05) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(255, 245, 255, 0.1) 0%,
+      transparent 20%
+    );
+  z-index: -1;
+}
+
+.profile-container {
+  position: relative;
+  margin: 0 auto 2rem;
+  width: 160px;
+  height: 160px;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  border: 5px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 20px rgba(1, 59, 93, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(1, 59, 93, 0.3);
+}
+
+.profile-frame {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--brand-primary),
+    var(--brand-secondary)
+  );
+  z-index: 1;
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 30px rgba(1, 59, 93, 0.15);
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(1, 59, 93, 0.25);
+}
+
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  animation: pulse 2s infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.whatsapp-btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(30deg);
+  transition: all 0.6s ease;
+}
+
+.whatsapp-btn:hover::after {
+  transform: rotate(30deg) translate(10%, 10%);
+}
+
+.instagram-btn {
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.facebook-btn {
+  background: linear-gradient(135deg, #1877f2 0%, #0d5cb6 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.tiktok-btn {
+  background: linear-gradient(135deg, #000000 0%, #2c2c2c 50%, #69c9d0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(30deg);
+  transition: all 0.6s ease;
+}
+
+.social-btn:hover::after {
+  transform: rotate(30deg) translate(10%, 10%);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.tagline {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.tagline::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--brand-primary),
+    var(--brand-secondary)
+  );
+  border-radius: 3px;
+}
+
+.watermark {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.03;
+  font-size: 20rem;
+  font-weight: 900;
+  color: var(--brand-primary);
+  z-index: -1;
+  transform: rotate(-25deg);
+  user-select: none;
+  line-height: 1;
+}
+
+.bio-text {
+  position: relative;
+  padding: 0 20px;
+}
+
+.bio-text::before,
+.bio-text::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  font-size: 3rem;
+  color: var(--brand-primary);
+  opacity: 0.2;
+}
+
+.bio-text::before {
+  left: 0;
+}
+
+.bio-text::after {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.floating {
+  animation: floating 6s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(1, 59, 93, 0.1);
+  animation: float linear infinite;
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-100vh) rotate(360deg);
+  }
+}
+
+.social-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  padding: 15px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.85);
+}

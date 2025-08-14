@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolutiva Core - Agência de Marketing Digital</title>
+   <link rel="shortcut icon" href="assets/image/five.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="canonical" href="https://linkado.click/evolutiva_core" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1a56db',
+                        secondary: '#0e2b5c',
+                        accent: '#ff6b35',
+                        dark: '#0f172a',
+                        light: '#f8fafc'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+</head>
+<body class="text-light font-sans flex flex-col min-h-screen">
+    <div class="container mx-auto px-4 py-8 flex-grow">
+        <!-- Cabeçalho com animação de entrada -->
+        <header class="text-center fade-in">
+            <div class="flex justify-center mb-4">
+                <div class="bg-gradient-to-r from-primary to-accent p-1 rounded-full">
+                    <div class="bg-dark rounded-full p-4">
+                        <i class="fas fa-rocket text-4xl text-accent"></i>
+                    </div>
+                </div>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+                Evolutiva Core
+            </h1>
+            <p class="mt-2 text-lg text-gray-300 max-w-2xl mx-auto">
+                Transformamos sua presença digital com estratégias inovadoras que impulsionam resultados
+            </p>
+        </header>
+
+        <!-- Links de contato com destaque para WhatsApp -->
+        <section class="max-w-2xl mx-auto mt-12 space-y-4 fade-in">
+            <h2 class="text-2xl font-bold text-center mb-6">Entre em contato</h2>
+            
+            <a href="https://wa.me/244946043956" 
+               class="block card rounded-xl p-5 text-center pulse btn-primary hover:shadow-xl">
+                <div class="flex items-center justify-center gap-3">
+                    <i class="fab fa-whatsapp text-2xl text-green-400"></i>
+                    <span class="font-semibold text-lg">WhatsApp Comercial</span>
+                </div>
+                <p class="mt-2 text-gray-300">+244 946 043 956</p>
+            </a>
+        </section>
+
+        <!-- Catálogo com Preçário em Kz -->
+        <section class="mt-16 fade-in">
+            <h2 class="text-2xl font-bold text-center mb-2">Nossos Serviços</h2>
+            <p class="text-center text-gray-300 mb-8">Investimentos que impulsionam seu negócio</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- Plano Básico -->
+                <div class="price-card card rounded-xl p-6 flex flex-col">
+                    <h3 class="text-xl font-bold text-center">Plano Inicial</h3>
+                    <div class="my-4 text-center">
+                        <span class="text-3xl font-bold">350.000 Kz</span>
+                        <span class="text-gray-400">/mês</span>
+                    </div>
+                    <ul class="space-y-2 flex-grow">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Gestão de Redes Sociais
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            5 posts criativos/mês
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Relatório de desempenho
+                        </li>
+                        <li class="flex items-center text-gray-500">
+                            <i class="fas fa-times-circle mr-2"></i>
+                            Campanhas pagas
+                        </li>
+                    </ul>
+                    <button class="btn-primary mt-6 py-3 rounded-lg font-medium">Selecionar</button>
+                </div>
+                
+                <!-- Plano Intermediário (Destacado) -->
+                <div class="price-card card rounded-xl p-6 flex flex-col highlighted">
+                    <h3 class="text-xl font-bold text-center">Plano Profissional</h3>
+                    <div class="my-4 text-center">
+                        <span class="text-3xl font-bold">650.000 Kz</span>
+                        <span class="text-gray-400">/mês</span>
+                    </div>
+                    <ul class="space-y-2 flex-grow">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Gestão Completa de Redes
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            10 posts criativos/mês
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Campanhas Ads (Facebook/Instagram)
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Relatório detalhado + otimizações
+                        </li>
+                    </ul>
+                    <button class="btn-accent mt-6 py-3 rounded-lg font-medium">Selecionar</button>
+                </div>
+                
+                <!-- Plano Premium -->
+                <div class="price-card card rounded-xl p-6 flex flex-col">
+                    <h3 class="text-xl font-bold text-center">Plano Premium</h3>
+                    <div class="my-4 text-center">
+                        <span class="text-3xl font-bold">1.200.000 Kz</span>
+                        <span class="text-gray-400">/mês</span>
+                    </div>
+                    <ul class="space-y-2 flex-grow">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Gestão Completa de Redes
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            15 posts criativos/mês
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Campanhas Ads Multiplataforma
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Estratégia de Conteúdo Personalizada
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            Suporte Prioritário 24/7
+                        </li>
+                    </ul>
+                    <button class="btn-primary mt-6 py-3 rounded-lg font-medium">Selecionar</button>
+                </div>
+            </div>
+            
+            <p class="text-center text-gray-400 mt-6 text-sm">
+                * Preços em Kwanza Angolano (Kz). Planos personalizados disponíveis sob consulta.
+            </p>
+        </section>
+
+        <!-- Redes Sociais -->
+        <section class="max-w-2xl mx-auto mt-16 fade-in">
+            <h2 class="text-2xl font-bold text-center mb-6">Nossas Redes</h2>
+            <p class="text-center text-gray-300 mb-8">Siga-nos para dicas e novidades do marketing digital</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#" class="social-link card rounded-xl p-5 text-center">
+                    <i class="fab fa-tiktok text-3xl text-[#69C9D0]"></i>
+                    <p class="mt-2 font-medium">TikTok</p>
+                </a>
+                <a href="#" class="social-link card rounded-xl p-5 text-center">
+                    <i class="fab fa-facebook text-3xl text-[#1877F2]"></i>
+                    <p class="mt-2 font-medium">Facebook</p>
+                </a>
+                <a href="#" class="social-link card rounded-xl p-5 text-center">
+                    <i class="fab fa-instagram text-3xl text-[#E1306C]"></i>
+                    <p class="mt-2 font-medium">Instagram</p>
+                </a>
+                <a href="#" class="social-link card rounded-xl p-5 text-center">
+                    <i class="fab fa-youtube text-3xl text-[#FF0000]"></i>
+                    <p class="mt-2 font-medium">YouTube</p>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Depoimentos -->
+        <section class="max-w-4xl mx-auto mt-16 fade-in">
+            <h2 class="text-2xl font-bold text-center mb-6">O que nossos clientes dizem</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center">
+                            <span class="text-white font-bold">AS</span>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Ana Silva</h4>
+                            <p class="text-sm text-gray-400">CEO, Moda Elegante</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "A Evolutiva Core transformou nosso Instagram! Em 3 meses, nossas vendas online aumentaram 150%. Profissionais incríveis!"
+                    </p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="card rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center">
+                            <span class="text-white font-bold">PC</span>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-bold">Pedro Costa</h4>
+                            <p class="text-sm text-gray-400">Diretor, Tech Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "Estratégia de marketing digital perfeita para nosso público. ROI impressionante em todas as campanhas. Recomendo fortemente!"
+                    </p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer (conforme especificado) -->
+    <footer class="w-full max-w-md mx-auto py-6 px-4 text-center">
+        <div class="flex flex-col items-center">
+            <div class="flex items-center justify-center mb-3">
+                <a href="https://linkado.click" target="_blank"
+                    class="inline-flex items-center gap-2 font-medium text-indigo-700 hover:text-indigo-900 transition-all group">
+                    <div class="bg-indigo-100 group-hover:bg-indigo-200 p-2 rounded-lg transition-colors">
+                        <img src="/assets/image/FIVE.png" alt="Logo Linkado"
+                            class="w-6 h-6 object-contain" />
+                    </div>
+                    <span class="font-bold text-lg tracking-tight">linkado.click</span>
+                </a>
+            </div>
+
+            <p class="text-gray-600 mb-3 text-sm italic max-w-xs">
+                O link que conecta, converte e cresce.
+            </p>
+
+            <div class="text-sm text-gray-500">
+                © <span id="current-year"></span> Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

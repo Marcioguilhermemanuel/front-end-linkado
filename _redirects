@@ -31,7 +31,12 @@ http://linkado.click/* https://linkado.click/:splat 301!
 # Barberia Premium
 /barberia-premium               /barberia-premium/index.html          200
 /barberia-premium/              /barberia-premium                     301
-/mdc_gang/*             Cache-Control: public, max-age=86400
+/barberia-premium/*             Cache-Control: public, max-age=86400
+
+# Burger Master
+/burger-master               /burger-master/index.html          200
+/burger-master/              /burger-master                     301
+/burger-master/*             Cache-Control: public, max-age=86400
 
 # Cudio Dia
 /cudiodia               /cudiodia/index.html          200
@@ -43,10 +48,25 @@ http://linkado.click/* https://linkado.click/:splat 301!
 /cold_studio/           /cold_studio                  301
 /cold_studio/*          Cache-Control: public, max-age=86400
 
+# Dizumba Grande
+/dizumba_grande            /dizumba_grande/index.html       200
+/dizumba_grande/           /dizumba_grande                  301
+/dizumba_grande/*          Cache-Control: public, max-age=86400
+
 # Eu Meduzu
 /eu_meduzu            /eu_meduzu/index.html       200
 /eu_meduzu/           /eu_meduzu                  301
 /eu_meduzu/*          Cache-Control: public, max-age=86400
+
+# Elisandra Elly
+/elisandra_elly         /elisandra_elly/index.html       200
+/elisandra_elly/        /elisandra_elly                 301
+/elisandra_elly/*       Cache-Control: public, max-age=86400
+
+# evolutiva Core
+/evolutiva_core          /evolutiva_core/index.html     200
+/evolutiva_core/         /evolutiva_core                301
+/evolutiva_core/*        Cache-Control: public, max-age=86400
 
 # Jurema Quiosa
 /jurema-quiosa          /jurema-quiosa/index.html     200
@@ -97,6 +117,12 @@ http://linkado.click/* https://linkado.click/:splat 301!
 /sabor-arte               /sabor-arte/index.html          200
 /sabor-arte/              /sabor-arte                     301
 /sabor-arte/*             Cache-Control: public, max-age=86400
+
+
+# sabor arte
+/vanilson_gourgel               /vanilson_gourgel/index.html          200
+/vanilson_gourgel/              /vanilson_gourgel                     301
+/vanilson_gourgel/*             Cache-Control: public, max-age=86400
 
 # Wizard
 /wizard                 /wizard/index.html            200

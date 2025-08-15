@@ -118,8 +118,13 @@ http://linkado.click/* https://linkado.click/:splat 301!
 /sabor-arte/              /sabor-arte                     301
 /sabor-arte/*             Cache-Control: public, max-age=86400
 
+# Samerda
+/samerda               /samerda/index.html          200
+/samerda/              /samerda                     301
+/samerda/*             Cache-Control: public, max-age=86400
 
-# sabor arte
+
+# Vanilson Gourgel
 /vanilson_gourgel               /vanilson_gourgel/index.html          200
 /vanilson_gourgel/              /vanilson_gourgel                     301
 /vanilson_gourgel/*             Cache-Control: public, max-age=86400

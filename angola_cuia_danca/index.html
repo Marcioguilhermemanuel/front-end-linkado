@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angola Cuia Dança - O Maior Portal de Dança do Mundo 🇦🇴</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Bebas+Neue:wght@400&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        .dance-gradient {
+            background: linear-gradient(135deg, #dc2626 0%, #000000 25%, #fbbf24 50%, #dc2626 75%, #000000 100%);
+            background-size: 400% 400%;
+            animation: danceGradient 8s ease infinite;
+        }
+        
+        @keyframes danceGradient {
+            0% { background-position: 0% 50%; }
+            25% { background-position: 100% 50%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .pulse-dance {
+            animation: pulseDance 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulseDance {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .dance-beat {
+            animation: danceBeat 0.8s ease-in-out infinite alternate;
+        }
+        
+        @keyframes danceBeat {
+            from { transform: translateY(-2px); }
+            to { transform: translateY(2px); }
+        }
+        
+        .glow-red {
+            box-shadow: 0 0 30px rgba(220, 38, 38, 0.5);
+        }
+        
+        .glow-yellow {
+            box-shadow: 0 0 25px rgba(251, 191, 36, 0.4);
+        }
+        
+        .link-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .link-hover:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .primary-btn {
+            background: linear-gradient(45deg, #dc2626, #ef4444);
+            transition: all 0.3s ease;
+        }
+        
+        .primary-btn:hover {
+            background: linear-gradient(45deg, #b91c1c, #dc2626);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(220, 38, 38, 0.4);
+        }
+        
+        .secondary-btn {
+            background: linear-gradient(45deg, #000000, #1f1f1f);
+            border: 2px solid #fbbf24;
+        }
+        
+        .secondary-btn:hover {
+            background: linear-gradient(45deg, #fbbf24, #f59e0b);
+            color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(251, 191, 36, 0.3);
+        }
+        
+        .social-btn {
+            transition: all 0.3s ease;
+        }
+        
+        .social-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .floating-icon {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        
+        .bg-pattern {
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(220, 38, 38, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(251, 191, 36, 0.1) 0%, transparent 50%);
+        }
+        
+        .vibrate-on-hover:hover {
+            animation: vibrate 0.5s ease-in-out;
+        }
+        
+        @keyframes vibrate {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-2px); }
+            75% { transform: translateX(2px); }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-900 dance-gradient bg-pattern font-sans">
+    <!-- Floating Icons Background -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <i class="fas fa-music absolute top-10 left-10 text-yellow-400/20 text-4xl floating-icon" style="animation-delay: 0s;"></i>
+        <i class="fas fa-heart absolute top-20 right-20 text-red-500/20 text-3xl floating-icon" style="animation-delay: 1s;"></i>
+        <i class="fas fa-fire absolute bottom-32 left-16 text-red-600/20 text-5xl floating-icon" style="animation-delay: 2s;"></i>
+        <i class="fas fa-star absolute bottom-20 right-12 text-yellow-300/20 text-3xl floating-icon" style="animation-delay: 0.5s;"></i>
+    </div>
+
+    <div class="relative z-10 container mx-auto px-4 py-8 max-w-md">
+        <!-- Header Profile Section -->
+        <header class="text-center mb-8">
+            <div class="relative mb-6">
+                <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-red-600 via-black to-yellow-500 p-1 glow-red pulse-dance">
+                    <div class="w-full h-full rounded-full bg-gray-900 flex items-center justify-center">
+                        <div class="text-center">
+                            <i class="fas fa-music text-red-500 text-4xl dance-beat mb-1"></i>
+                            <div class="text-yellow-400 text-xs font-bold">DANÇA</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                    <span class="bg-red-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                        <i class="fas fa-fire"></i>
+                        OFICIAL
+                    </span>
+                </div>
+            </div>
+            
+            <h1 class="text-4xl font-black text-white mb-2 text-shadow" style="font-family: 'Anton', sans-serif;">
+                ANGOLA CUIA DANÇA
+            </h1>
+            <p class="text-lg text-yellow-400 font-bold mb-4 flex items-center justify-center gap-2" style="font-family: 'Montserrat', sans-serif;">
+                <i class="fas fa-crown text-yellow-500"></i>
+                O maior portal de dança do mundo 🇦🇴
+                <i class="fas fa-crown text-yellow-500"></i>
+            </p>
+            
+            <!-- Stats Section -->
+            <div class="flex justify-center gap-4 mb-6">
+                <div class="bg-black/50 backdrop-blur-sm px-4 py-2 rounded-lg border border-red-500/30">
+                    <div class="text-red-400 font-bold text-lg">1M+</div>
+                    <div class="text-gray-300 text-xs">Seguidores</div>
+                </div>
+                <div class="bg-black/50 backdrop-blur-sm px-4 py-2 rounded-lg border border-yellow-500/30">
+                    <div class="text-yellow-400 font-bold text-lg">500+</div>
+                    <div class="text-gray-300 text-xs">Artistas</div>
+                </div>
+                <div class="bg-black/50 backdrop-blur-sm px-4 py-2 rounded-lg border border-red-500/30">
+                    <div class="text-red-400 font-bold text-lg">5K+</div>
+                    <div class="text-gray-300 text-xs">Vídeos</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Action Button -->
+        <div class="mb-8">
+            <a href="https://wa.link/luc66w" target="_blank" 
+               class="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-4 px-6 rounded-2xl flex items-center justify-center gap-3 link-hover glow-red vibrate-on-hover text-lg">
+                <i class="fab fa-whatsapp text-2xl dance-beat"></i>
+                <div class="text-center">
+                    <div>📢 PUBLICITE AQUI</div>
+                    <div class="text-sm font-normal opacity-90">Alcance milhões de pessoas!</div>
+                </div>
+                <i class="fas fa-rocket text-xl"></i>
+            </a>
+        </div>
+
+        <!-- Featured Links -->
+        <div class="space-y-4 mb-8">
+            <a href="#" class="w-full secondary-btn text-white font-bold py-4 px-6 rounded-xl flex items-center justify-between link-hover">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-bullhorn text-yellow-400 text-xl"></i>
+                    <span>Divulgações Recentes</span>
+                </div>
+                <i class="fas fa-arrow-right text-yellow-400"></i>
+            </a>
+
+            <a href="#" class="w-full secondary-btn text-white font-bold py-4 px-6 rounded-xl flex items-center justify-between link-hover">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-star text-yellow-400 text-xl dance-beat"></i>
+                    <span>Artistas em Destaque</span>
+                </div>
+                <i class="fas fa-arrow-right text-yellow-400"></i>
+            </a>
+
+            <a href="#" class="w-full secondary-btn text-white font-bold py-4 px-6 rounded-xl flex items-center justify-between link-hover">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-handshake text-yellow-400 text-xl"></i>
+                    <span>Nossas Parcerias</span>
+                </div>
+                <i class="fas fa-arrow-right text-yellow-400"></i>
+            </a>
+
+            <a href="#" class="w-full secondary-btn text-white font-bold py-4 px-6 rounded-xl flex items-center justify-between link-hover">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-comments text-yellow-400 text-xl"></i>
+                    <span>Feedbacks de Parceiros</span>
+                </div>
+                <i class="fas fa-arrow-right text-yellow-400"></i>
+            </a>
+
+            <a href="#" class="w-full secondary-btn text-white font-bold py-4 px-6 rounded-xl flex items-center justify-between link-hover">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-ad text-yellow-400 text-xl"></i>
+                    <span>Formatos de Publicidade</span>
+                </div>
+                <i class="fas fa-arrow-right text-yellow-400"></i>
+            </a>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="mb-8">
+            <h3 class="text-white font-bold text-center mb-4 text-xl" style="font-family: 'Montserrat', sans-serif;">
+                <i class="fas fa-share-alt text-red-500"></i>
+                Siga-nos nas Redes Sociais
+            </h3>
+            
+            <div class="grid grid-cols-2 gap-4">
+                <a href="https://www.instagram.com/angola_cuia_danca?igsh=ZTVmbXh5cHl3OXE=" target="_blank" 
+                   class="bg-gradient-to-br from-purple-600 to-pink-600 text-white font-semibold py-4 px-4 rounded-xl flex flex-col items-center gap-2 social-btn link-hover">
+                    <i class="fab fa-instagram text-2xl"></i>
+                    <span class="text-sm">Instagram</span>
+                </a>
+
+                <a href="https://www.tiktok.com/@angolacuiadanca?_t=ZM-8yt93i34Nr3&_r=1" target="_blank" 
+                   class="bg-gradient-to-br from-gray-800 to-gray-900 text-white font-semibold py-4 px-4 rounded-xl flex flex-col items-center gap-2 social-btn link-hover">
+                    <i class="fab fa-tiktok text-2xl"></i>
+                    <span class="text-sm">TikTok</span>
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=100095360350419" target="_blank" 
+                   class="bg-gradient-to-br from-blue-600 to-blue-700 text-white font-semibold py-4 px-4 rounded-xl flex flex-col items-center gap-2 social-btn link-hover">
+                    <i class="fab fa-facebook text-2xl"></i>
+                    <span class="text-sm">Facebook</span>
+                </a>
+
+                <a href="https://youtube.com/@angolacuiadanca?si=x_AXEXW9tiuO3hK8" target="_blank" 
+                   class="bg-gradient-to-br from-red-600 to-red-700 text-white font-semibold py-4 px-4 rounded-xl flex flex-col items-center gap-2 social-btn link-hover">
+                    <i class="fab fa-youtube text-2xl"></i>
+                    <span class="text-sm">YouTube</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="bg-gradient-to-r from-black/60 to-red-900/60 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 mb-8 text-center">
+            <i class="fas fa-fire text-red-500 text-3xl mb-3 dance-beat"></i>
+            <h4 class="text-white font-bold text-lg mb-2">Faça Parte da Nossa Família!</h4>
+            <p class="text-gray-300 text-sm mb-4">Conecte-se conosco e descubra o mundo da dança angolana</p>
+            <a href="https://wa.me/244951853424" target="_blank" 
+               class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                <i class="fab fa-whatsapp text-lg"></i>
+                Falar Conosco
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w-full max-w-md mx-auto py-6 px-4 text-center">
+            <div class="flex flex-col items-center">
+                <div class="flex items-center justify-center mb-3">
+                    <a href="https://linkado.click" target="_blank"
+                        class="inline-flex items-center gap-2 font-medium text-indigo-700 hover:text-indigo-900 transition-all group">
+                        <div class="bg-indigo-100 group-hover:bg-indigo-200 p-2 rounded-lg transition-colors">
+                            <img src="/assets/image/FIVE.png" alt="Logo Linkado"
+                                class="w-6 h-6 object-contain" />
+                        </div>
+                        <span class="font-bold text-lg tracking-tight">linkado.click</span>
+                    </a>
+                </div>
+
+                <p class="text-gray-600 mb-3 text-sm italic max-w-xs">
+                    O link que conecta, converte e cresce.
+                </p>
+
+                <div class="text-sm text-gray-500">
+                    © <span id="current-year"></span> Todos os direitos reservados
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Atualiza o ano automaticamente
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+
+        // Adiciona efeitos de som visual aos botões
+        document.querySelectorAll('.link-hover').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.02)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Efeito de partículas no clique
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                // Criar efeito de clique
+                const ripple = document.createElement('div');
+                ripple.style.cssText = `
+                    position: absolute;
+                    left: ${x}px;
+                    top: ${y}px;
+                    width: 20px;
+                    height: 20px;
+                    background: radial-gradient(circle, rgba(251,191,36,0.8) 0%, transparent 70%);
+                    border-radius: 50%;
+                    transform: scale(0);
+                    animation: ripple 0.6s ease-out;
+                    pointer-events: none;
+                `;
+                
+                this.style.position = 'relative';
+                this.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Criar keyframe para ripple
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Parallax effect para ícones flutuantes
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelectorAll('.floating-icon');
+            
+            parallax.forEach((element, index) => {
+                const speed = 0.5 + (index * 0.1);
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Adicionar efeito de hover com som
+        const buttons = document.querySelectorAll('.vibrate-on-hover');
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.style.animation = 'none';
+                setTimeout(() => {
+                    button.style.animation = 'vibrate 0.5s ease-in-out';
+                }, 10);
+            });
+        });
+    </script>
+</body>
+</html>

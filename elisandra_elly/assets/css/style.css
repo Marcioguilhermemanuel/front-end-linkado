@@ -304,8 +304,8 @@ body::before {
   font-weight: 800;
   letter-spacing: -0.5px;
   background: linear-gradient(to right, var(--light), var(--accent));
-  --webkit-background-clip: text;
-  --webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   position: relative;
   display: inline-block;
 }
@@ -343,8 +343,8 @@ body::before {
   border: 1px solid transparent;
   background: linear-gradient(45deg, var(--primary), var(--secondary))
     border-box;
-  --webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  --webkit-mask-composite: destination-out;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
   mask-composite: exclude;
 }
 

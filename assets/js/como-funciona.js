@@ -1,4 +1,4 @@
-// Adiciona classe de animação quando a seção entra na viewport
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {

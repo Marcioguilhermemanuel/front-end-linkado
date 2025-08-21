@@ -38,6 +38,11 @@ http://linkado.click/* https://linkado.click/:splat 301!
 /burger-master/              /burger-master                     301
 /burger-master/*             Cache-Control: public, max-age=86400
 
+# Burger 
+/burger               /burger/index.html          200
+/burger/              /burger                     301
+/burger/*             Cache-Control: public, max-age=86400
+
 # Cudio Dia
 /cudiodia               /cudiodia/index.html          200
 /cudiodia/              /cudiodia                     301

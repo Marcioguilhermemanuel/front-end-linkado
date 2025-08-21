@@ -1,0 +1,4 @@
+
+    :root { --radius: 18px }
+    .glass { --backdrop-filter: saturate(160%) blur(14px); }
+    .focus-ring { outline: none; box-shadow: 0 0 0 4px rgba(245,165,36,.35), 0 0 0 6px rgba(0,0,0,.25) }

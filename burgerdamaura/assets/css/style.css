@@ -1,0 +1,35 @@
+:root {
+    --radius: 20px
+}
+
+.glass {
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.focus-ring {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(252, 211, 77, .4), 0 0 0 6px rgba(0, 0, 0, .3)
+}
+
+.animate-bounce-gentle {
+    animation: bounce-gentle 2s infinite;
+}
+
+@keyframes bounce-gentle {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #FCD34D, #F59E0B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

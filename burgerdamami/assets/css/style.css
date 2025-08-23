@@ -1,0 +1,44 @@
+:root {
+  --radius: 16px;
+}
+
+body {
+  background-color: #fff9e6;
+  color: #2e2e33;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.focus-ring:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(215, 38, 61, 0.35);
+}
+
+/* Animações suaves */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Acessibilidade - alto contraste para modo escuro/leitores de tela */
+@media (prefers-contrast: high) {
+  .card {
+    background: #ffffff;
+    border: 2px solid #2e2e33;
+  }
+}

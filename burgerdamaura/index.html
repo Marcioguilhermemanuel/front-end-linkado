@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BURGER DA MAURA | Linkado Oficial</title>
+    <meta name="description"
+        content="Link único da BURGER DA MAURA: cardápio com preços em Kz, pedidos por WhatsApp, e redes sociais. Rápido, acessível e feito para conversão." />
+    <meta property="og:title" content="BURGER DA MAURA | Linkado" />
+    <meta property="og:description"
+        content="O melhor hambúrguer da cidade! Peça o seu em poucos cliques. Pagamento no balcão/entrega. WhatsApp direto." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1200&auto=format&fit=crop" />
+    <meta name="theme-color" content="#DC2626" />
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#1a0f0a',
+                            primary: '#DC2626', // vermelho tomate
+                            accent: '#FCD34D',  // amarelo
+                            dark: '#7f1d1d',
+                            light: '#fef3c7',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Poppins', 'ui-sans-serif', 'system-ui'],
+                        body: ['Inter', 'ui-sans-serif', 'system-ui']
+                    },
+                    boxShadow: {
+                        glow: '0 0 30px rgba(252, 211, 77, 0.3)',
+                        soft: '0 20px 40px -12px rgba(0,0,0,.6)',
+                    },
+                    backgroundImage: {
+                        'hero-pattern': `radial-gradient(900px 400px at 30% -10%, rgba(220, 38, 38, .15), transparent 70%),
+                             radial-gradient(700px 300px at 90% 20%, rgba(252, 211, 77, .12), transparent 70%),
+                             radial-gradient(1000px 600px at 50% 100%, rgba(255,255,255,.03), transparent 70%)`,
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/image/FIVE.png" type="image/x-icon">
+    <link rel="canonical" href="https://linkado.click/burger_da_Maura" />
+
+    <script>
+        // Acessibilidade: permite pressionar Enter em elementos com role="button"
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && e.target.getAttribute('role') === 'button') {
+                e.preventDefault();
+                e.target.click();
+            }
+        });
+    </script>
+</head>
+
+<body class="min-h-screen bg-brand-bg text-white font-body selection:bg-brand-accent/30 selection:text-black">
+
+    <!-- Fundo com padrão -->
+    <div class="fixed inset-0 -z-10 bg-hero-pattern"></div>
+
+    <main class="max-w-xl mx-auto px-4 pt-8 pb-36">
+
+        <!-- Header / Marca -->
+        <header class="text-center">
+            <div
+                class="relative mx-auto w-28 h-28 rounded-3xl bg-gradient-to-br from-brand-primary to-brand-dark p-1 shadow-glow">
+                <div class="w-full h-full rounded-[22px] bg-white/10 backdrop-blur-xl flex items-center justify-center">
+                    <i class="fas fa-hamburger text-4xl text-brand-accent animate-bounce-gentle"></i>
+                </div>
+            </div>
+
+            <h1 class="font-display text-4xl sm:text-5xl font-black mt-6 tracking-tight">
+                BURGER DA <span class="gradient-text">MAURA</span>
+            </h1>
+            <p class="text-white/80 mt-2 text-lg">O sabor que você nunca vai esquecer 🔥</p>
+
+            <div class="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs">
+                <span
+                    class="inline-flex items-center gap-2 rounded-full bg-emerald-500/20 text-emerald-300 px-4 py-2 border border-emerald-500/30">
+                    <i class="fas fa-circle text-emerald-400 animate-pulse"></i>
+                    Aberto agora
+                </span>
+                <span
+                    class="inline-flex items-center gap-2 rounded-full bg-brand-accent/20 text-brand-accent px-4 py-2 border border-brand-accent/30">
+                    <i class="fas fa-star"></i>
+                    4.9/5 estrelas
+                </span>
+                <span
+                    class="inline-flex items-center gap-2 rounded-full bg-white/10 text-white/80 px-4 py-2 border border-white/20">
+                    <i class="fas fa-shipping-fast"></i>
+                    Entrega rápida
+                </span>
+            </div>
+
+            <!-- CTA Primário -->
+            <div class="mt-8 flex flex-col gap-4">
+                <a id="cta-whatsapp-top" href="#pedido"
+                    class="group relative overflow-hidden inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-brand-primary to-red-600 hover:from-red-600 hover:to-brand-primary text-white font-bold text-lg shadow-soft hover:shadow-glow transition-all duration-300 active:scale-[0.98]"
+                    aria-label="Fazer pedido pelo WhatsApp">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Fazer pedido no WhatsApp</span>
+                    <div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                    </div>
+                </a>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="#cardapio"
+                        class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 transition-all duration-300 hover:border-brand-accent/50"
+                        aria-label="Ver cardápio">
+                        <i class="fas fa-utensils"></i>
+                        <span>Cardápio</span>
+                    </a>
+                    <a href="#redes"
+                        class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-accent/20 hover:bg-brand-accent/30 border border-brand-accent/30 text-brand-accent transition-all duration-300"
+                        aria-label="Redes sociais">
+                        <i class="fas fa-share-alt"></i>
+                        <span>Redes</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Banner de Oferta -->
+        <section class="mt-10" aria-label="Promoções">
+            <div
+                class="relative overflow-hidden rounded-[var(--radius)] bg-gradient-to-r from-brand-primary/20 via-brand-accent/20 to-brand-primary/20 border border-brand-accent/30 p-6">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
+                <div class="relative flex items-center gap-4">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-gradient-to-br from-brand-accent to-yellow-500 flex items-center justify-center shadow-glow">
+                        <i class="fas fa-fire text-2xl text-white animate-bounce-gentle"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-sm uppercase tracking-wide text-brand-accent font-bold">🔥 Oferta especial</p>
+                        <h3 class="font-display text-xl font-bold">Combo Família Maura</h3>
+                        <p class="text-white/80 text-sm">
+                            De <span class="line-through">Kz 15.000</span> por
+                            <span class="font-bold text-brand-accent text-lg">Kz 11.990</span>
+                        </p>
+                    </div>
+                    <button id="add-promo"
+                        class="shrink-0 px-5 py-2.5 rounded-xl bg-brand-accent text-black font-bold hover:bg-yellow-400 transition-all duration-300 shadow-lg hover:shadow-glow active:scale-95"
+                        role="button" aria-label="Adicionar promoção ao carrinho">
+                        <i class="fas fa-plus mr-1"></i>
+                        Adicionar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Links principais -->
+        <nav class="mt-10 space-y-4" aria-label="Links principais">
+            <a class="group relative overflow-hidden rounded-[var(--radius)] bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brand-accent/50 transition-all duration-300 p-6 flex items-center justify-between glass"
+                href="#cardapio" aria-label="Ver o catálogo completo">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-gradient-to-br from-brand-accent/20 to-yellow-600/20 flex items-center justify-center border border-brand-accent/30">
+                        <i class="fas fa-book-open text-brand-accent text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg">Catálogo Completo</p>
+                        <p class="text-sm text-white/70">Todos os sabores com preços em Kz</p>
+                    </div>
+                </div>
+                <i
+                    class="fas fa-chevron-right text-white/50 group-hover:text-brand-accent group-hover:translate-x-1 transition-all"></i>
+            </a>
+
+            <a class="group relative overflow-hidden rounded-[var(--radius)] bg-white/5 hover:bg-white/10 border border-white/10 hover:border-brand-accent/50 transition-all duration-300 p-6 flex items-center justify-between glass"
+                href="#redes" aria-label="Seguir nas redes sociais">
+                <div class="flex items-center gap-4">
+                    <div
+                        class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/20 to-purple-600/20 flex items-center justify-center border border-blue-400/30">
+                        <i class="fas fa-heart text-pink-400 text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="font-bold text-lg">Siga a Burger da Maura</p>
+                        <p class="text-sm text-white/70">Instagram, TikTok e Facebook</p>
+                    </div>
+                </div>
+                <i
+                    class="fas fa-chevron-right text-white/50 group-hover:text-brand-accent group-hover:translate-x-1 transition-all"></i>
+            </a>
+        </nav>
+
+        <!-- Cardápio / Catálogo -->
+        <section id="cardapio" class="mt-12">
+            <div class="flex items-center gap-3 mb-6">
+                <i class="fas fa-utensils text-brand-accent text-2xl"></i>
+                <h2 class="font-display text-3xl font-bold">Nosso Cardápio</h2>
+            </div>
+
+            <!-- Tabs -->
+            <div class="flex flex-wrap gap-2 mb-8" role="tablist" aria-label="Categorias do cardápio">
+                <button
+                    class="tab-btn px-5 py-3 rounded-full bg-brand-accent text-black font-semibold hover:bg-yellow-400 transition-all"
+                    role="tab" aria-selected="true" data-cat="burgers">
+                    <i class="fas fa-hamburger mr-2"></i>Burgers
+                </button>
+                <button
+                    class="tab-btn px-5 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 transition-all"
+                    role="tab" aria-selected="false" data-cat="combos">
+                    <i class="fas fa-box mr-2"></i>Combos
+                </button>
+                <button
+                    class="tab-btn px-5 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 transition-all"
+                    role="tab" aria-selected="false" data-cat="acomp">
+                    <i class="fas fa-french-fries mr-2"></i>Acompanhamentos
+                </button>
+                <button
+                    class="tab-btn px-5 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 transition-all"
+                    role="tab" aria-selected="false" data-cat="drinks">
+                    <i class="fas fa-glass-cheers mr-2"></i>Bebidas
+                </button>
+                <button
+                    class="tab-btn px-5 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 transition-all"
+                    role="tab" aria-selected="false" data-cat="doces">
+                    <i class="fas fa-ice-cream mr-2"></i>Doces
+                </button>
+            </div>
+
+            <!-- Lista dinâmica de produtos -->
+            <div id="lista-produtos" class="space-y-4"></div>
+        </section>
+
+        <!-- Redes sociais -->
+        <section id="redes" class="mt-12" aria-label="Redes Sociais">
+            <div class="flex items-center gap-3 mb-6">
+                <i class="fas fa-share-alt text-brand-accent text-2xl"></i>
+                <h2 class="font-display text-3xl font-bold">Conecte-se</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="https://wa.me/244946043956" target="_blank" rel="noopener"
+                    class="group relative overflow-hidden p-5 rounded-[var(--radius)] bg-gradient-to-br from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 transition-all duration-300 shadow-lg hover:shadow-glow"
+                    aria-label="Abrir WhatsApp da Burger da Maura">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                                <i class="fab fa-whatsapp text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg">WhatsApp</p>
+                                <p class="text-sm text-green-100">+244 946 043 956</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-external-link-alt text-white/80 group-hover:text-white transition-colors"></i>
+                    </div>
+                </a>
+
+                <a href="#" target="_blank" rel="noopener"
+                    class="group relative overflow-hidden p-5 rounded-[var(--radius)] bg-gradient-to-br from-pink-600 to-purple-700 hover:from-pink-700 hover:to-purple-800 transition-all duration-300 shadow-lg hover:shadow-glow"
+                    aria-label="Abrir Instagram da Burger da Maura">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                                <i class="fab fa-instagram text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg">Instagram</p>
+                                <p class="text-sm text-pink-100">@burgerdamaura</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-external-link-alt text-white/80 group-hover:text-white transition-colors"></i>
+                    </div>
+                </a>
+
+                <a href="#" target="_blank" rel="noopener"
+                    class="group relative overflow-hidden p-5 rounded-[var(--radius)] bg-gradient-to-br from-gray-800 to-black hover:from-gray-900 hover:to-gray-800 transition-all duration-300 shadow-lg hover:shadow-glow"
+                    aria-label="Abrir TikTok da Burger da Maura">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                                <i class="fab fa-tiktok text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg">TikTok</p>
+                                <p class="text-sm text-gray-300">@burgerdamaura</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-external-link-alt text-white/80 group-hover:text-white transition-colors"></i>
+                    </div>
+                </a>
+
+                <a href="#" target="_blank" rel="noopener"
+                    class="group relative overflow-hidden p-5 rounded-[var(--radius)] bg-gradient-to-br from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 transition-all duration-300 shadow-lg hover:shadow-glow"
+                    aria-label="Abrir Facebook da Burger da Maura">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center">
+                                <i class="fab fa-facebook-f text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-lg">Facebook</p>
+                                <p class="text-sm text-blue-100">/burgerdamaura</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-external-link-alt text-white/80 group-hover:text-white transition-colors"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Área do pedido / carrinho -->
+        <section id="pedido" class="mt-12">
+            <div class="flex items-center gap-3 mb-6">
+                <i class="fas fa-shopping-cart text-brand-accent text-2xl"></i>
+                <h2 class="font-display text-3xl font-bold">Seu Pedido</h2>
+            </div>
+
+            <div class="p-6 rounded-[var(--radius)] bg-white/5 border border-white/10 glass">
+                <div id="itens-carrinho" class="space-y-4" aria-live="polite"></div>
+
+                <div class="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-user text-brand-accent"></i>
+                        <label for="nome" class="text-sm text-white/80 font-medium">Seu nome</label>
+                        <input id="nome" type="text" placeholder="Ex: Maria"
+                            class="flex-1 rounded-lg bg-white/10 border border-white/20 px-4 py-2 placeholder:text-white/40 focus:border-brand-accent focus-visible:focus-ring transition-colors" />
+                    </div>
+                    <div class="text-right">
+                        <p class="text-sm text-white/70 mb-1">Total do pedido</p>
+                        <p id="subtotal" class="font-display text-2xl font-bold text-brand-accent">Kz 0</p>
+                    </div>
+                </div>
+
+                <button id="finalizar"
+                    class="mt-6 w-full group relative overflow-hidden inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-brand-accent to-yellow-500 hover:from-yellow-500 hover:to-brand-accent text-black font-bold text-lg shadow-soft hover:shadow-glow transition-all duration-300 active:scale-[0.98]"
+                    aria-label="Finalizar pedido no WhatsApp">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Finalizar no WhatsApp</span>
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </button>
+
+                <p class="mt-3 text-xs text-white/60 text-center">
+                    <i class="fas fa-info-circle mr-1"></i>
+                    Pagamento no balcão/entrega. Taxa de entrega conforme bairro.
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="w-full max-w-md mx-auto py-10 px-4 text-center">
+            <div class="flex flex-col items-center">
+                <div class="flex items-center justify-center mb-3">
+                    <a href="https://linkado.click" target="_blank"
+                        class="inline-flex items-center gap-2 font-medium text-indigo-300 hover:text-white transition-all group">
+                        <div class="bg-indigo-500/10 group-hover:bg-indigo-500/20 p-2 rounded-lg transition-colors">
+                            <img src="../assets/image/FIVE.png" alt="Logo Linkado" class="w-6 h-6 object-contain" />
+                        </div>
+                        <span class="font-bold text-lg tracking-tight">linkado.click</span>
+                    </a>
+                </div>
+
+                <p class="text-indigo-200/80 mb-3 text-sm italic max-w-xs">
+                    O link que conecta, converte e cresce.
+                </p>
+
+                <div class="text-sm text-indigo-200/70">
+                    © <span id="current-year"></span> Todos os direitos reservados
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Mini Cart flutuante -->
+    <div id="cart-fab" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hidden">
+        <button id="cart-open"
+            class="px-6 py-3 rounded-full bg-gradient-to-r from-brand-accent to-yellow-500 text-black shadow-glow font-bold hover:scale-105 active:scale-95 transition-all duration-300"
+            aria-label="Abrir carrinho">
+            <i class="fas fa-shopping-cart mr-2"></i>
+            <span id="fab-count">0</span> itens · <span id="fab-total">Kz 0</span>
+        </button>
+    </div>
+
+    <!-- Sheet do carrinho (mobile-first) -->
+    <div id="sheet" class="fixed inset-0 z-50 hidden" aria-hidden="true">
+        <div class="absolute inset-0 bg-black/70" id="sheet-backdrop"></div>
+        <div class="absolute left-0 right-0 bottom-0 p-4 pb-6 bg-brand-bg rounded-t-3xl border-t border-white/10 shadow-soft glass"
+            role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+            <div class="mx-auto max-w-xl">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 id="sheet-title" class="font-display text-xl font-bold flex items-center gap-2">
+                        <i class="fas fa-shopping-cart text-brand-accent"></i>
+                        Seu Carrinho
+                    </h3>
+                    <button id="sheet-close"
+                        class="p-3 rounded-xl bg-white/10 border border-white/20 hover:bg-white/20 transition-all"
+                        aria-label="Fechar carrinho">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <div id="sheet-itens" class="max-h-[50vh] overflow-y-auto pr-2 space-y-3 custom-scrollbar"></div>
+
+                <div
+                    class="mt-6 flex items-center justify-between p-4 rounded-xl bg-brand-accent/10 border border-brand-accent/30">
+                    <span class="text-white/80 font-medium">Total do pedido</span>
+                    <span id="sheet-total" class="font-display text-xl font-bold text-brand-accent">Kz 0</span>
+                </div>
+
+                <button id="sheet-finalizar"
+                    class="mt-4 w-full group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-brand-accent to-yellow-500 hover:from-yellow-500 hover:to-brand-accent text-black font-bold text-lg transition-all duration-300 active:scale-[0.98]">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Finalizar no WhatsApp</span>
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+    <!-- JSON-LD para SEO -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "BURGER DA MAURA",
+    "servesCuisine": "Burgers, Fast Food, Hambúrgueres Artesanais",
+    "telephone": "+244946043956",
+    "url": "https://linkado.click/burgerdamaura",
+    "priceRange": "Kz 600 - Kz 25.000",
+    "description": "O melhor hambúrguer artesanal de Angola. Ingredientes frescos, sabor único e entrega rápida.",
+    "sameAs": [
+      "https://www.instagram.com/burgerdamaura",
+      "https://www.facebook.com/burgerdamaura",
+      "https://www.tiktok.com/@burgerdamaura"
+    ]
+  }
+  </script>
+</body>
+
+</html>

@@ -28,6 +28,11 @@ http://linkado.click/* https://linkado.click/:splat 301!
 /barberia-premium/              /barberia-premium                     301
 /barberia-premium/*             Cache-Control: public, max-age=86400
 
+# Doce Encanto
+/doce_encanto               /doce_encanto/index.html          200
+/doce_encanto/              /doce_encanto                     301
+/doce_encanto/*             Cache-Control: public, max-age=86400
+
 
 # Burger 
 /burger               /burger/index.html          200

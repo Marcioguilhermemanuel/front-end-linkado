@@ -1,0 +1,13 @@
+:root {
+  --radius: 16px;
+}
+.focus-ring {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.5);
+}
+.card-hover {
+  transition: all 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-5px);
+}

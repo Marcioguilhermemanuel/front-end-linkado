@@ -170,9 +170,9 @@ http://linkado.click/* https://linkado.click/:splat 301!
 /vanilson_gourgel/*     Cache-Control: public, max-age=86400
 
 # Versa
-/versa               /versa /index.html          200
-/versa /             /versa                      301
-/versa /*             Cache-Control: public, max-age=86400
+/versa               /versa/index.html          200
+/versa/              /versa                      301
+/versa/*             Cache-Control: public, max-age=86400
 
 # Wizard
 /wizard                 /wizard/index.html            200

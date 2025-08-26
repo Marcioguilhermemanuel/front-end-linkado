@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VERSA SERVIÇOS | Linkado Oficial</title>
+    <meta name="description"
+        content="Versa Serviços - Soluções profissionais completas. Construção civil, climatização, design, desenvolvimento e muito mais." />
+    <meta property="og:title" content="VERSA SERVIÇOS | Linkado" />
+    <meta property="og:description"
+        content="Profissionais qualificados para todos os seus projetos. Orçamento gratuito via WhatsApp." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1200&auto=format&fit=crop" />
+    <meta name="theme-color" content="#1e293b" />
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#1e293b',    // slate-800
+                            secondary: '#0f172a',  // slate-900
+                            accent: '#3b82f6',     // blue-500
+                            light: '#64748b',      // slate-500
+                            success: '#10b981',    // emerald-500
+                            warning: '#f59e0b',    // amber-500
+                            gray: '#f8fafc'        // slate-50
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Inter', 'ui-sans-serif', 'system-ui'],
+                        body: ['Inter', 'ui-sans-serif', 'system-ui']
+                    },
+                    boxShadow: {
+                        soft: '0 20px 40px -12px rgba(30, 41, 59, 0.15)',
+                        glow: '0 0 30px rgba(59, 130, 246, 0.15)',
+                        card: '0 4px 20px -4px rgba(30, 41, 59, 0.1)',
+                    },
+                    backgroundImage: {
+                        mesh: `radial-gradient(1200px 600px at -15% -10%, rgba(59, 130, 246, 0.1), transparent 70%),
+                    radial-gradient(800px 400px at 110% -10%, rgba(16, 185, 129, 0.08), transparent 70%),
+                    radial-gradient(1000px 500px at 50% 120%, rgba(30, 41, 59, 0.05), transparent 70%)`,
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/image/FIVE.png" type="image/x-icon">
+
+    <script>
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && e.target.getAttribute('role') === 'button') {
+                e.preventDefault();
+                e.target.click();
+            }
+        });
+    </script>
+</head>
+
+<body class="min-h-screen bg-brand-gray text-brand-primary font-body selection:bg-brand-accent/20">
+
+    <!-- Fundo decorativo -->
+    <div class="fixed inset-0 -z-10 bg-mesh"></div>
+
+    <!-- Decorações flutuantes -->
+    <div class="fixed top-16 left-8 w-8 h-8 text-brand-accent/20 floating-animation" style="animation-delay: 0s;">
+        <i class="fas fa-tools text-2xl"></i>
+    </div>
+    <div class="fixed top-32 right-12 w-8 h-8 text-brand-success/20 floating-animation" style="animation-delay: 3s;">
+        <i class="fas fa-cogs text-2xl"></i>
+    </div>
+    <div class="fixed bottom-40 left-12 w-8 h-8 text-brand-warning/20 floating-animation" style="animation-delay: 6s;">
+        <i class="fas fa-laptop-code text-2xl"></i>
+    </div>
+
+    <main class="max-w-2xl mx-auto px-4 pt-8 pb-36">
+
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <div class="w-full max-w-md text-center mb-12 animate-fade-in">
+                <div class="relative inline-block mb-6">
+                    <div
+                        class="absolute -inset-2 bg-gradient-to-r from-indigo-500 to-emerald-400 rounded-full blur-md opacity-75">
+                    </div>
+                    <img src="assets/image/logo.png" alt="Educamorim"
+                        class="relative w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg mx-auto">
+                </div>
+
+            <h1 class="font-display text-5xl sm:text-6xl font-bold tracking-tight mb-4">
+                <span class="gradient-text">VERSA</span>
+                <span class="block text-3xl sm:text-4xl font-medium text-brand-light mt-2">SERVIÇOS</span>
+            </h1>
+
+            <p class="text-xl text-brand-light max-w-lg mx-auto mb-8 leading-relaxed">
+                Soluções profissionais completas para seus projetos e necessidades
+            </p>
+
+            <div class="flex items-center justify-center gap-4 text-sm flex-wrap mb-8">
+                <span
+                    class="inline-flex items-center gap-2 rounded-full bg-brand-success/10 px-4 py-2 border border-brand-success/20">
+                    <span class="w-3 h-3 rounded-full bg-brand-success animate-pulse"></span>
+                    <span class="text-brand-success font-medium">Disponível 24/7</span>
+                </span>
+                <span
+                    class="inline-flex items-center gap-2 rounded-full bg-brand-warning/10 px-4 py-2 border border-brand-warning/20">
+                    <i class="fas fa-award text-brand-warning"></i>
+                    <span class="text-brand-warning font-medium">Profissionais Qualificados</span>
+                </span>
+                <span
+                    class="inline-flex items-center gap-2 rounded-full bg-brand-accent/10 px-4 py-2 border border-brand-accent/20">
+                    <i class="fas fa-shield-alt text-brand-accent"></i>
+                    <span class="text-brand-accent font-medium">Garantia Total</span>
+                </span>
+            </div>
+
+            <!-- CTA Principal -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a id="cta-orcamento" href="#servicos"
+                    class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-brand-accent to-brand-success hover:from-brand-success hover:to-brand-accent text-white font-semibold shadow-glow hover:shadow-xl active:scale-[.98] transition-all duration-300 ripple focus-visible:focus-ring">
+                    <i class="fas fa-calculator text-xl"></i>
+                    <span>Solicitar Orçamento Grátis</span>
+                </a>
+                <a href="#sobre"
+                    class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-white hover:bg-gray-50 border-2 border-brand-primary/10 hover:border-brand-primary/20 transition-all duration-300 text-brand-primary font-semibold focus-visible:focus-ring">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Conhecer Empresa</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Banner Destaque -->
+        <section class="mb-12" aria-label="Destaque">
+            <div
+                class="relative overflow-hidden rounded-[var(--radius)] bg-gradient-to-r from-brand-primary/90 to-brand-accent/90 border border-white/20 p-8 text-white">
+                <div
+                    class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=1200')] bg-cover bg-center opacity-20">
+                </div>
+                <div class="relative z-10 flex items-center gap-6">
+                    <div
+                        class="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-sm border border-white/30 grid place-content-center">
+                        <i class="fas fa-phone-alt text-3xl text-white"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-sm uppercase tracking-wider text-white/80 font-semibold mb-2">Atendimento
+                            Especializado</p>
+                        <h3 class="font-display text-2xl font-bold mb-2">Consulta Gratuita por WhatsApp</h3>
+                        <p class="text-white/90 mb-4">Fale com nossos especialistas e receba orientação profissional sem
+                            compromisso</p>
+                        <a href="https://wa.me/244946043956" target="_blank" rel="noopener"
+                            class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/30 transition-all duration-200 font-semibold focus-visible:focus-ring">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                            <span>Falar com Especialista</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Links principais -->
+        <nav class="mb-12 grid grid-cols-1 gap-5" aria-label="Links principais">
+            <a class="group relative overflow-hidden rounded-[var(--radius)] bg-white hover:bg-gray-50 border border-gray-200 hover:border-brand-accent/30 transition-all duration-300 p-6 flex items-center justify-between shadow-card hover:shadow-glow focus-visible:focus-ring"
+                href="#servicos" aria-label="Ver todos os serviços">
+                <div class="flex items-center gap-5">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-accent to-brand-success grid place-content-center">
+                        <i class="fas fa-th-large text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-xl text-brand-primary mb-1">Catálogo de Serviços</p>
+                        <p class="text-brand-light">Conheça todas as nossas especialidades</p>
+                    </div>
+                </div>
+                <i
+                    class="fas fa-arrow-right text-brand-light group-hover:translate-x-2 group-hover:text-brand-accent transition-all duration-300 text-xl"></i>
+            </a>
+
+            <a class="group relative overflow-hidden rounded-[var(--radius)] bg-white hover:bg-gray-50 border border-gray-200 hover:border-brand-success/30 transition-all duration-300 p-6 flex items-center justify-between shadow-card hover:shadow-glow focus-visible:focus-ring"
+                href="#portfolio" aria-label="Ver trabalhos realizados">
+                <div class="flex items-center gap-5">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-success to-brand-warning grid place-content-center">
+                        <i class="fas fa-images text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-xl text-brand-primary mb-1">Portfólio & Projetos</p>
+                        <p class="text-brand-light">Veja nossos trabalhos realizados</p>
+                    </div>
+                </div>
+                <i
+                    class="fas fa-arrow-right text-brand-light group-hover:translate-x-2 group-hover:text-brand-success transition-all duration-300 text-xl"></i>
+            </a>
+        </nav>
+
+        <!-- Catálogo de Serviços -->
+        <section id="servicos" class="mb-12">
+            <div class="text-center mb-10">
+                <h2 class="font-display text-4xl font-bold mb-4">Nossos Serviços</h2>
+                <p class="text-xl text-brand-light max-w-2xl mx-auto">Especialistas em diversas áreas para atender todas
+                    as suas necessidades</p>
+            </div>
+
+            <!-- Tabs -->
+            <div class="flex flex-wrap gap-3 justify-center mb-10" role="tablist" aria-label="Categorias de serviços">
+                <button
+                    class="tab-btn px-6 py-3 rounded-full bg-brand-primary text-white font-semibold hover:bg-brand-secondary transition-all duration-200 focus-visible:focus-ring"
+                    role="tab" aria-selected="true" data-cat="construcao">
+                    <i class="fas fa-hammer mr-2"></i>Construção
+                </button>
+                <button
+                    class="tab-btn px-6 py-3 rounded-full bg-white hover:bg-gray-50 border border-brand-primary/20 text-brand-primary font-semibold transition-all duration-200 focus-visible:focus-ring"
+                    role="tab" aria-selected="false" data-cat="climatizacao">
+                    <i class="fas fa-snowflake mr-2"></i>Climatização
+                </button>
+                <button
+                    class="tab-btn px-6 py-3 rounded-full bg-white hover:bg-gray-50 border border-brand-primary/20 text-brand-primary font-semibold transition-all duration-200 focus-visible:focus-ring"
+                    role="tab" aria-selected="false" data-cat="digital">
+                    <i class="fas fa-laptop-code mr-2"></i>Digital
+                </button>
+                <button
+                    class="tab-btn px-6 py-3 rounded-full bg-white hover:bg-gray-50 border border-brand-primary/20 text-brand-primary font-semibold transition-all duration-200 focus-visible:focus-ring"
+                    role="tab" aria-selected="false" data-cat="educacao">
+                    <i class="fas fa-graduation-cap mr-2"></i>Educação
+                </button>
+                <button
+                    class="tab-btn px-6 py-3 rounded-full bg-white hover:bg-gray-50 border border-brand-primary/20 text-brand-primary font-semibold transition-all duration-200 focus-visible:focus-ring"
+                    role="tab" aria-selected="false" data-cat="manutencao">
+                    <i class="fas fa-wrench mr-2"></i>Manutenção
+                </button>
+            </div>
+
+            <!-- Lista de serviços -->
+            <div id="lista-servicos" class="grid gap-6"></div>
+        </section>
+
+        <!-- Sobre a Empresa -->
+        <section id="sobre" class="mb-12">
+            <h2 class="font-display text-4xl font-bold text-center mb-10">Por Que Escolher a Versa?</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-6 rounded-[var(--radius)] bg-white border border-gray-200 shadow-card">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-accent to-brand-success grid place-content-center mb-4">
+                        <i class="fas fa-certificate text-xl text-white"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-3">Qualidade Garantida</h3>
+                    <p class="text-brand-light">Profissionais qualificados e materiais de primeira linha em todos os
+                        projetos.</p>
+                </div>
+
+                <div class="p-6 rounded-[var(--radius)] bg-white border border-gray-200 shadow-card">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-success to-brand-warning grid place-content-center mb-4">
+                        <i class="fas fa-clock text-xl text-white"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-3">Agilidade</h3>
+                    <p class="text-brand-light">Cumprimos prazos rigorosamente e oferecemos atendimento rápido e
+                        eficiente.</p>
+                </div>
+
+                <div class="p-6 rounded-[var(--radius)] bg-white border border-gray-200 shadow-card">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-warning to-brand-primary grid place-content-center mb-4">
+                        <i class="fas fa-handshake text-xl text-white"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-3">Atendimento Personalizado</h3>
+                    <p class="text-brand-light">Cada projeto é único. Oferecemos soluções sob medida para suas
+                        necessidades.</p>
+                </div>
+
+                <div class="p-6 rounded-[var(--radius)] bg-white border border-gray-200 shadow-card">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-primary to-brand-accent grid place-content-center mb-4">
+                        <i class="fas fa-dollar-sign text-xl text-white"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-3">Preços Justos</h3>
+                    <p class="text-brand-light">Orçamentos transparentes e competitivos, sem surpresas ou custos
+                        ocultos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="mb-12">
+            <h2 class="font-display text-4xl font-bold text-center mb-2">Fale Conosco</h2>
+            <p class="text-center text-brand-light mb-8 text-lg">Entre em contato e solicite seu orçamento gratuito</p>
+
+            <div class="grid sm:grid-cols-2 gap-6">
+                <a href="https://wa.me/244946043956" target="_blank" rel="noopener"
+                    class="group relative overflow-hidden rounded-[var(--radius)] bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 transition-all duration-300 text-white p-6 shadow-glow hover:shadow-xl focus-visible:focus-ring">
+                    <div class="flex items-center gap-4">
+                        <i class="fab fa-whatsapp text-3xl"></i>
+                        <div>
+                            <p class="font-semibold text-lg">WhatsApp</p>
+                            <p class="text-green-100 text-sm">Resposta imediata</p>
+                        </div>
+                    </div>
+                    <i
+                        class="fas fa-external-link-alt absolute top-6 right-6 opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                </a>
+
+                <a href="tel:+244938899421"
+                    class="group relative overflow-hidden rounded-[var(--radius)] bg-gradient-to-r from-brand-accent to-brand-primary hover:from-brand-primary hover:to-brand-accent transition-all duration-300 text-white p-6 shadow-glow hover:shadow-xl focus-visible:focus-ring">
+                    <div class="flex items-center gap-4">
+                        <i class="fas fa-phone text-3xl"></i>
+                        <div>
+                            <p class="font-semibold text-lg">Telefone</p>
+                            <p class="text-blue-100 text-sm">+244 938899421</p>
+                        </div>
+                    </div>
+                    <i
+                        class="fas fa-phone-alt absolute top-6 right-6 opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                </a>
+            </div>
+
+            <!-- Formulário de contato rápido -->
+            <div class="mt-8 p-6 rounded-[var(--radius)] bg-white border border-gray-200 shadow-card">
+                <h3 class="font-semibold text-xl mb-4 text-center">
+                    <i class="fas fa-paper-plane text-brand-accent mr-2"></i>
+                    Solicitar Orçamento Rápido
+                </h3>
+
+                <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                    <input id="nome-cliente" type="text" placeholder="Seu nome..."
+                        class="rounded-xl bg-gray-50 border border-gray-300 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 px-4 py-3 placeholder:text-gray-500 focus:outline-none transition-colors" />
+                    <input id="telefone-cliente" type="tel" placeholder="Seu telefone..."
+                        class="rounded-xl bg-gray-50 border border-gray-300 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 px-4 py-3 placeholder:text-gray-500 focus:outline-none transition-colors" />
+                </div>
+
+                <select id="servico-interesse"
+                    class="w-full mb-4 rounded-xl bg-gray-50 border border-gray-300 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 px-4 py-3 text-gray-700 focus:outline-none transition-colors">
+                    <option value="">Selecione o serviço de interesse...</option>
+                    <option value="construcao">Construção Civil</option>
+                    <option value="climatizacao">Climatização</option>
+                    <option value="design">Design Gráfico</option>
+                    <option value="desenvolvimento">Desenvolvimento Web</option>
+                    <option value="educacao">Aulas Particulares</option>
+                    <option value="manutencao">Manutenção</option>
+                </select>
+
+                <button id="enviar-orcamento"
+                    class="w-full inline-flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-gradient-to-r from-brand-accent to-brand-success hover:from-brand-success hover:to-brand-accent text-white font-semibold transition-all duration-300 shadow-glow hover:shadow-xl focus-visible:focus-ring">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Enviar para WhatsApp</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+
+                <p class="mt-4 text-xs text-brand-light text-center">
+                    <i class="fas fa-lock mr-1"></i>
+                    Seus dados estão seguros conosco. Responderemos em até 1 hora.
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer-->
+        <footer class="w-full max-w-md mx-auto py-6 px-4 text-center">
+            <div class="flex flex-col items-center">
+                <div class="flex items-center justify-center mb-3">
+                    <a href="https://linkado.click" target="_blank"
+                        class="inline-flex items-center gap-2 font-medium text-indigo-700 hover:text-indigo-900 transition-all group">
+                        <div class="bg-indigo-100 group-hover:bg-indigo-200 p-2 rounded-lg transition-colors">
+                            <img src="../assets/image/FIVE.png" alt="Logo Linkado" class="w-6 h-6 object-contain" />
+                        </div>
+                        <span class="font-bold text-lg tracking-tight">linkado.click</span>
+                    </a>
+                </div>
+
+                <p class="text-gray-600 mb-3 text-sm italic max-w-xs">
+                    O link que conecta, converte e cresce.
+                </p>
+
+                <div class="text-sm text-gray-500">
+                    © <span id="current-year"></span> Todos os direitos reservados
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="assets/js/script.js"></script>
+
+    <!-- JSON-LD para SEO -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "VERSA SERVIÇOS",
+    "description": "Soluções profissionais completas para seus projetos e necessidades",
+    "serviceType": [
+      "Construção Civil",
+      "Climatização",
+      "Design Gráfico",
+      "Desenvolvimento Web",
+      "Educação",
+      "Manutenção"
+    ],
+    "telephone": "+244938899421",
+    "url": "https://linkado.click/versa",
+    "areaServed": "Angola",
+    "sameAs": [
+      "https://wa.me/244946043956"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Catálogo de Serviços Versa",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Construção Civil",
+            "description": "Reformas, acabamentos, instalações elétricas e hidráulicas"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Climatização",
+            "description": "Ar condicionado residencial, automotivo e sistemas de refrigeração"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Serviços Digitais",
+            "description": "Design gráfico, desenvolvimento web e marketing digital"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+</body>
+
+</html>

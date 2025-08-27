@@ -1,36 +1,36 @@
-// Funcionalidade do FAQ
-const faqItems = document.querySelectorAll('.faq-item');
+document.addEventListener('DOMContentLoaded', () => {
+  const faqItems = document.querySelectorAll('.faq-item');
 
-faqItems.forEach((item) => {
-  const question = item.querySelector('.faq-question');
+  faqItems.forEach(item => {
+      const questionButton = item.querySelector('.faq-question');
+      const answerPanel = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.faq-icon');
 
-  question.addEventListener('click', () => {
-    const isActive = item.classList.contains('active');
+      questionButton.addEventListener('click', () => {
+          const isExpanded = questionButton.getAttribute('aria-expanded') === 'true';
 
-    // Fecha todos os itens
-    faqItems.forEach((faq) => {
-      faq.classList.remove('active');
-    });
+          // Fecha todos os outros itens para um acordeão "clássico"
+          faqItems.forEach(otherItem => {
+              if (otherItem !== item) {
+                  otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                  otherItem.querySelector('.faq-answer').style.display = 'none';
+                  otherItem.querySelector('.faq-icon').classList.remove('rotate-180');
+                  otherItem.classList.remove('bg-primary-dark/20');
+              }
+          });
 
-    // Abre o item clicado se não estava ativo
-    if (!isActive) {
-      item.classList.add('active');
-    }
+          // Alterna o item clicado
+          if (isExpanded) {
+              questionButton.setAttribute('aria-expanded', 'false');
+              answerPanel.style.display = 'none';
+              icon.classList.remove('rotate-180');
+              item.classList.remove('bg-primary-dark/20');
+          } else {
+              questionButton.setAttribute('aria-expanded', 'true');
+              answerPanel.style.display = 'block';
+              icon.classList.add('rotate-180');
+              item.classList.add('bg-primary-dark/20');
+          }
+      });
   });
-});
-
-// Observador para animações
-const faqObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animated');
-      }
-    });
-  },
-  { threshold: 0.1 },
-);
-
-document.querySelectorAll('.faq-item, .faq-cta').forEach((el) => {
-  faqObserver.observe(el);
 });

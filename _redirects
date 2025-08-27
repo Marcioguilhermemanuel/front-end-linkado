@@ -153,6 +153,11 @@ http://linkado.click/* https://linkado.click/:splat 301!
 /piedade-amorim/        /piedade-amorim               301
 /piedade-amorim/*       Cache-Control: public, max-age=86400
 
+# pizzaria Carla
+/pizzaria_carla         /pizzaria_carla/index.html    200
+/pizzaria_carla/        /pizzaria_carla               301
+/pizzaria_carla/*       Cache-Control: public, max-age=86400
+
 # sabor arte
 /sabor-arte               /sabor-arte/index.html          200
 /sabor-arte/              /sabor-arte                     301

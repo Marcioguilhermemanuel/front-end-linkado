@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PIZZA DA CARLA | Linktree Oficial</title>
+  <meta name="description" content="Link único da Pizza da Carla: cardápio com preços, pedidos por WhatsApp, e redes sociais. Rápido, acessível e feito para conversão." />
+  <meta property="og:title" content="PIZZA DA CARLA | Linktree" />
+  <meta property="og:description" content="Peça sua pizza preferida em poucos cliques. Pagamento no balcão/entrega. WhatsApp direto." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?q=80&w=1200&auto=format&fit=crop" />
+  <meta name="theme-color" content="#D97706" />
+  
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pacifico&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#EA580C',    // laranja vibrante
+              amber: '#F59E0B',     // âmbar dourado
+              dark: '#1F2937',      // cinza escuro
+              cream: '#FEF7ED',     // creme suave
+              green: '#059669',     // verde para destaque
+            }
+          },
+          fontFamily: {
+            display: ['Pacifico', 'cursive'],
+            heading: ['Nunito', 'ui-sans-serif', 'system-ui'],
+            body: ['Inter', 'ui-sans-serif', 'system-ui']
+          },
+          boxShadow: {
+            'warm': '0 10px 40px -12px rgba(234,88,12,.4)',
+            'glow': '0 0 0 4px rgba(245,158,11,.35)',
+          },
+          backgroundImage: {
+            'pizza-pattern': "url('data:image/svg+xml,%3Csvg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"%23EA580C\" fill-opacity=\"0.06\" fill-rule=\"evenodd\"%3E%3Cpath d=\"M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z\"/%3E%3C/g%3E%3C/svg%3E')",
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="shortcut icon" href="../assets/image/FIVE.png" type="image/x-icon">
+  
+  <script>
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && e.target.getAttribute('role') === 'button') {
+        e.preventDefault();
+        e.target.click();
+      }
+    });
+  </script>
+</head>
+
+<body class="min-h-screen bg-pizza-pattern font-body">
+  <main class="max-w-xl mx-auto px-4 pt-8 pb-36">
+    
+    <!-- Header -->
+    <header class="text-center mb-8 animate-slideUp">
+      <div class="mx-auto w-32 h-32 rounded-full bg-gradient-to-br from-brand-orange via-brand-amber to-brand-green p-1 shadow-warm animate-pulse-soft">
+        <div class="w-full h-full rounded-full bg-white grid place-content-center overflow-hidden">
+          <div class="text-5xl text-brand-orange">
+            <i class="fa-solid fa-pizza-slice"></i>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="font-display text-4xl sm:text-5xl mt-6 tracking-wide gradient-text">
+        Pizza da Carla
+      </h1>
+      <p class="text-gray-700 mt-3 text-lg font-medium">Sabor italiano feito com carinho</p>
+
+      <div class="mt-6 flex items-center justify-center gap-3 flex-wrap">
+        <span class="inline-flex items-center gap-2 rounded-full bg-green-100 px-4 py-2 text-sm text-green-800 font-medium">
+          <i class="fa-solid fa-clock text-green-600"></i> Aberto até 23h
+        </span>
+        <span class="inline-flex items-center gap-2 rounded-full bg-amber-100 px-4 py-2 text-sm text-amber-800 font-medium">
+          <i class="fa-solid fa-star text-amber-600"></i> 4,8/5
+        </span>
+        <span class="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-2 text-sm text-blue-800 font-medium">
+          <i class="fa-solid fa-motorcycle text-blue-600"></i> Entrega rápida
+        </span>
+      </div>
+
+      <!-- CTA Primário -->
+      <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <a id="cta-whatsapp-top" href="#pedido" class="inline-flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-brand-orange text-white font-bold text-lg hover:bg-orange-600 active:scale-[.98] transition-all focus-ring shadow-warm hover-lift" aria-label="Fazer pedido pelo WhatsApp">
+          <i class="fa-brands fa-whatsapp text-xl"></i>
+          <span>Pedir agora</span>
+        </a>
+        <a href="#cardapio" class="inline-flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-white text-gray-800 font-bold text-lg hover:bg-gray-50 ring-2 ring-brand-amber transition-all focus-ring hover-lift" aria-label="Ver cardápio">
+          <i class="fa-solid fa-book-open"></i>
+          <span>Ver cardápio</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- Banner de Oferta -->
+    <section class="mb-8 animate-slideUp" aria-label="Promoções" style="animation-delay: 0.1s">
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-brand-orange via-brand-amber to-brand-green p-6 text-white shadow-warm">
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="relative flex items-center gap-4">
+          <div class="w-20 h-20 rounded-2xl bg-white/20 grid place-content-center backdrop-blur-sm">
+            <i class="fa-solid fa-fire text-3xl text-white"></i>
+          </div>
+          <div class="flex-1">
+            <p class="text-sm uppercase tracking-widest font-bold opacity-90">Oferta Especial</p>
+            <h3 class="font-heading text-2xl font-bold mt-1">2 Pizzas Grandes + Refri 2L</h3>
+            <p class="text-white/95 text-base mt-1">De <s class="opacity-75">Kz 18.500</s> por <span class="font-bold text-xl">Kz 14.990</span></p>
+          </div>
+        </div>
+        <button id="add-promo" class="mt-6 w-full bg-white text-brand-orange py-3 rounded-xl font-bold text-lg hover:bg-gray-100 transition focus-ring shadow-lg" role="button" aria-label="Adicionar promoção ao carrinho">
+          🍕 Quero essa oferta!
+        </button>
+      </div>
+    </section>
+
+    <!-- Links Rápidos -->
+    <nav class="mb-10 grid grid-cols-1 gap-4 animate-slideUp" aria-label="Links principais" style="animation-delay: 0.2s">
+      <a class="group card rounded-3xl p-6 flex items-center justify-between transition-all hover-lift focus-ring" href="#cardapio" aria-label="Ver o catálogo completo">
+        <div class="flex items-center gap-4">
+          <div class="w-16 h-16 rounded-2xl bg-orange-100 grid place-content-center text-brand-orange">
+            <i class="fa-solid fa-pizza-slice text-2xl"></i>
+          </div>
+          <div>
+            <p class="font-heading font-bold text-lg">Nosso Cardápio</p>
+            <p class="text-gray-600 mt-1">Pizzas, calzones e bebidas</p>
+          </div>
+        </div>
+        <span class="text-gray-400 group-hover:text-brand-orange transition-all text-xl">
+          <i class="fa-solid fa-chevron-right"></i>
+        </span>
+      </a>
+
+      <a class="group card rounded-3xl p-6 flex items-center justify-between transition-all hover-lift focus-ring" href="#redes" aria-label="Seguir nas redes sociais">
+        <div class="flex items-center gap-4">
+          <div class="w-16 h-16 rounded-2xl bg-pink-100 grid place-content-center text-pink-600">
+            <i class="fa-solid fa-heart text-2xl"></i>
+          </div>
+          <div>
+            <p class="font-heading font-bold text-lg">Siga-nos</p>
+            <p class="text-gray-600 mt-1">Instagram, Facebook e mais</p>
+          </div>
+        </div>
+        <span class="text-gray-400 group-hover:text-brand-orange transition-all text-xl">
+          <i class="fa-solid fa-chevron-right"></i>
+        </span>
+      </a>
+    </nav>
+
+    <!-- Cardápio -->
+    <section id="cardapio" class="mb-12 animate-slideUp" style="animation-delay: 0.3s">
+      <h2 class="font-heading text-3xl font-bold mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-utensils text-brand-orange"></i>
+        Cardápio
+      </h2>
+
+      <!-- Tabs -->
+      <div class="mb-8 flex flex-wrap gap-3" role="tablist" aria-label="Categorias do cardápio">
+        <button class="tab-btn px-5 py-3 rounded-full bg-white text-gray-800 font-semibold hover:bg-gray-50 ring-2 ring-gray-200 transition-all focus-ring" role="tab" aria-selected="true" data-cat="pizzas">
+          <i class="fa-solid fa-pizza-slice mr-2"></i> Pizzas
+        </button>
+        <button class="tab-btn px-5 py-3 rounded-full bg-white text-gray-800 font-semibold hover:bg-gray-50 ring-2 ring-gray-200 transition-all focus-ring" role="tab" aria-selected="false" data-cat="calzones">
+          <i class="fa-solid fa-bread-slice mr-2"></i> Calzones
+        </button>
+        <button class="tab-btn px-5 py-3 rounded-full bg-white text-gray-800 font-semibold hover:bg-gray-50 ring-2 ring-gray-200 transition-all focus-ring" role="tab" aria-selected="false" data-cat="acomp">
+          <i class="fa-solid fa-leaf mr-2"></i> Acompanhamentos
+        </button>
+        <button class="tab-btn px-5 py-3 rounded-full bg-white text-gray-800 font-semibold hover:bg-gray-50 ring-2 ring-gray-200 transition-all focus-ring" role="tab" aria-selected="false" data-cat="drinks">
+          <i class="fa-solid fa-wine-glass mr-2"></i> Bebidas
+        </button>
+      </div>
+
+      <!-- Lista dinâmica de produtos -->
+      <div id="lista-produtos" class="grid gap-6"></div>
+    </section>
+
+    <!-- Redes sociais -->
+    <section id="redes" class="mb-12 animate-slideUp" aria-label="Redes Sociais" style="animation-delay: 0.4s">
+      <h2 class="font-heading text-3xl font-bold mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-share-nodes text-brand-orange"></i>
+        Conecte-se conosco
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a href="https://wa.me/244946043956" target="_blank" rel="noopener" class="card p-6 rounded-2xl flex items-center gap-4 transition-all hover-lift focus-ring group" aria-label="Abrir WhatsApp da Pizza da Carla">
+          <div class="w-16 h-16 rounded-2xl bg-green-100 grid place-content-center text-green-600 group-hover:bg-green-200 transition-all">
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+          </div>
+          <div>
+            <p class="font-heading font-bold text-lg">WhatsApp</p>
+            <p class="text-gray-600">+244 946 043 956</p>
+          </div>
+          <span class="ml-auto text-gray-400 group-hover:text-brand-orange text-xl">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener" class="card p-6 rounded-2xl flex items-center gap-4 transition-all hover-lift focus-ring group" aria-label="Abrir Instagram da Pizza da Carla">
+          <div class="w-16 h-16 rounded-2xl bg-pink-100 grid place-content-center text-pink-600 group-hover:bg-pink-200 transition-all">
+            <i class="fa-brands fa-instagram text-2xl"></i>
+          </div>
+          <div>
+            <p class="font-heading font-bold text-lg">Instagram</p>
+            <p class="text-gray-600">@pizzadacarla</p>
+          </div>
+          <span class="ml-auto text-gray-400 group-hover:text-brand-orange text-xl">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener" class="card p-6 rounded-2xl flex items-center gap-4 transition-all hover-lift focus-ring group" aria-label="Abrir Facebook da Pizza da Carla">
+          <div class="w-16 h-16 rounded-2xl bg-blue-100 grid place-content-center text-blue-600 group-hover:bg-blue-200 transition-all">
+            <i class="fa-brands fa-facebook text-2xl"></i>
+          </div>
+          <div>
+            <p class="font-heading font-bold text-lg">Facebook</p>
+            <p class="text-gray-600">/pizzadacarla</p>
+          </div>
+          <span class="ml-auto text-gray-400 group-hover:text-brand-orange text-xl">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </a>
+
+        <a href="#" target="_blank" rel="noopener" class="card p-6 rounded-2xl flex items-center gap-4 transition-all hover-lift focus-ring group" aria-label="Abrir TikTok da Pizza da Carla">
+          <div class="w-16 h-16 rounded-2xl bg-gray-100 grid place-content-center text-gray-800 group-hover:bg-gray-200 transition-all">
+            <i class="fa-brands fa-tiktok text-2xl"></i>
+          </div>
+          <div>
+            <p class="font-heading font-bold text-lg">TikTok</p>
+            <p class="text-gray-600">@pizzadacarla</p>
+          </div>
+          <span class="ml-auto text-gray-400 group-hover:text-brand-orange text-xl">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Área do pedido -->
+    <section id="pedido" class="animate-slideUp" style="animation-delay: 0.5s">
+      <h2 class="font-heading text-3xl font-bold mb-6 flex items-center gap-3">
+        <i class="fa-solid fa-shopping-cart text-brand-orange"></i>
+        Seu pedido
+      </h2>
+      <div class="card rounded-3xl p-8">
+        <div id="itens-carrinho" class="space-y-4 mb-6" aria-live="polite"></div>
+        
+        <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between mb-6">
+          <div>
+            <label for="nome" class="block text-sm font-semibold text-gray-700 mb-2">Seu nome</label>
+            <input id="nome" type="text" placeholder="Ex: Maria Silva" class="w-full sm:w-52 rounded-xl bg-gray-50 border-2 border-gray-200 px-4 py-3 placeholder:text-gray-400 focus-ring font-medium" />
+          </div>
+          <div class="text-right">
+            <p class="text-gray-600 font-medium">Subtotal</p>
+            <p id="subtotal" class="font-heading text-2xl font-bold text-brand-orange">Kz 0</p>
+          </div>
+        </div>
+        
+        <button id="finalizar" class="w-full inline-flex items-center justify-center gap-3 py-4 rounded-2xl bg-brand-green text-white font-bold text-lg hover:bg-green-700 transition-all focus-ring shadow-warm" aria-label="Finalizar pedido no WhatsApp">
+          <i class="fa-brands fa-whatsapp text-xl"></i>
+          <span>Finalizar no WhatsApp</span>
+        </button>
+        
+        <p class="mt-4 text-sm text-gray-500 text-center">
+          💳 Pagamento no balcão/entrega • 🏍️ Taxa de entrega varia por bairro
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer (mantido exatamente como solicitado) -->
+    <footer class="w-full max-w-md mx-auto py-6 px-4 text-center">
+        <div class="flex flex-col items-center">
+            <div class="flex items-center justify-center mb-3">
+                <a href="https://linkado.click" target="_blank"
+                    class="inline-flex items-center gap-2 font-medium text-indigo-700 hover:text-indigo-900 transition-all group">
+                    <div class="bg-indigo-100 group-hover:bg-indigo-200 p-2 rounded-lg transition-colors">
+                        <img src="/assets/image/FIVE.png" alt="Logo Linkado"
+                            class="w-6 h-6 object-contain" />
+                    </div>
+                    <span class="font-bold text-lg tracking-tight">linkado.click</span>
+                </a>
+            </div>
+
+            <p class="text-gray-600 mb-3 text-sm italic max-w-xs">
+                O link que conecta, converte e cresce.
+            </p>
+
+            <div class="text-sm text-gray-500">
+                © <span id="current-year"></span> Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
+
+  </main>
+
+  <!-- Mini Cart flutuante -->
+  <div id="cart-fab" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hidden">
+    <button id="cart-open" class="px-6 py-4 rounded-full bg-brand-orange text-white shadow-warm font-bold hover:bg-orange-600 transition-all flex items-center gap-3 hover-lift" aria-label="Abrir carrinho">
+      <i class="fa-solid fa-shopping-cart"></i>
+      <span>
+        <span id="fab-count">0</span> itens • <span id="fab-total">Kz 0</span>
+      </span>
+    </button>
+  </div>
+
+  <!-- Sheet do carrinho -->
+  <div id="sheet" class="fixed inset-0 z-50 hidden" aria-hidden="true">
+    <div class="absolute inset-0 bg-black/50" id="sheet-backdrop"></div>
+    <div class="absolute left-0 right-0 bottom-0 p-6 pb-8 bg-white rounded-t-3xl shadow-warm" role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+      <div class="mx-auto max-w-xl">
+        <div class="flex items-center justify-between mb-6">
+          <h3 id="sheet-title" class="font-heading text-xl font-bold">Seu carrinho</h3>
+          <button id="sheet-close" class="p-3 rounded-xl bg-gray-100 hover:bg-gray-200 transition-all" aria-label="Fechar carrinho">
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+        <div id="sheet-itens" class="mb-6 max-h-[45vh] overflow-y-auto pr-2 space-y-4"></div>
+        <div class="flex items-center justify-between mb-6">
+          <span class="text-gray-600 font-semibold">Total</span>
+          <span id="sheet-total" class="font-heading text-2xl font-bold text-brand-orange">Kz 0</span>
+        </div>
+        <button id="sheet-finalizar" class="w-full inline-flex items-center justify-center gap-3 py-4 rounded-2xl bg-brand-green text-white font-bold text-lg hover:bg-green-700 transition-all">
+          <i class="fa-brands fa-whatsapp"></i>
+          Finalizar no WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+
+  <!-- JSON-LD para SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Pizza da Carla",
+    "servesCuisine": "Pizza, Italian Food",
+    "telephone": "+244946043956",
+    "priceRange": "Kz 500 - Kz 25.000",
+    "sameAs": [
+      "https://www.instagram.com/pizzadacarla",
+      "https://www.facebook.com/pizzadacarla",
+      "https://www.tiktok.com/@pizzadacarla"
+    ]
+  }
+  </script>
+</body>
+</html>

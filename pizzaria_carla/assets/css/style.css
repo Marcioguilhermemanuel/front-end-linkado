@@ -1,0 +1,71 @@
+:root {
+    --radius: 20px;
+}
+
+body {
+    background: linear-gradient(135deg, #FEF7ED 0%, #FED7AA 100%);
+    color: #1F2937;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px rgba(234, 88, 12, 0.1);
+}
+
+.focus-ring:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.4);
+}
+
+/* Animações */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.animate-slideUp {
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+.animate-pulse-soft {
+    animation: pulse 2s infinite;
+}
+
+/* Efeito hover para cards */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(234, 88, 12, 0.15);
+}
+
+/* Gradiente para header */
+.gradient-text {
+    background: linear-gradient(135deg, #EA580C 0%, #F59E0B 50%, #059669 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}

@@ -168,6 +168,11 @@ http://linkado.click/* https://linkado.click/:splat 301!
 /samerda/              /samerda                     301
 /samerda/*             Cache-Control: public, max-age=86400
 
+# Sushi
+/sushi               /sushi/index.html          200
+/sushi/              /sushi                     301
+/sushi/*             Cache-Control: public, max-age=86400
+
 
 # Vanilson Gourgel
 /vanilson_gourgel      /vanilson_gourgel/index.html          200

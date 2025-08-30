@@ -47,6 +47,11 @@
     rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="assets/css/como-funciona.css" />
   <link rel="stylesheet" href="assets/css/beneficios.css" />
@@ -58,6 +63,44 @@
   <link rel="stylesheet" href="assets/css/quempode.css" />
   <link rel="stylesheet" href="assets/css/whatsapp.css" />
   <link rel="stylesheet" href="assets/css/footer.css" />
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#5E35B1',
+            'primary-light': '#7E57C2',
+            'primary-dark': '#4527A0',
+            secondary: '#FF6B6B',
+            accent: '#4ECDC4',
+            dark: '#1F2937',
+            'dark-light': '#374151',
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          animation: {
+            'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+            'fade-in': 'fadeIn 0.8s ease-out forwards',
+            'bounce-gentle': 'bounceGentle 2s infinite',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+            bounceGentle: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-5px)' },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+
 
   <script defer src="assets/js/script.js"></script>
   <script defer src="assets/js/como-funciona.js"></script>
@@ -310,117 +353,112 @@
   </section>
 
   <!-- Seção Benefícios -->
-  <section class="benefits-section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Por que escolher nosso serviço premium</h2>
-        <p class="subtitle">Valor excepcional que transforma sua presença digital</p>
-      </div>
+  <section id="benefits" class="relative py-20 lg:py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-white via-purple-50 to-secondary/10"></div>
+    <div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/5 rounded-full filter blur-3xl"></div>
+    <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-accent/10 rounded-full filter blur-3xl"></div>
 
-      <div class="benefits-grid">
-        <!-- Benefício 1 -->
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83">
-              </path>
-            </svg>
-            <div class="icon-bg"></div>
-          </div>
-          <h3>Personalização Total</h3>
-          <p>
-            Design 100% personalizado que reflete sua identidade única. Cores, fontes, layouts -
-            tudo adaptado para você.
-          </p>
-          <div class="benefit-highlight">
-            <i class="fas fa-check-circle"></i>
-            <span>Inclui 3 revisões gratuitas</span>
-          </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="text-center mb-16 lg:mb-20">
+            <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-sm font-semibold tracking-wide uppercase">
+                Vantagens Exclusivas
+            </span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark mt-4 mb-6 leading-tight">
+                Por que Escolher Nosso Serviço
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Entregamos um valor excepcional que vai além do design, transformando sua presença digital de forma completa.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+            
+            <div class="benefit-card flex flex-col bg-white rounded-3xl p-8 text-center shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <div class="relative w-20 h-20 mx-auto">
+                    <div class="absolute inset-0 bg-primary/10 rounded-full blur-lg animate-pulse"></div>
+                    <svg class="relative w-full h-full stroke-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-dark mt-6">Personalização Total</h3>
+                <p class="text-gray-600 mt-2 flex-grow">Design 100% personalizado que reflete sua identidade única. Cores, fontes, layouts - tudo adaptado para você.</p>
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <div class="inline-flex items-center text-sm font-medium text-primary">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        <span>Inclui 3 revisões gratuitas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative lg:scale-105">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <span class="bg-gradient-to-r from-primary to-secondary text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-lg">
+                        Popular
+                    </span>
+                </div>
+                <div class="benefit-card flex flex-col h-full bg-white rounded-3xl p-8 text-center shadow-2xl border-2 border-primary">
+                    <div class="relative w-20 h-20 mx-auto">
+                        <div class="absolute inset-0 bg-primary/10 rounded-full blur-lg animate-pulse"></div>
+                        <svg class="relative w-full h-full stroke-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-dark mt-6">Rápido e Eficiente</h3>
+                    <p class="text-gray-600 mt-2 flex-grow">Entregamos seu linktree premium em até 24 horas. Processo otimizado sem sacrificar a qualidade.</p>
+                    <div class="mt-6 pt-6 border-t border-gray-200">
+                        <div class="inline-flex items-center text-sm font-medium text-primary">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>Garantia de entrega rápida</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="benefit-card flex flex-col bg-white rounded-3xl p-8 text-center shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <div class="relative w-20 h-20 mx-auto">
+                    <div class="absolute inset-0 bg-primary/10 rounded-full blur-lg animate-pulse"></div>
+                    <svg class="relative w-full h-full stroke-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-dark mt-6">Suporte Contínuo</h3>
+                <p class="text-gray-600 mt-2 flex-grow">Equipe disponível para ajustes, dúvidas e otimizações pós-entrega.</p>
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <div class="inline-flex items-center text-sm font-medium text-primary">
+                        <i class="fas fa-check-circle mr-2"></i>
+                        <span>Atualizações gratuitas por 30 dias</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Benefício 2 -->
-        <div class="benefit-card featured">
-          <div class="featured-badge">Popular</div>
-          <div class="benefit-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-            <div class="icon-bg"></div>
-          </div>
-          <h3>Rápido e Eficiente</h3>
-          <p>
-            Entregamos seu linktree premium em até 24 horas. Processo otimizado sem sacrificar
-            qualidade.
-          </p>
-          <div class="benefit-highlight">
-            <i class="fas fa-check-circle"></i>
-            <span>Garantia de entrega rápida</span>
-          </div>
+        <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="extra-benefit-card bg-white/50 backdrop-blur-sm border border-gray-200/80 rounded-2xl p-6 text-center transition-all duration-300 hover:bg-white hover:border-primary/50 hover:shadow-lg">
+                <div class="w-12 h-12 mx-auto rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-chart-line fa-lg"></i></div>
+                <h4 class="font-semibold text-dark mt-4">Performance Otimizada</h4>
+                <p class="text-sm text-gray-600 mt-1">Carregamento ultrarrápido para melhor experiência do usuário.</p>
+            </div>
+            <div class="extra-benefit-card bg-white/50 backdrop-blur-sm border border-gray-200/80 rounded-2xl p-6 text-center transition-all duration-300 hover:bg-white hover:border-primary/50 hover:shadow-lg">
+                <div class="w-12 h-12 mx-auto rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-mobile-alt fa-lg"></i></div>
+                <h4 class="font-semibold text-dark mt-4">Design Responsivo</h4>
+                <p class="text-sm text-gray-600 mt-1">Perfeito em todos os dispositivos, de smartphones a desktops.</p>
+            </div>
+            <div class="extra-benefit-card bg-white/50 backdrop-blur-sm border border-gray-200/80 rounded-2xl p-6 text-center transition-all duration-300 hover:bg-white hover:border-primary/50 hover:shadow-lg">
+                <div class="w-12 h-12 mx-auto rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fas fa-lock fa-lg"></i></div>
+                <h4 class="font-semibold text-dark mt-4">Segurança Garantida</h4>
+                <p class="text-sm text-gray-600 mt-1">Proteção avançada contra ameaças e links maliciosos.</p>
+            </div>
+            <div class="extra-benefit-card bg-white/50 backdrop-blur-sm border border-gray-200/80 rounded-2xl p-6 text-center transition-all duration-300 hover:bg-white hover:border-primary/50 hover:shadow-lg">
+                <div class="w-12 h-12 mx-auto rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="fa-solid fa-link fa-lg"></i></div>
+                <h4 class="font-semibold text-dark mt-4">Integrações</h4>
+                <p class="text-sm text-gray-600 mt-1">Conecte com Google Analytics, Pixel do Facebook e mais.</p>
+            </div>
         </div>
 
-        <!-- Benefício 3 -->
-        <div class="benefit-card">
-          <div class="benefit-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-              <line x1="6" y1="1" x2="6" y2="4"></line>
-              <line x1="10" y1="1" x2="10" y2="4"></line>
-              <line x1="14" y1="1" x2="14" y2="4"></line>
-            </svg>
-            <div class="icon-bg"></div>
-          </div>
-          <h3>Suporte Contínuo</h3>
-          <p>
-            Equipe disponível 7 dias por semana para ajustes, dúvidas e otimizações pós-entrega.
-          </p>
-          <div class="benefit-highlight">
-            <i class="fas fa-check-circle"></i>
-            <span>Atualizações gratuitas por 30 dias</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="benefits-extra">
-        <div class="extra-card">
-          <div class="extra-icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <h4>Performance Otimizada</h4>
-          <p>Código leve e carregamento ultrarrápido para melhor experiência do usuário</p>
-        </div>
-
-        <div class="extra-card">
-          <div class="extra-icon">
-            <i class="fas fa-mobile-alt"></i>
-          </div>
-          <h4>Design Responsivo</h4>
-          <p>Perfeito em todos os dispositivos, de smartphones a desktops</p>
-        </div>
-
-        <div class="extra-card">
-          <div class="extra-icon">
-            <i class="fas fa-lock"></i>
-          </div>
-          <h4>Segurança Garantida</h4>
-          <p>Proteção avançada contra ameaças digitais</p>
-        </div>
-
-        <div class="extra-card">
-          <div class="extra-icon">
-            <i class="fa-solid fa-link"></i>
-          </div>
-          <h4>Integrações</h4>
-          <p>Conecte com Google Analytics e outras ferramentas</p>
-        </div>
-      </div>
     </div>
-  </section>
+</section>
+
 
   <!-- Seção Testemunhos -->
     <section class="testimonials-section" id="testimonials" aria-label="Depoimentos de clientes">
@@ -552,432 +590,446 @@
     </section>
 
   <!-- Seção Portfólio -->
-  <section class="portfolio-section" id="portfolio">
-    <div class="container">
-      <div class="section-header">
-        <h2>Veja Alguns Exemplos de Linktrees Criados por Nós</h2>
-        <p class="subtitle">
-          Cada página é única, feita sob medida para destacar a presença online de nossos clientes
+  <section id="portfolio" class="relative bg-dark text-white py-20 lg:py-32 overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-5" style="background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iIzE0MTQxNCIvPjxwYXRoIGQ9Ik0wIDEwMCAxMDAgMCBNMTAwIDEwMCAwIDAiIHN0cm9rZT0iIzU1NSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+');"></div>
+    <div class="absolute -top-20 -left-20 w-96 h-96 bg-primary/10 rounded-full filter blur-3xl"></div>
+    <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-secondary/10 rounded-full filter blur-3xl"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <header class="text-center mb-16 lg:mb-20">
+        <span class="bg-gradient-to-r from-primary-light to-secondary bg-clip-text text-transparent text-sm font-semibold tracking-wide uppercase">
+          Nossos Clientes
+        </span>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-4 mb-6 leading-tight">
+          Confiado por Marcas Incríveis
+        </h2>
+        <p class="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          Construímos o sucesso, entregando resultados que impulsionam o crescimento e a visibilidade online de nossos clientes.
         </p>
-      </div>
+        <div class="mt-8 flex justify-center">
+          <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+        </div>
+      </header>
 
-      <div class="portfolio-filter">
-        <button class="filter-btn active" data-filter="all">Todos</button>
-        <button class="filter-btn" data-filter="influencer">Influencers</button>
-        <button class="filter-btn" data-filter="business">Negócios</button>
-        <button class="filter-btn" data-filter="creative">Criativos</button>
-      </div>
-
-      <div class="portfolio-grid">
-        <!-- Item 1 -->
-        <div class="portfolio-item" data-category="influencer">
-          <div class="portfolio-card">
-            <div class="portfolio-image">
-              <img src="assets/image/fontviva.png" alt="Linktree para Influencer" />
-              <div class="portfolio-overlay">
-                <a href="https://linkado-fontviva.netlify.app/" class="preview-btn" target="_blank"
-                  rel="noopener noreferrer" aria-label="Visualizar projeto completo">
-                  <i class="fas fa-expand"></i>
-                </a>
+      <div class="swiper client-carousel">
+        <div class="swiper-wrapper flex items-center">
+          <!-- 1. Fontviva -->
+          <div class="swiper-slide">
+            <div class="swiper-slide-wrapper">
+              <div class="client-logo-wrapper block p-2 group">
+                <img src="assets/image/font.jpeg" alt="Logo da Fontviva"
+                     class="client-logo-img transition-all duration-300 ease-in-out object-contain">
               </div>
-            </div>
-            <div class="portfolio-info">
-              <h3>Fontviva</h3>
-              <p>Clinica de estetica</p>
-              <a href="https://linkado-fontviva.netlify.app/" class="view-btn" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fas fa-external-link-alt"></i> Ver Página
+              <a href="https://linkado.click/clinica-fontviva" target="_blank" rel="noopener noreferrer" aria-label="Previsualizar Fontviva" class="preview-overlay">
+                <div class="relative">
+                  <div class="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300">
+                    <span class="text-white font-bold text-lg lg:text-xl">L</span>
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-light rounded-2xl blur opacity-50 transition-opacity"></div>
+                  </div>
+                  <div class="absolute -top-1 -right-1 w-4 h-4 bg-secondary rounded-full animate-bounce-gentle opacity-80"></div>
+                </div>
               </a>
             </div>
           </div>
-        </div>
 
-        <!-- Item 2 -->
-        <div class="portfolio-item" data-category="business">
-          <div class="portfolio-card">
-            <div class="portfolio-image">
-              <img src="assets/image/conceito.png" alt="Linktree para Negócio" />
-              <div class="portfolio-overlay">
-                <a href="#" class="preview-btn" aria-label="Visualizar projeto completo">
-                  <i class="fas fa-expand"></i>
-                </a>
+          <!-- 2. Conceitos Realize -->
+          <!-- <div class="swiper-slide">
+            <div class="swiper-slide-wrapper">
+              <div class="client-logo-wrapper block p-2 group">
+                <img src="https://via.placeholder.com/200x150/FFFFFF/1F2937?text=Conceitos+Realize" alt="Logo da Conceitos Realize"
+                     class="client-logo-img transition-all duration-300 ease-in-out object-contain">
               </div>
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Previsualizar Conceitos Realize" class="preview-overlay">
+                <div class="relative">
+                  <div class="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300">
+                    <span class="text-white font-bold text-lg lg:text-xl">L</span>
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-light rounded-2xl blur opacity-50 transition-opacity"></div>
+                  </div>
+                  <div class="absolute -top-1 -right-1 w-4 h-4 bg-secondary rounded-full animate-bounce-gentle opacity-80"></div>
+                </div>
+              </a>
             </div>
-            <div class="portfolio-info">
-              <h3>Conceitos Realize</h3>
-              <p>Agronegócio</p>
-              <a href="https://linkado-conceitosrealize.netlify.app/" class="view-btn" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fas fa-external-link-alt"></i> Ver Página
+          </div>-->
+
+          <!-- 3. Dra Jurema Quiosa -->
+          <div class="swiper-slide">
+            <div class="swiper-slide-wrapper">
+              <div class="client-logo-wrapper block p-2 group">
+                <img src="assets/image/logo2.png" alt="Logo da Dra Jurema Quiosa"
+                     class="client-logo-img transition-all duration-300 ease-in-out object-contain">
+              </div>
+              <a href="https://linkado.click/cold_studio" target="_blank" rel="noopener noreferrer" aria-label="Previsualizar Dra Jurema Quiosa" class="preview-overlay">
+                <div class="relative">
+                  <div class="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300">
+                    <span class="text-white font-bold text-lg lg:text-xl">L</span>
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-light rounded-2xl blur opacity-50 transition-opacity"></div>
+                  </div>
+                  <div class="absolute -top-1 -right-1 w-4 h-4 bg-secondary rounded-full animate-bounce-gentle opacity-80"></div>
+                </div>
               </a>
             </div>
           </div>
-        </div>
 
-        <!-- Item 3 -->
-        <div class="portfolio-item" data-category="creative">
-          <div class="portfolio-card">
-            <div class="portfolio-image">
-              <img src="assets/image/dra-jurema.png" alt="Linktree para Criativo" />
-              <div class="portfolio-overlay">
-                <a href="#" class="preview-btn" aria-label="Visualizar projeto completo">
-                  <i class="fas fa-expand"></i>
-                </a>
+          <!-- 4. Destino Sortudo -->
+          <div class="swiper-slide">
+            <div class="swiper-slide-wrapper">
+              <div class="client-logo-wrapper block p-2 group">
+                <img src="assets/image/destino.jpg" alt="Logo do Destino Sortudo"
+                     class="client-logo-img transition-all duration-300 ease-in-out object-contain">
               </div>
-            </div>
-            <div class="portfolio-info">
-              <h3>Dra Jurema Quiosa</h3>
-              <p>Mestre em Ciências da Comunicação e Marketing</p>
-              <a href="https://linkado-dra-jurema-quiosa.netlify.app/" class="view-btn" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fas fa-external-link-alt"></i> Ver Página
+              <a href="https://linkado.click/destino-sortudo" target="_blank" rel="noopener noreferrer" aria-label="Previsualizar Destino Sortudo" class="preview-overlay">
+                <div class="relative">
+                  <div class="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300">
+                    <span class="text-white font-bold text-lg lg:text-xl">L</span>
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-light rounded-2xl blur opacity-50 transition-opacity"></div>
+                  </div>
+                  <div class="absolute -top-1 -right-1 w-4 h-4 bg-secondary rounded-full animate-bounce-gentle opacity-80"></div>
+                </div>
               </a>
             </div>
           </div>
-        </div>
 
-        <!-- Item 4 -->
-        <div class="portfolio-item" data-category="influencer">
-          <div class="portfolio-card">
-            <div class="portfolio-image">
-              <img src="assets/image/destino.png" alt="Linktree para Influencer" />
-              <div class="portfolio-overlay">
-                <a href="#" class="preview-btn" aria-label="Visualizar projeto completo">
-                  <i class="fas fa-expand"></i>
-                </a>
+
+          <!-- 4. Destino Sortudo -->
+          <div class="swiper-slide">
+            <div class="swiper-slide-wrapper">
+              <div class="client-logo-wrapper block p-2 group">
+                <img src="assets/image/eu-meduzu.png" alt="Logo do Destino Sortudo"
+                     class="client-logo-img transition-all duration-300 ease-in-out object-contain">
               </div>
-            </div>
-            <div class="portfolio-info">
-              <h3>Destino Sortudo</h3>
-              <p>Criador de Conteúdo</p>
-              <a href="https://linkado-destinosortudo.netlify.app/" class="view-btn" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fas fa-external-link-alt"></i> Ver Página
+              <a href="https://linkado.click/eu_meduzu" target="_blank" rel="noopener noreferrer" aria-label="Previsualizar Destino Sortudo" class="preview-overlay">
+                <div class="relative">
+                  <div class="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300">
+                    <span class="text-white font-bold text-lg lg:text-xl">L</span>
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-light rounded-2xl blur opacity-50 transition-opacity"></div>
+                  </div>
+                  <div class="absolute -top-1 -right-1 w-4 h-4 bg-secondary rounded-full animate-bounce-gentle opacity-80"></div>
+                </div>
               </a>
             </div>
           </div>
-        </div>
 
-        <!-- Item 5 -->
-        <div class="portfolio-item" data-category="business">
-          <div class="portfolio-card">
-            <div class="portfolio-image">
-              <img src="assets/image/cold studio.png" alt="Linktree para Negócio" />
-              <div class="portfolio-overlay">
-                <a href="https://linkado-goldestudio.netlify.app/" class="preview-btn"
-                  aria-label="Visualizar projeto completo" target="_blank" rel="noopener noreferrer">
-                  <i class="fas fa-expand"></i>
-                </a>
+          <!-- 5. COLD Studio -->
+          <div class="swiper-slide">
+            <div class="swiper-slide-wrapper">
+              <div class="client-logo-wrapper block p-2 group">
+                <img src="assets/image/depoimento2.jpg" alt="Logo do COLD Studio"
+                     class="client-logo-img transition-all duration-300 ease-in-out object-contain">
               </div>
-            </div>
-            <div class="portfolio-info">
-              <h3>COLD Studio</h3>
-              <p>Agência Marketig</p>
-              <a href="https://linkado-goldestudio.netlify.app/" class="view-btn" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fas fa-external-link-alt"></i> Ver Página
+              <a href="https://linkado.click/jurema-quiosa" target="_blank" rel="noopener noreferrer" aria-label="Previsualizar COLD Studio" class="preview-overlay">
+                <div class="relative">
+                  <div class="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300">
+                    <span class="text-white font-bold text-lg lg:text-xl">L</span>
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-light rounded-2xl blur opacity-50 transition-opacity"></div>
+                  </div>
+                  <div class="absolute -top-1 -right-1 w-4 h-4 bg-secondary rounded-full animate-bounce-gentle opacity-80"></div>
+                </div>
               </a>
             </div>
           </div>
-        </div>
 
-        <!-- Item 6 -->
-        <div class="portfolio-item" data-category="creative">
-          <div class="portfolio-card">
-            <div class="portfolio-image">
-              <img src="assets/image/franco.png" alt="Linktree para Criativo" />
-              <div class="portfolio-overlay">
-                <a href="https://linkado-francofrancisco.netlify.app/" class="preview-btn"
-                  aria-label="Visualizar projeto completo" target="_blank" rel="noopener noreferrer">
-                  <i class="fas fa-expand"></i>
-                </a>
+          <!-- 6. Franco Francisco -->
+          <div class="swiper-slide">
+            <div class="swiper-slide-wrapper">
+              <div class="client-logo-wrapper block p-2 group">
+                <img src="assets/image/franco.webp" alt="Logo de Franco Francisco"
+                     class="client-logo-img transition-all duration-300 ease-in-out object-contain">
               </div>
-            </div>
-            <div class="portfolio-info">
-              <h3>Franco Francisco</h3>
-              <p>Contabilista</p>
-              <a href="https://linkado-francofrancisco.netlify.app/" class="view-btn" target="_blank"
-                rel="noopener noreferrer">
-                <i class="fas fa-external-link-alt"></i> Ver Página
+              <a href="https://linkado.click/franco-francisco" target="_blank" rel="noopener noreferrer" aria-label="Previsualizar Franco Francisco" class="preview-overlay">
+                <div class="relative">
+                  <div class="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300">
+                    <span class="text-white font-bold text-lg lg:text-xl">L</span>
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-light rounded-2xl blur opacity-50 transition-opacity"></div>
+                  </div>
+                  <div class="absolute -top-1 -right-1 w-4 h-4 bg-secondary rounded-full animate-bounce-gentle opacity-80"></div>
+                </div>
               </a>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="portfolio-cta">
-        <p>Quer seu linktree personalizado como esses?</p>
-        <a href="#contact" class="cta-button">
-          <i class="fas fa-pencil-alt"></i> Solicitar Orçamento
-        </a>
-      </div>
-    </div>
+          
+          <!-- 6. Franco Francisco -->
+          <div class="swiper-slide">
+            <div class="swiper-slide-wrapper">
+              <div class="client-logo-wrapper block p-2 group">
+                <img src="assets/image/logo.jpg" alt="Logo de Franco Francisco"
+                     class="client-logo-img transition-all duration-300 ease-in-out object-contain">
+              </div>
+              <a href="https://linkado.click/dizumba_grande" target="_blank" rel="noopener noreferrer" aria-label="Previsualizar Franco Francisco" class="preview-overlay">
+                <div class="relative">
+                  <div class="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300">
+                    <span class="text-white font-bold text-lg lg:text-xl">L</span>
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-light rounded-2xl blur opacity-50 transition-opacity"></div>
+                  </div>
+                  <div class="absolute -top-1 -right-1 w-4 h-4 bg-secondary rounded-full animate-bounce-gentle opacity-80"></div>
+                </div>
+              </a>
+            </div>
+          </div>
 
-    <!-- Modal de Preview -->
-    <div class="portfolio-modal">
-      <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <img src="" alt="Preview do Linktree" class="modal-image" />
-        <div class="modal-info">
-          <h3 class="modal-title"></h3>
-          <p class="modal-category"></p>
-          <a href="#" class="cta-button" target="_blank">
-            <i class="fas fa-external-link-alt"></i> Visitar Página
-          </a>
+
+          <!-- 6. Franco Francisco -->
+          <div class="swiper-slide">
+            <div class="swiper-slide-wrapper">
+              <div class="client-logo-wrapper block p-2 group">
+                <img src="assets/image/piedade.jpeg" alt="Logo de Franco Francisco"
+                     class="client-logo-img transition-all duration-300 ease-in-out object-contain">
+              </div>
+              <a href="https://linkado.click/piedade-amorim" target="_blank" rel="noopener noreferrer" aria-label="Previsualizar Franco Francisco" class="preview-overlay">
+                <div class="relative">
+                  <div class="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center shadow-lg transition-all duration-300">
+                    <span class="text-white font-bold text-lg lg:text-xl">L</span>
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-light rounded-2xl blur opacity-50 transition-opacity"></div>
+                  </div>
+                  <div class="absolute -top-1 -right-1 w-4 h-4 bg-secondary rounded-full animate-bounce-gentle opacity-80"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </section>
 
   <!-- Seção Planos -->
-  <section class="pricing-section" id="pricing">
-    <div class="container">
-      <div class="section-header">
-        <h2>Escolha o Plano Ideal para Sua Presença Online</h2>
-        <p class="subtitle">Simples, transparente e sob medida para o seu momento</p>
-      </div>
+  <section id="pricing" class="relative py-20 lg:py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-50/50 via-white to-secondary/10"></div>
+    <div class="absolute top-1/4 left-10 w-80 h-80 bg-primary/10 rounded-full filter blur-3xl opacity-50"></div>
+    <div class="absolute bottom-1/4 right-10 w-80 h-80 bg-secondary/10 rounded-full filter blur-3xl opacity-50"></div>
 
-      <div class="pricing-grid">
-        <!-- Plano Essencial -->
-        <div class="pricing-card">
-          <div class="pricing-header">
-            <div class="plan-tag" style="background-color: #4caf50">Essencial</div>
-            <div class="plan-price">
-              <span class="currency">Kz</span>
-              <span class="amount">9.000</span>
-              <span class="period">/único</span>
-            </div>
-            <p class="plan-description">
-              Ideal para quem quer começar com presença online profissional
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="text-center mb-16 lg:mb-20">
+            <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-sm font-semibold tracking-wide uppercase">
+                Preços Transparentes
+            </span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark mt-4 mb-6 leading-tight">
+                Escolha o Plano Ideal para Você
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Soluções simples, transparentes e sob medida para impulsionar sua presença online. Sem taxas escondidas.
             </p>
-          </div>
-          <div class="pricing-features">
-            <ul>
-              <li><i class="fas fa-check-circle"></i> Linktree com até 5 links personalizados</li>
-              <li><i class="fas fa-check-circle"></i> Imagem de capa e cores da marca</li>
-              <li><i class="fas fa-check-circle"></i> Entrega em 24 horas</li>
-              <li><i class="fas fa-check-circle"></i> 1 revisão incluída</li>
-            </ul>
-          </div>
-          <div class="pricing-footer">
-            <a href="#contact" class="cta-button" style="background-color: #4caf50">
-              <i class="fas fa-rocket"></i> Começar com Essencial
-            </a>
-          </div>
-        </div>
-
-        <!-- Plano Profissional -->
-        <div class="pricing-card featured">
-          <div class="featured-badge">Mais Popular</div>
-          <div class="pricing-header">
-            <div class="plan-tag" style="background-color: #ffc107">Profissional</div>
-            <div class="plan-price">
-              <span class="currency">Kz</span>
-              <span class="amount">13.000</span>
-              <span class="period">/único</span>
+            <div class="mt-8 flex justify-center">
+                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
             </div>
-            <p class="plan-description">Para quem quer algo mais completo e impactante</p>
-          </div>
-          <div class="pricing-features">
-            <ul>
-              <li><i class="fas fa-check-circle"></i> Até 10 links personalizados</li>
-              <li><i class="fas fa-check-circle"></i> Ícones e seções visuais</li>
-              <li>
-                <i class="fas fa-check-circle"></i> Integração com WhatsApp, Instagram e YouTube
-              </li>
-              <li><i class="fas fa-check-circle"></i> Entrega em 24 horas</li>
-              <li><i class="fas fa-check-circle"></i> 2 revisões incluídas</li>
-            </ul>
-          </div>
-          <div class="pricing-footer">
-            <a href="#contact" class="cta-button">
-              <i class="fas fa-star"></i> Quero o Profissional
-            </a>
-          </div>
-        </div>
+        </header>
 
-        <!-- Plano Premium -->
-        <div class="pricing-card">
-          <div class="pricing-header">
-            <div class="plan-tag" style="background-color: #f44336">Premium</div>
-            <div class="plan-price">
-              <span class="currency">Kz</span>
-              <span class="amount">18.000</span>
-              <span class="period">/único</span>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+            
+            <div class="pricing-card flex flex-col h-full bg-white rounded-3xl p-8 shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <div class="flex-grow">
+                    <h3 class="text-2xl font-bold text-dark">Essencial</h3>
+                    <p class="text-gray-500 mt-2 mb-6">Ideal para começar com uma presença online profissional.</p>
+                    
+                    <div class="my-8">
+                        <span class="text-5xl font-extrabold text-dark">Kz 9.000</span>
+                        <span class="text-lg font-medium text-gray-500">/pagamento único</span>
+                    </div>
+
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                            <span>Linktree com até <strong>5 links</strong> personalizados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                            <span>Imagem de capa e cores da marca</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                            <span>Entrega em 24 horas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                            <span>1 revisão incluída</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-10">
+                    <a href="#contact" class="group relative w-full inline-flex items-center justify-center px-6 py-3 text-lg font-semibold text-primary bg-primary/10 rounded-xl hover:bg-primary/20 transition-colors duration-300">
+                       <i class="fas fa-rocket mr-2"></i> Começar com Essencial
+                    </a>
+                </div>
             </div>
-            <p class="plan-description">Máxima personalização e suporte total</p>
-          </div>
-          <div class="pricing-features">
-            <ul>
-              <li><i class="fas fa-check-circle"></i> Links ilimitados</li>
-              <li>
-                <i class="fas fa-check-circle"></i> Design exclusivo com imagem de fundo ou vídeo
-              </li>
-              <li><i class="fas fa-check-circle"></i> Inclusão de formulário de contato</li>
-              <li><i class="fas fa-check-circle"></i> Suporte prioritário via WhatsApp</li>
-              <li><i class="fas fa-check-circle"></i> 3 revisões incluídas</li>
-            </ul>
-          </div>
-          <div class="pricing-footer">
-            <a href="#contact" class="cta-button" style="background-color: #f44336">
-              <i class="fas fa-crown"></i> Ir de Premium
-            </a>
-          </div>
-        </div>
-      </div>
 
-      <div class="pricing-footer-note">
-        <div class="note-icon">
-          <i class="fas fa-lightbulb"></i>
+            <div class="relative lg:scale-105">
+                <div class="absolute -top-4 right-8">
+                    <span class="bg-gradient-to-r from-primary to-secondary text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-lg">
+                        Mais Popular
+                    </span>
+                </div>
+                <div class="pricing-card flex flex-col h-full bg-white rounded-3xl p-8 shadow-2xl border-2 border-primary transition-all duration-300">
+                    <div class="flex-grow">
+                        <h3 class="text-2xl font-bold text-dark">Profissional</h3>
+                        <p class="text-gray-500 mt-2 mb-6">Para quem busca algo mais completo e impactante.</p>
+                        
+                        <div class="my-8">
+                            <span class="text-5xl font-extrabold text-dark">Kz 13.000</span>
+                            <span class="text-lg font-medium text-gray-500">/pagamento único</span>
+                        </div>
+
+                        <ul class="space-y-4 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Até <strong>10 links</strong> personalizados</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Ícones e seções visuais</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Integração com WhatsApp, Instagram, etc.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span>Entrega em 24 horas</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-3"></i>
+                                <span><strong>2 revisões</strong> incluídas</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-10">
+                        <a href="#contact" class="group relative w-full inline-flex items-center justify-center px-6 py-3 text-lg font-semibold text-white bg-gradient-to-r from-primary to-secondary rounded-xl hover:shadow-lg hover:shadow-primary/40 transition-all duration-300 transform hover:scale-105 overflow-hidden">
+                           <i class="fas fa-star mr-2"></i> Quero o Profissional
+                           <div class="absolute top-0 left-0 w-full h-full bg-white opacity-20 animate-shine"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-card flex flex-col h-full bg-white rounded-3xl p-8 shadow-lg border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                <div class="flex-grow">
+                    <h3 class="text-2xl font-bold text-dark">Premium</h3>
+                    <p class="text-gray-500 mt-2 mb-6">Máxima personalização e suporte total para você.</p>
+                    
+                    <div class="my-8">
+                        <span class="text-5xl font-extrabold text-dark">Kz 18.000</span>
+                        <span class="text-lg font-medium text-gray-500">/pagamento único</span>
+                    </div>
+
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                            <span><strong>Links ilimitados</strong></span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                            <span>Design exclusivo com <strong>fundo de imagem ou vídeo</strong></span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                            <span>Inclusão de formulário de contato</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                            <span>Suporte prioritário via WhatsApp</span>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-3"></i>
+                            <span><strong>3 revisões</strong> incluídas</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mt-10">
+                    <a href="#contact" class="group relative w-full inline-flex items-center justify-center px-6 py-3 text-lg font-semibold text-secondary bg-secondary/10 rounded-xl hover:bg-secondary/20 transition-colors duration-300">
+                       <i class="fas fa-crown mr-2"></i> Ir de Premium
+                    </a>
+                </div>
+            </div>
         </div>
-        <p>
-          Todos os planos incluem suporte básico pós-entrega e hospedagem gratuita da sua página.
-        </p>
-      </div>
+
+        <div class="mt-16 text-center max-w-3xl mx-auto">
+            <div class="inline-flex items-center justify-center bg-primary/10 text-primary p-4 rounded-2xl">
+                <i class="fas fa-lightbulb fa-2x"></i>
+                <p class="ml-4 text-left">
+                    <strong>Nota Importante:</strong> Todos os planos incluem suporte básico pós-entrega e hospedagem gratuita da sua página, sem custos adicionais.
+                </p>
+            </div>
+        </div>
     </div>
-  </section>
+</section>
 
   <!-- Seção FAQ -->
-  <section class="faq-section" id="faq">
-    <div class="container">
-      <div class="section-header">
-        <h2>Perguntas Frequentes</h2>
-        <p class="subtitle">Tire suas dúvidas sobre nossos serviços e planos</p>
-      </div>
+  <section id="faq" class="relative bg-dark text-white py-20 lg:py-32 overflow-hidden">
+    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at top right, rgba(94, 53, 177, 0.3), transparent 40%), radial-gradient(circle at bottom left, rgba(78, 205, 196, 0.2), transparent 50%);"></div>
 
-      <div class="faq-container">
-        <!-- FAQ 1 -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>Quanto tempo leva para receber meu Linktree personalizado?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p>
-              Nosso prazo padrão é de 24 horas após a confirmação do pagamento e envio de todas as
-              informações necessárias. Trabalhamos com eficiência para garantir que você tenha sua
-              página profissional o mais rápido possível.
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="text-center mb-16">
+            <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-sm font-semibold tracking-wide uppercase">
+                Tudo o que você precisa saber
+            </span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mt-4 mb-6 leading-tight">
+                Perguntas Frequentes
+            </h2>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                Encontre respostas para as dúvidas mais comuns sobre nossos serviços, processo e planos.
             </p>
-          </div>
-        </div>
+        </header>
 
-        <!-- FAQ 2 -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>Posso solicitar alterações após a entrega?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p>
-              Sim, cada plano inclui um número específico de revisões gratuitas (1 no Essencial, 2
-              no Profissional e 3 no Premium). Após essas revisões, oferecemos pacotes adicionais
-              de ajustes a preços acessíveis.
-            </p>
-          </div>
-        </div>
+        <div class="faq-container space-y-4">
+            
+            <div class="faq-item bg-dark-light/50 rounded-2xl border border-gray-700/50 transition-all duration-300">
+                <button class="faq-question w-full flex justify-between items-center text-left p-6" aria-expanded="false">
+                    <span class="text-lg font-semibold text-gray-100">Quanto tempo leva para receber meu Linktree personalizado?</span>
+                    <i class="faq-icon fas fa-chevron-down text-primary-light transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer" style="display: none;">
+                    <p class="px-6 pb-6 text-gray-400 leading-relaxed">
+                        Nosso prazo padrão é de 24 horas após a confirmação do pagamento e envio de todas as informações necessárias. Trabalhamos com eficiência para garantir que você tenha sua página profissional o mais rápido possível.
+                    </p>
+                </div>
+            </div>
 
-        <!-- FAQ 3 -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>O que preciso fornecer para criar meu Linktree?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p>
-              Precisamos das informações dos links que deseja incluir, preferências de cores, logo
-              (se tiver), fotos ou imagens que deseja usar e qualquer outra informação relevante
-              sobre sua marca ou negócio. Quanto mais detalhes, melhor personalizaremos sua
-              página.
-            </p>
-          </div>
-        </div>
+            <div class="faq-item bg-dark-light/50 rounded-2xl border border-gray-700/50 transition-all duration-300">
+                <button class="faq-question w-full flex justify-between items-center text-left p-6" aria-expanded="false">
+                    <span class="text-lg font-semibold text-gray-100">Posso solicitar alterações após a entrega?</span>
+                    <i class="faq-icon fas fa-chevron-down text-primary-light transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer" style="display: none;">
+                    <p class="px-6 pb-6 text-gray-400 leading-relaxed">
+                        Sim, cada plano inclui um número específico de revisões gratuitas (1 no Essencial, 2 no Profissional e 3 no Premium). Após essas revisões, oferecemos pacotes adicionais de ajustes a preços acessíveis.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item bg-dark-light/50 rounded-2xl border border-gray-700/50 transition-all duration-300">
+                <button class="faq-question w-full flex justify-between items-center text-left p-6" aria-expanded="false">
+                    <span class="text-lg font-semibold text-gray-100">O que preciso fornecer para criar meu Linktree?</span>
+                    <i class="faq-icon fas fa-chevron-down text-primary-light transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer" style="display: none;">
+                    <p class="px-6 pb-6 text-gray-400 leading-relaxed">
+                        Precisamos das informações dos links que deseja incluir, preferências de cores, logo (se tiver), fotos ou imagens que deseja usar e qualquer outra informação relevante sobre sua marca ou negócio. Quanto mais detalhes, melhor personalizaremos sua página.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item bg-dark-light/50 rounded-2xl border border-gray-700/50 transition-all duration-300">
+                <button class="faq-question w-full flex justify-between items-center text-left p-6" aria-expanded="false">
+                    <span class="text-lg font-semibold text-gray-100">Como é feito o pagamento?</span>
+                    <i class="faq-icon fas fa-chevron-down text-primary-light transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer" style="display: none;">
+                    <p class="px-6 pb-6 text-gray-400 leading-relaxed">
+                        Aceitamos transferência bancária e pagamentos via terminal Multicaixa (TPA). O pagamento é feito antecipadamente para iniciarmos o trabalho. Após a confirmação, enviaremos um formulário para coletar todas as informações necessárias.
+                    </p>
+                </div>
+            </div>
+            
+            </div>
 
-        <!-- FAQ 4 -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>Como é feito o pagamento?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p>
-              Aceitamos transferência bancária, pagamentos via terminal Multicaixa e depósitos. O
-              pagamento é feito antecipadamente para iniciarmos o trabalho. Após o pagamento,
-              enviaremos um formulário para coletar todas as informações necessárias para criar
-              seu Linktree personalizado.
-            </p>
-          </div>
+        <div class="mt-16 text-center bg-gradient-to-br from-primary-dark/80 to-dark-light/50 p-10 rounded-3xl border border-gray-700/50">
+            <h3 class="text-2xl font-bold text-white">Ainda tem dúvidas?</h3>
+            <p class="text-gray-400 mt-2 mb-6 max-w-xl mx-auto">Nossa equipe está pronta para ajudar. Entre em contato conosco diretamente pelo WhatsApp.</p>
+            <a href="https://wa.link/yvn84a" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-primary to-secondary rounded-xl hover:shadow-lg hover:shadow-primary/40 transition-all duration-300 transform hover:scale-105 overflow-hidden">
+                <i class="fa-brands fa-whatsapp mr-3"></i> Fale Conosco
+            </a>
         </div>
-
-        <!-- FAQ 5 -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>Posso atualizar os links posteriormente?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p>
-              Sim! Você terá acesso a um painel simples onde poderá atualizar seus links a
-              qualquer momento, sem custo adicional. Alterações mais complexas no design podem
-              exigir um pequeno ajuste, dependendo da complexidade.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 6 -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>O que acontece se eu não gostar do design?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p>
-              Trabalharemos com você através das revisões inclusas no seu plano até que você fique
-              100% satisfeito. Nosso objetivo é criar uma página que você ame e que represente
-              perfeitamente sua marca. Caso necessário, faremos quantas alterações forem
-              necessárias dentro do número de revisões do seu plano.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 7 -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>Há custos adicionais de hospedagem?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p>
-              Não! Todos os nossos planos incluem hospedagem gratuita da sua página Linktree. Você
-              não precisará se preocupar com custos adicionais de hospedagem ou manutenção da
-              página após a entrega.
-            </p>
-          </div>
-        </div>
-
-        <!-- FAQ 8 -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <span>Posso migrar para um plano superior depois?</span>
-            <i class="fas fa-chevron-down"></i>
-          </div>
-          <div class="faq-answer">
-            <p>
-              Com certeza! Se você começar com um plano Essencial ou Profissional e depois quiser
-              mais recursos, podemos fazer a migração para um plano superior. O valor já pago será
-              descontado do novo plano.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-cta">
-        <p>Ainda tem dúvidas? Entre em contato conosco!</p>
-        <a href="https://wa.link/yvn84a" class="cta-button">
-          <i class="fa-brands fa-whatsapp"></i> Fale Conosco
-        </a>
-      </div>
     </div>
-  </section>
+</section>
 
   <!-- Seção: Suporte via WhatsApp -->
   <section class="whatsapp-section">

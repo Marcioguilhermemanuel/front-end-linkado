@@ -28,6 +28,17 @@ http://linkado.click/* https://linkado.click/:splat 301!
 /barberia-premium/              /barberia-premium                     301
 /barberia-premium/*             Cache-Control: public, max-age=86400
 
+
+# Barberia Premium
+/beleza_pura               /beleza_pura/index.html          200
+/beleza_pura/              /beleza_pura                     301
+/beleza_pura/*             Cache-Control: public, max-age=86400
+
+# Barberia Premium
+/bella               /bella/index.html          200
+/bella/              /bella                     301
+/bella/*             Cache-Control: public, max-age=86400
+
 # Doce Encanto
 /doce_encanto               /doce_encanto/index.html          200
 /doce_encanto/              /doce_encanto                     301

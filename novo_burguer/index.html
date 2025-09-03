@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BURGER DA MAMI | Hamburgueria Artesanal | Linkado Oficial</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6MRXRE8NN7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-6MRXRE8NN7');
+    </script>
+
+    <meta name="description"
+        content="Burger da Mami: hambúrgueres artesanais com preços especiais. Faça seu pedido por WhatsApp. Cardápio completo, promoções e redes sociais." />
+    <meta name="keywords" content="hambúrguer, delivery, fast food, burger da mami, hamburgueria artesanal, lanches" />
+    <meta property="og:title" content="BURGER DA MAMI | Hamburgueria Artesanal" />
+    <meta property="og:description"
+        content="Peça seu hambúrguer artesanal preferido em poucos cliques. Entregas rápidas e pagamento no balcão/entrega." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=1200&auto=format&fit=crop" />
+    <meta property="og:url" content="https://linkado.click/novo_burguer" />
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="canonical" href="https://linkado.click/burger_da_mami" />
+    <link rel="shortcut icon" href="../assets/image/FIVE.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#FFF8F0',
+                            100: '#FEEEDB',
+                            500: '#FF8C00',  // laranja vibrante
+                            600: '#E67E00',  // laranja escuro
+                            700: '#CC6F00',  // laranja mais escuro
+                            800: '#A85A00',  // marrom alaranjado
+                            900: '#7A4100',  // marrom
+                        },
+                        secondary: {
+                            50: '#FEF2F2',
+                            500: '#DC2626',  // vermelho
+                            600: '#B91C1C',  // vermelho escuro
+                            700: '#991B1B',  // vermelho mais escuro
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Poppins', 'ui-sans-serif', 'system-ui'],
+                        body: ['Inter', 'ui-sans-serif', 'system-ui']
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px -12px rgba(0,0,0,.15)',
+                        'highlight': '0 0 0 4px rgba(255,140,0,.35)',
+                    },
+                    backgroundImage: {
+                        'burger-pattern': "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23FF8C00\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    
+</head>
+
+<body class="min-h-screen bg-burger-pattern font-body text-gray-800">
+    <main class="max-w-2xl mx-auto px-4 pt-6 pb-32">
+
+        <!-- Header com imagem de fundo -->
+        <header class="text-center mb-8 rounded-2xl overflow-hidden bg-gradient-to-r from-primary-600 to-primary-800 text-white p-6 shadow-soft animate-fadeIn">
+            <div class="mx-auto w-32 h-32 rounded-full bg-white/20 p-2 backdrop-blur-sm">
+                <div class="w-full h-full rounded-full bg-white/10 grid place-content-center overflow-hidden border-4 border-white/30">
+                    <i class="fa-solid fa-burger text-5xl text-white"></i>
+                </div>
+            </div>
+
+            <h1 class="font-display text-4xl sm:text-5xl font-extrabold mt-4 tracking-tight">
+                NOVO  <span class="text-primary-50">BURGUER</span>
+            </h1>
+            <p class="text-primary-100 mt-2 text-lg">Hambúrgueres artesanais com aquele sabor caseiro</p>
+
+            <div class="mt-4 flex items-center justify-center gap-2 flex-wrap">
+                <span class="inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 text-sm">
+                    <i class="fa-solid fa-clock text-primary-50"></i> Aberto: 18h-23h
+                </span>
+                <span class="inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 text-sm">
+                    <i class="fa-solid fa-star text-primary-50"></i> 4,9/5 (256 avaliações)
+                </span>
+                <span class="inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 text-sm">
+                    <i class="fa-solid fa-truck text-primary-50"></i> Delivery Grátis (5km)
+                </span>
+            </div>
+
+            <!-- CTA Primário -->
+            <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+                <a id="cta-whatsapp-top" href="#pedido"
+                    class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white text-primary-700 font-bold hover:bg-gray-50 active:scale-[.98] transition-all focus-ring shadow-md"
+                    aria-label="Fazer pedido pelo WhatsApp">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    <span>Fazer pedido</span>
+                </a>
+                <a href="#cardapio"
+                    class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-primary-900 text-white font-medium hover:bg-primary-800 transition-all focus-ring border border-primary-700"
+                    aria-label="Ver cardápio">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Ver cardápio</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Banner de Oferta -->
+        <section class="mb-8 animate-fadeIn" aria-label="Promoções" style="animation-delay: 0.1s">
+            <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-secondary-500 to-primary-500 p-5 text-white shadow-soft">
+                <div class="absolute -right-6 -top-6 w-24 h-24 rounded-full bg-white/10"></div>
+                <div class="absolute -left-6 -bottom-6 w-20 h-20 rounded-full bg-white/10"></div>
+                
+                <div class="flex items-center gap-4 relative z-10">
+                    <div class="w-16 h-16 rounded-xl bg-white/20 grid place-content-center">
+                        <i class="fa-solid fa-fire text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-sm uppercase tracking-wide font-semibold">Oferta especial</p>
+                        <h3 class="font-display text-xl font-bold">Combo Mami Família</h3>
+                        <p class="text-white/90 text-sm">4 burgers + 4 refrigerantes</p>
+                        <p class="mt-1">De <s>Kz 18.500</s> por <span class="font-bold text-amber-300">Kz 14.990</span></p>
+                    </div>
+                </div>
+                <button id="add-promo"
+                    class="mt-4 w-full bg-white text-primary-600 py-3 rounded-xl font-bold hover:bg-gray-100 transition focus-ring relative z-10"
+                    role="button" aria-label="Adicionar promoção ao carrinho">
+                    Adicionar ao pedido
+                </button>
+            </div>
+        </section>
+
+        <!-- Links Rápidos -->
+        <nav class="mb-8 grid grid-cols-2 gap-3 animate-fadeIn" aria-label="Links principais" style="animation-delay: 0.2s">
+            <a class="group card rounded-xl p-4 flex flex-col items-center text-center transition-all hover:shadow-md focus-ring bg-white"
+                href="#cardapio" aria-label="Ver o catálogo completo">
+                <div class="w-14 h-14 rounded-xl bg-primary-100 grid place-content-center text-primary-600 mb-2">
+                    <i class="fa-solid fa-book text-xl"></i>
+                </div>
+                <p class="font-semibold text-sm">Cardápio completo</p>
+            </a>
+
+            <a class="group card rounded-xl p-4 flex flex-col items-center text-center transition-all hover:shadow-md focus-ring bg-white"
+                href="#redes" aria-label="Seguir nas redes sociais">
+                <div class="w-14 h-14 rounded-xl bg-primary-100 grid place-content-center text-primary-600 mb-2">
+                    <i class="fa-solid fa-heart text-xl"></i>
+                </div>
+                <p class="font-semibold text-sm">Redes Sociais</p>
+            </a>
+
+            <a class="group card rounded-xl p-4 flex flex-col items-center text-center transition-all hover:shadow-md focus-ring bg-white"
+                href="#localizacao" aria-label="Ver localização">
+                <div class="w-14 h-14 rounded-xl bg-primary-100 grid place-content-center text-primary-600 mb-2">
+                    <i class="fa-solid fa-location-dot text-xl"></i>
+                </div>
+                <p class="font-semibold text-sm">Localização</p>
+            </a>
+
+            <a class="group card rounded-xl p-4 flex flex-col items-center text-center transition-all hover:shadow-md focus-ring bg-white"
+                href="#avaliacoes" aria-label="Ver avaliações">
+                <div class="w-14 h-14 rounded-xl bg-primary-100 grid place-content-center text-primary-600 mb-2">
+                    <i class="fa-solid fa-star text-xl"></i>
+                </div>
+                <p class="font-semibold text-sm">Avaliações</p>
+            </a>
+        </nav>
+
+        <!-- Cardápio / Catálogo -->
+        <section id="cardapio" class="mb-10 animate-fadeIn" style="animation-delay: 0.3s">
+            <h2 class="font-display text-2xl font-bold mb-6 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-primary-100 grid place-content-center text-primary-600">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                Cardápio
+            </h2>
+
+            <!-- Tabs -->
+            <div class="mb-6 flex overflow-x-auto pb-2 gap-2" role="tablist" aria-label="Categorias do cardápio">
+                <button
+                    class="tab-btn flex-shrink-0 px-4 py-2 rounded-full bg-primary-600 text-white font-medium transition-all focus-ring text-sm"
+                    role="tab" aria-selected="true" data-cat="burgers">
+                    <i class="fa-solid fa-burger mr-1"></i> Burgers
+                </button>
+                <button
+                    class="tab-btn flex-shrink-0 px-4 py-2 rounded-full bg-white text-gray-800 font-medium hover:bg-gray-50 ring-1 ring-gray-200 transition-all focus-ring text-sm"
+                    role="tab" aria-selected="false" data-cat="combos">
+                    <i class="fa-solid fa-gift mr-1"></i> Combos
+                </button>
+                <button
+                    class="tab-btn flex-shrink-0 px-4 py-2 rounded-full bg-white text-gray-800 font-medium hover:bg-gray-50 ring-1 ring-gray-200 transition-all focus-ring text-sm"
+                    role="tab" aria-selected="false" data-cat="acomp">
+                    <i class="fa-solid fa-french-fries mr-1"></i> Acompanhamentos
+                </button>
+                <button
+                    class="tab-btn flex-shrink-0 px-4 py-2 rounded-full bg-white text-gray-800 font-medium hover:bg-gray-50 ring-1 ring-gray-200 transition-all focus-ring text-sm"
+                    role="tab" aria-selected="false" data-cat="drinks">
+                    <i class="fa-solid fa-glass mr-1"></i> Bebidas
+                </button>
+            </div>
+
+            <!-- Lista dinâmica de produtos -->
+            <div id="lista-produtos" class="grid gap-4"></div>
+        </section>
+
+        <!-- Redes sociais -->
+        <section id="redes" class="mb-10 animate-fadeIn" aria-label="Redes Sociais" style="animation-delay: 0.4s">
+            <h2 class="font-display text-2xl font-bold mb-6 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-primary-100 grid place-content-center text-primary-600">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                Nossas Redes
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <a href="https://wa.me/244946043956" target="_blank" rel="noopener nofollow"
+                    class="card p-4 rounded-xl flex items-center gap-3 transition-all hover:shadow-md focus-ring group bg-white"
+                    aria-label="Abrir WhatsApp do Burger da Mami">
+                    <div class="w-12 h-12 rounded-xl bg-green-100 grid place-content-center text-green-600 group-hover:bg-green-200 transition-all">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold">WhatsApp</p>
+                        <p class="text-sm text-gray-600">+244 946 043 956</p>
+                    </div>
+                    <span class="ml-auto text-gray-400 group-hover:text-primary-600">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </span>
+                </a>
+
+                <a href="#" target="_blank" rel="noopener nofollow"
+                    class="card p-4 rounded-xl flex items-center gap-3 transition-all hover:shadow-md focus-ring group bg-white"
+                    aria-label="Abrir Instagram do Burger da Mami">
+                    <div class="w-12 h-12 rounded-xl bg-pink-100 grid place-content-center text-pink-600 group-hover:bg-pink-200 transition-all">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Instagram</p>
+                        <p class="text-sm text-gray-600">@burgerdamami</p>
+                    </div>
+                    <span class="ml-auto text-gray-400 group-hover:text-primary-600">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </span>
+                </a>
+
+                <a href="#" target="_blank" rel="noopener nofollow"
+                    class="card p-4 rounded-xl flex items-center gap-3 transition-all hover:shadow-md focus-ring group bg-white"
+                    aria-label="Abrir Facebook do Burger da Mami">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 grid place-content-center text-blue-600 group-hover:bg-blue-200 transition-all">
+                        <i class="fa-brands fa-facebook text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Facebook</p>
+                        <p class="text-sm text-gray-600">/burgerdamami</p>
+                    </div>
+                    <span class="ml-auto text-gray-400 group-hover:text-primary-600">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </span>
+                </a>
+
+                <a href="#" target="_blank" rel="noopener nofollow"
+                    class="card p-4 rounded-xl flex items-center gap-3 transition-all hover:shadow-md focus-ring group bg-white"
+                    aria-label="Abrir TikTok do Burger da Mami">
+                    <div class="w-12 h-12 rounded-xl bg-gray-100 grid place-content-center text-gray-800 group-hover:bg-gray-200 transition-all">
+                        <i class="fa-brands fa-tiktok text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="font-semibold">TikTok</p>
+                        <p class="text-sm text-gray-600">@burgerdamami</p>
+                    </div>
+                    <span class="ml-auto text-gray-400 group-hover:text-primary-600">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Localização -->
+        <section id="localizacao" class="mb-10 animate-fadeIn" aria-label="Localização" style="animation-delay: 0.5s">
+            <h2 class="font-display text-2xl font-bold mb-6 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-primary-100 grid place-content-center text-primary-600">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                Onde estamos
+            </h2>
+            <div class="card rounded-2xl p-4 bg-white shadow-soft">
+                <div class="aspect-video bg-gray-200 rounded-xl mb-4 grid place-content-center text-gray-400">
+                    <i class="fa-solid fa-map text-4xl"></i>
+                </div>
+                <div>
+                    <p class="font-semibold">Burger da Mami</p>
+                    <p class="text-gray-600 text-sm">Av. Principal, 123 - Centro</p>
+                    <p class="text-gray-600 text-sm">Luanda, Angola</p>
+                </div>
+                <a href="#" class="mt-3 inline-flex items-center gap-2 text-primary-600 font-medium text-sm">
+                    <i class="fa-solid fa-directions"></i>
+                    Ver rotas no Google Maps
+                </a>
+            </div>
+        </section>
+
+        <!-- Área do pedido / carrinho -->
+        <section id="pedido" class="animate-fadeIn" style="animation-delay: 0.6s">
+            <h2 class="font-display text-2xl font-bold mb-6 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-primary-100 grid place-content-center text-primary-600">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                </div>
+                Seu pedido
+            </h2>
+            <div class="card rounded-2xl p-5 bg-white shadow-soft">
+                <div id="itens-carrinho" class="space-y-3 mb-4" aria-live="polite"></div>
+
+                <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-4">
+                    <div>
+                        <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Seu nome</label>
+                        <input id="nome" type="text" placeholder="Ex: Maria"
+                            class="w-full sm:w-48 rounded-lg bg-gray-100 border border-gray-300 px-3 py-2 placeholder:text-gray-400 focus-ring" />
+                    </div>
+                    <div class="text-right">
+                        <p class="text-sm text-gray-600">Subtotal</p>
+                        <p id="subtotal" class="font-display text-xl font-semibold text-primary-600">Kz 0</p>
+                    </div>
+                </div>
+
+                <button id="finalizar"
+                    class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-all focus-ring shadow-md"
+                    aria-label="Finalizar pedido no WhatsApp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Finalizar no WhatsApp</span>
+                </button>
+
+                <p class="mt-3 text-xs text-gray-500 text-center">
+                    Pagamento no balcão/entrega. Taxa de entrega conforme o bairro.
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer fornecido pelo cliente -->
+        <footer class="w-full max-w-md mx-auto py-6 px-4 text-center mt-10">
+            <div class="flex flex-col items-center">
+                <div class="flex items-center justify-center mb-3">
+                    <a href="https://linkado.click" target="_blank" rel="noopener"
+                        class="inline-flex items-center gap-2 font-medium text-indigo-700 hover:text-indigo-900 transition-all group">
+                        <div class="bg-indigo-100 group-hover:bg-indigo-200 p-2 rounded-lg transition-colors">
+                            <img src="../assets/image/FIVE.png" alt="Logo Linkado" class="w-6 h-6 object-contain" />
+                        </div>
+                        <span class="font-bold text-lg tracking-tight">linkado.click</span>
+                    </a>
+                </div>
+
+                <p class="text-gray-600 mb-3 text-sm italic max-w-xs">
+                    O link que conecta, converte e cresce.
+                </p>
+
+                <div class="text-sm text-gray-500">
+                    © <span id="current-year"></span> Todos os direitos reservados
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Mini Cart flutuante -->
+    <div id="cart-fab" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 hidden">
+        <button id="cart-open"
+            class="px-5 py-3 rounded-full bg-primary-600 text-white shadow-soft font-semibold hover:bg-primary-700 transition-all flex items-center gap-2"
+            aria-label="Abrir carrinho">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span>
+                <span id="fab-count">0</span> itens · <span id="fab-total">Kz 0</span>
+            </span>
+        </button>
+    </div>
+
+    <!-- Sheet do carrinho -->
+    <div id="sheet" class="fixed inset-0 z-50 hidden" aria-hidden="true">
+        <div class="absolute inset-0 bg-black/50" id="sheet-backdrop"></div>
+        <div class="absolute left-0 right-0 bottom-0 p-4 pb-6 bg-white rounded-t-3xl shadow-soft" role="dialog"
+            aria-modal="true" aria-labelledby="sheet-title">
+            <div class="mx-auto max-w-xl">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 id="sheet-title" class="font-display text-lg font-bold">Seu carrinho</h3>
+                    <button id="sheet-close" class="p-2 rounded-xl bg-gray-100 hover:bg-gray-200 transition-all"
+                        aria-label="Fechar carrinho">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div id="sheet-itens" class="mb-4 max-h-[45vh] overflow-y-auto pr-1 space-y-3"></div>
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-gray-600">Total</span>
+                    <span id="sheet-total" class="font-display text-xl font-semibold text-primary-600">Kz 0</span>
+                </div>
+                <button id="sheet-finalizar"
+                    class="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl bg-primary-600 text-white font-semibold hover:bg-primary-700 transition-all">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Finalizar no WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+    <!-- JSON-LD para SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Burger da Mami",
+        "description": "Hambúrgueres artesanais com aquele sabor caseiro",
+        "url": "https://linkado.click/novo_burguer",
+        "telephone": "+244946043956",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Principal, 123",
+            "addressLocality": "Luanda",
+            "addressCountry": "Angola"
+        },
+        "openingHours": "Mo-Su 18:00-23:00",
+        "servesCuisine": ["Hambúrgueres", "Fast Food"],
+        "priceRange": "Kz 5.000 - Kz 25.000",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "256"
+        },
+        "sameAs": [
+            "https://www.instagram.com/burgerdamami",
+            "https://www.facebook.com/burgerdamami",
+            "https://www.tiktok.com/@burgerdamami"
+        ]
+    }
+    </script>
+</body>
+
+</html>

@@ -169,10 +169,20 @@ http://linkado.click/* https://linkado.click/:splat 301!
 /pizzaria_carla/        /pizzaria_carla               301
 /pizzaria_carla/*       Cache-Control: public, max-age=86400
 
+# Pizzaria Sault
+/pizzaria_sault         /pizzaria_sault/index.html    200
+/pizzaria_sault/        /pizzaria_sault               301
+/pizzaria_sault/*       Cache-Control: public, max-age=86400
+
 # sabor arte
 /sabor-arte               /sabor-arte/index.html          200
 /sabor-arte/              /sabor-arte                     301
 /sabor-arte/*             Cache-Control: public, max-age=86400
+
+# Sabor Pizzaria
+/sabor_pizzaria               /sabor_pizzaria/index.html          200
+/sabor_pizzaria/              /sabor_pizzaria                     301
+/sabor_pizzaria/*             Cache-Control: public, max-age=86400
 
 # Samerda
 /samerda               /samerda/index.html          200

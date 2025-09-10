@@ -6,21 +6,21 @@ const SERVICOS = {
         nome: 'Reformas e Acabamentos', 
         desc: 'Reformas completas, pinturas, revestimentos e acabamentos de alta qualidade.',
         icon: 'fas fa-paint-roller',
-        img: 'assets/image/construcao.png'
+        img: 'assets/image/construcao.webp'
       },
       { 
         id: 'tetos-falsos', 
         nome: 'Tetos Falsos e Divisórias', 
         desc: 'Instalação de tetos falsos em gesso, PVC e divisórias para ambientes.',
         icon: 'fas fa-th-large',
-        img: 'assets/image/tetofalso.png'
+        img: 'assets/image/tetofalso.webp'
       },
       { 
         id: 'eletrica-hidraulica', 
-        nome: 'Elétrica e Hidráulica', 
-        desc: 'Instalações elétricas, canalização e reparos hidráulicos profissionais.',
+        nome: 'Elétricidade e Canalização', 
+        desc: 'Instalações elétricas, canalização e reparos profissionais.',
         icon: 'fas fa-bolt',
-        img: 'assets/image/ele.png'
+        img: 'assets/image/ele.webp'
       },
     ],
     climatizacao: [
@@ -29,7 +29,7 @@ const SERVICOS = {
         nome: 'Ar Condicionado Residencial', 
         desc: 'Instalação, manutenção e reparo de sistemas de climatização.',
         icon: 'fas fa-snowflake',
-        img: 'assets/image/manut-ac.png'
+        img: 'assets/image/manut-ac.webp'
       },
       { 
         id: 'refrigeracao-auto', 
@@ -43,7 +43,7 @@ const SERVICOS = {
         nome: 'Câmaras Frigoríficas', 
         desc: 'Instalação e manutenção de sistemas de refrigeração comercial.',
         icon: 'fas fa-thermometer-half',
-        img: 'assets/image/limpesa-de-ac.png'
+        img: 'assets/image/limpesa-de-ac.webp'
       },
     ],
     digital: [
@@ -52,21 +52,21 @@ const SERVICOS = {
         nome: 'Design Gráfico', 
         desc: 'Criação de logotipos, materiais gráficos e identidade visual completa.',
         icon: 'fas fa-palette',
-        img: 'assets/image/desigr.png'
+        img: 'assets/image/desigr.webp'
       },
       { 
         id: 'desenvolvimento-web', 
         nome: 'Desenvolvimento Web', 
         desc: 'Criação de sites, sistemas web e aplicativos móveis personalizados.',
         icon: 'fas fa-code',
-        img: 'assets/image/developer.png'
+        img: 'assets/image/developer.webp'
       },
       { 
         id: 'marketing-digital', 
         nome: 'Marketing Digital', 
         desc: 'Gestão de redes sociais, tráfego pago e estratégias digitais.',
         icon: 'fas fa-chart-line',
-        img: 'assets/image/marketing.png'
+        img: 'assets/image/marketing.webp'
       },
     ],
     educacao: [
@@ -75,21 +75,21 @@ const SERVICOS = {
         nome: 'Reforço Escolar', 
         desc: 'Aulas de reforço para todas as disciplinas e níveis de ensino.',
         icon: 'fas fa-chalkboard-teacher',
-        img: 'assets/image/aulas.png'
+        img: 'assets/image/aulas.webp'
       },
       { 
         id: 'preparatorio-exames', 
         nome: 'Preparatório para Exames', 
         desc: 'Preparação intensiva para vestibulares e exames de admissão.',
         icon: 'fas fa-graduation-cap',
-        img: 'assets/image/aulas-1.png'
+        img: 'assets/image/aulas-1.webp'
       },
       { 
         id: 'aulas-domicilio', 
         nome: 'Aulas ao Domicílio', 
         desc: 'Ensino personalizado no conforto da sua casa.',
         icon: 'fas fa-home',
-        img: 'assets/image/aulas-2.png'
+        img: 'assets/image/aulas-2.webp'
       },
     ],
     manutencao: [
@@ -98,14 +98,14 @@ const SERVICOS = {
         nome: 'Máquinas de Lavar', 
         desc: 'Diagnóstico, reparo e manutenção de máquinas de lavar roupas.',
         icon: 'fas fa-cog',
-        img: 'assets/image/maquina.png'
+        img: 'assets/image/maquina.webp'
       },
       { 
         id: 'eletrodomesticos', 
         nome: 'Eletrodomésticos Gerais', 
         desc: 'Conserto e manutenção de diversos tipos de eletrodomésticos.',
         icon: 'fas fa-wrench',
-        img: 'assets/image/reparacao-2.png'
+        img: 'assets/image/reparacao-2.webp'
       },
     ]
   };

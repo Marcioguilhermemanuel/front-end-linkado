@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chik Perfumaria | Fragrâncias Exclusivas</title>
+  <meta name="description" content="Chik Perfumaria: suas fragrâncias favoritas com entrega rápida. Perfumes importados e nacionais com os melhores preços." />
+  <meta name="keywords" content="perfumes, fragrâncias, cosméticos, beleza, importados, entrega rápida" />
+  <meta name="author" content="Chik Perfumaria" />
+  <meta property="og:title" content="Chik Perfumaria | Fragrâncias Exclusivas" />
+  <meta property="og:description" content="Encontre suas fragrâncias favoritas na Chik Perfumaria. Perfumes importados e nacionais com os melhores preços." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1595425970377-2f8ded7c7b19?q=80&w=1200&auto=format&fit=crop" />
+  <meta name="theme-color" content="#A78BFA" />
+  
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#F5F3FF',
+              100: '#EDE9FE',
+              200: '#DDD6FE',
+              300: '#C4B5FD',
+              400: '#A78BFA',
+              500: '#8B5CF6',
+              600: '#7C3AED',
+              700: '#6D28D9',
+              800: '#5B21B6',
+              900: '#4C1D95',
+            },
+            secondary: {
+              50: '#FDF2F8',
+              100: '#FCE7F3',
+              200: '#FBCFE8',
+              300: '#F9A8D4',
+              400: '#F472B6',
+              500: '#EC4899',
+              600: '#DB2777',
+              700: '#BE185D',
+              800: '#9D174D',
+              900: '#831843',
+            },
+            neutral: {
+              950: '#0F0F0F',
+              900: '#1A1A1A',
+              800: '#2A2A2A',
+              700: '#3D3D3D',
+              600: '#525252',
+              500: '#737373',
+            }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Inter', 'ui-sans-serif', 'system-ui']
+          },
+          animation: {
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'bounce-light': 'bounce 1s infinite',
+            'float': 'float 6s ease-in-out infinite',
+          }
+        }
+      }
+    }
+  </script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body class="min-h-screen bg-neutral-950 text-white font-body antialiased">
+  <!-- Header com navegação fixa -->
+  <header class="sticky top-0 z-40 glass border-b border-white/10">
+    <div class="max-w-xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-lg bg-primary-500 flex items-center justify-center">
+          <i class="fa-solid fa-spray-can-sparkles text-white text-lg"></i>
+        </div>
+        <span class="font-display font-bold text-lg">CHIK</span>
+      </div>
+      
+      <div class="flex items-center gap-2">
+        <a href="#catalogo" class="btn-accessible p-2 rounded-lg hover:bg-white/10 transition-all focus-ring" aria-label="Ver catálogo">
+          <i class="fa-solid fa-store text-sm"></i>
+        </a>
+        <button id="cart-btn" class="btn-accessible relative p-2 rounded-lg hover:bg-white/10 transition-all focus-ring" aria-label="Abrir carrinho">
+          <i class="fa-solid fa-cart-shopping text-sm"></i>
+          <span id="cart-badge" class="absolute -top-1 -right-1 w-5 h-5 flex items-center justify-center bg-primary-600 text-xs font-bold rounded-full hidden">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-xl mx-auto px-4 pt-6 pb-28">
+    <!-- Hero Section -->
+    <section class="text-center mb-10">
+      <div class="relative mb-6">
+        <div class="w-28 h-28 mx-auto rounded-2xl overflow-hidden border-4 border-white/10 shadow-lg">
+          <img src="https://images.unsplash.com/photo-1595425970377-2f8ded7c7b19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+               alt="Perfumes Chik Perfumaria" 
+               class="w-full h-full object-cover">
+        </div>
+        <div class="absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center border-2 border-neutral-950">
+          <i class="fa-solid fa-star text-white text-sm"></i>
+        </div>
+      </div>
+
+      <h1 class="font-display text-4xl font-bold mb-2">CHIK <span class="text-primary-300">PERFUMARIA</span></h1>
+      <p class="text-white/80 mb-4 max-w-md mx-auto">Fragrâncias que revelam sua essência com elegância e sofisticação</p>
+
+      <div class="flex flex-wrap justify-center gap-2 mb-6">
+        <span class="inline-flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-full text-sm">
+          <i class="fa-solid fa-clock text-primary-400"></i>
+          Aberto agora
+        </span>
+        <span class="inline-flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-full text-sm">
+          <i class="fa-solid fa-star text-primary-400"></i>
+          4.8/5 (189 avaliações)
+        </span>
+        <span class="inline-flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-full text-sm">
+          <i class="fa-solid fa-truck text-primary-400"></i>
+          Entrega Expressa
+        </span>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#pedir" class="btn-accessible inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-primary-600 hover:bg-primary-700 font-semibold transition-all focus-ring">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          Fazer pedido
+        </a>
+        <a href="#catalogo" class="btn-accessible inline-flex items-center justify-center gap-2 px-5 py-4 rounded-xl glass border border-white/10 hover:bg-white/5 font-medium transition-all focus-ring">
+          <i class="fa-solid fa-store"></i>
+          Ver catálogo
+        </a>
+      </div>
+    </section>
+
+    <!-- Banner de Oferta -->
+    <section class="mb-8" aria-label="Promoção especial">
+      <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary-700 to-secondary-700 p-5">
+        <div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-white/10"></div>
+        <div class="absolute -right-10 -top-10 w-36 h-36 rounded-full bg-white/10"></div>
+        
+        <div class="relative flex items-center gap-4">
+          <div class="flex-shrink-0 w-16 h-16 rounded-xl bg-white/10 flex items-center justify-center">
+            <i class="fa-solid fa-gift text-2xl text-white"></i>
+          </div>
+          <div class="flex-1">
+            <p class="text-sm uppercase tracking-wider text-white/80 mb-1">Promoção especial</p>
+            <h3 class="font-display text-xl font-bold mb-1">Kit Essencial</h3>
+            <p class="text-white/90 text-sm">2 perfumes + 1 hidratante corporal</p>
+            <div class="flex items-center gap-2 mt-2">
+              <span class="text-lg font-bold">Kz 25.000</span>
+              <span class="text-sm line-through text-white/60">Kz 30.000</span>
+            </div>
+          </div>
+          <button class="add-promo-btn btn-accessible shrink-0 px-4 py-2 rounded-xl bg-white text-neutral-900 font-semibold hover:bg-gray-100 transition-all focus-ring" data-id="kit-essencial">
+            Adicionar
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categorias com abas -->
+    <section id="catalogo" class="mb-10">
+      <div class="flex items-center justify-between mb-6">
+        <h2 class="font-display text-2xl font-bold">Catálogo</h2>
+        <div class="flex items-center gap-1 glass px-2 py-1 rounded-lg">
+          <button class="filter-btn active btn-accessible px-3 py-1 rounded-md text-sm font-medium transition-all" data-filter="all">
+            Tudo
+          </button>
+          <button class="filter-btn btn-accessible px-3 py-1 rounded-md text-sm font-medium transition-all" data-filter="popular">
+            Populares
+          </button>
+        </div>
+      </div>
+
+      <!-- Abas de categorias -->
+      <div class="flex gap-2 overflow-x-auto pb-2 mb-5 scrollbar-hide" role="tablist">
+        <button class="category-tab btn-accessible flex-shrink-0 px-4 py-2 rounded-xl bg-primary-600 text-white font-medium text-sm transition-all" data-category="perfumes" role="tab" aria-selected="true">
+          <i class="fa-solid fa-spray-can-sparkles mr-2"></i> Perfumes
+        </button>
+        <button class="category-tab btn-accessible flex-shrink-0 px-4 py-2 rounded-xl glass border border-white/10 font-medium text-sm transition-all" data-category="colonias" role="tab" aria-selected="false">
+          <i class="fa-solid fa-wind mr-2"></i> Colônias
+        </button>
+        <button class="category-tab btn-accessible flex-shrink-0 px-4 py-2 rounded-xl glass border border-white/10 font-medium text-sm transition-all" data-category="corporais" role="tab" aria-selected="false">
+          <i class="fa-solid fa-hand-sparkles mr-2"></i> Corporais
+        </button>
+        <button class="category-tab btn-accessible flex-shrink-0 px-4 py-2 rounded-xl glass border border-white/10 font-medium text-sm transition-all" data-category="masculinos" role="tab" aria-selected="false">
+          <i class="fa-solid fa-person mr-2"></i> Masculinos
+        </button>
+        <button class="category-tab btn-accessible flex-shrink-0 px-4 py-2 rounded-xl glass border border-white/10 font-medium text-sm transition-all" data-category="femininos" role="tab" aria-selected="false">
+          <i class="fa-solid fa-person-dress mr-2"></i> Femininos
+        </button>
+      </div>
+
+      <!-- Lista de produtos -->
+      <div id="produtos-container" class="grid grid-cols-1 gap-4">
+        <!-- Os produtos serão carregados aqui via JavaScript -->
+      </div>
+    </section>
+
+    <!-- Sobre e diferenciais -->
+    <section class="mb-10">
+      <h2 class="font-display text-2xl font-bold mb-4">Por que escolher a Chik Perfumaria?</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="glass rounded-2xl p-5 border border-white/10">
+          <div class="w-12 h-12 rounded-xl bg-primary-600/20 flex items-center justify-center mb-3">
+            <i class="fa-solid fa-certificate text-primary-400 text-xl"></i>
+          </div>
+          <h3 class="font-semibold mb-2">Produtos Originais</h3>
+          <p class="text-white/70 text-sm">Garantimos a autenticidade de todos os nossos produtos com certificação.</p>
+        </div>
+        
+        <div class="glass rounded-2xl p-5 border border-white/10">
+          <div class="w-12 h-12 rounded-xl bg-primary-600/20 flex items-center justify-center mb-3">
+            <i class="fa-solid fa-truck-fast text-primary-400 text-xl"></i>
+          </div>
+          <h3 class="font-semibold mb-2">Entrega Rápida</h3>
+          <p class="text-white/70 text-sm">Entregamos em até 24h na região metropolitana e 48h no interior.</p>
+        </div>
+        
+        <div class="glass rounded-2xl p-5 border border-white/10">
+          <div class="w-12 h-12 rounded-xl bg-primary-600/20 flex items-center justify-center mb-3">
+            <i class="fa-solid fa-comments text-primary-400 text-xl"></i>
+          </div>
+          <h3 class="font-semibold mb-2">Consultoria</h3>
+          <p class="text-white/70 text-sm">Ajudamos você a encontrar a fragrância perfeita para cada ocasião.</p>
+        </div>
+        
+        <div class="glass rounded-2xl p-5 border border-white/10">
+          <div class="w-12 h-12 rounded-xl bg-primary-600/20 flex items-center justify-center mb-3">
+            <i class="fa-solid fa-medal text-primary-400 text-xl"></i>
+          </div>
+          <h3 class="font-semibold mb-2">Qualidade Garantida</h3>
+          <p class="text-white/70 text-sm">Avaliação 4.8/5 pelos clientes e mais de 1.500 pedidos entregues.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Redes sociais -->
+    <section class="mb-10">
+      <h2 class="font-display text-2xl font-bold mb-4">Siga-nos nas redes sociais</h2>
+      
+      <div class="grid grid-cols-2 gap-3">
+        <a href="#" class="btn-accessible rounded-xl p-4 glass border border-white/10 flex items-center gap-3 transition-all hover:bg-white/5 focus-ring" target="_blank" rel="noopener">
+          <div class="w-10 h-10 rounded-lg bg-[#E1306C] flex items-center justify-center">
+            <i class="fa-brands fa-instagram text-white"></i>
+          </div>
+          <span class="font-medium">Instagram</span>
+        </a>
+        
+        <a href="#" class="btn-accessible rounded-xl p-4 glass border border-white/10 flex items-center gap-3 transition-all hover:bg-white/5 focus-ring" target="_blank" rel="noopener">
+          <div class="w-10 h-10 rounded-lg bg-[#1877F2] flex items-center justify-center">
+            <i class="fa-brands fa-facebook-f text-white"></i>
+          </div>
+          <span class="font-medium">Facebook</span>
+        </a>
+        
+        <a href="#" class="btn-accessible rounded-xl p-4 glass border border-white/10 flex items-center gap-3 transition-all hover:bg-white/5 focus-ring" target="_blank" rel="noopener">
+          <div class="w-10 h-10 rounded-lg bg-[#FF0000] flex items-center justify-center">
+            <i class="fa-brands fa-youtube text-white"></i>
+          </div>
+          <span class="font-medium">YouTube</span>
+        </a>
+        
+        <a href="#" class="btn-accessible rounded-xl p-4 glass border border-white/10 flex items-center gap-3 transition-all hover:bg-white/5 focus-ring" target="_blank" rel="noopener">
+          <div class="w-10 h-10 rounded-lg bg-[#000000] flex items-center justify-center">
+            <i class="fa-brands fa-tiktok text-white"></i>
+          </div>
+          <span class="font-medium">TikTok</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Localização -->
+    <section class="mb-10">
+      <h2 class="font-display text-2xl font-bold mb-4">Onde estamos</h2>
+      
+      <div class="rounded-2xl overflow-hidden glass border border-white/10">
+        <div class="aspect-video bg-neutral-800 relative">
+          <!-- Mapa placeholder - substituir por iframe do Google Maps -->
+          <div class="w-full h-full flex items-center justify-center">
+            <i class="fa-solid fa-map-location-dot text-4xl text-primary-400"></i>
+          </div>
+        </div>
+        <div class="p-4">
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-primary-400 mt-1"></i>
+            <div>
+              <h3 class="font-semibold">Chik Perfumaria</h3>
+              <p class="text-white/70 text-sm">Av. das Fragrâncias, 456 - Centro</p>
+              <p class="text-white/70 text-sm">Segunda a Sábado: 9h - 20h | Domingo: 10h - 16h</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pedido / WhatsApp -->
+    <section id="pedir" class="mb-10">
+      <div class="rounded-2xl bg-gradient-to-br from-primary-700 to-primary-800 p-5 text-center">
+        <div class="w-16 h-16 mx-auto rounded-full bg-white/10 flex items-center justify-center mb-4">
+          <i class="fa-brands fa-whatsapp text-3xl text-white"></i>
+        </div>
+        <h2 class="font-display text-2xl font-bold mb-2">Faça seu pedido</h2>
+        <p class="text-white/90 mb-5">Entre em contato pelo WhatsApp e receba em casa</p>
+        
+        <div class="bg-white/10 rounded-xl p-4 mb-4 text-left">
+          <div id="carrinho-vazio" class="text-center py-4">
+            <i class="fa-solid fa-cart-shopping text-2xl text-white/40 mb-2"></i>
+            <p class="text-white/60">Seu carrinho está vazio</p>
+          </div>
+          <div id="carrinho-itens" class="hidden space-y-3"></div>
+          <div id="carrinho-total" class="hidden flex items-center justify-between pt-3 mt-3 border-t border-white/10">
+            <span class="font-medium">Total</span>
+            <span class="font-display font-bold text-lg">Kz 0</span>
+          </div>
+        </div>
+        
+        <form class="mb-4 text-left" id="dados-cliente">
+          <div class="mb-3">
+            <label for="nome" class="block text-sm font-medium mb-1">Seu nome</label>
+            <input type="text" id="nome" placeholder="Digite seu nome" class="w-full px-4 py-3 rounded-xl glass border border-white/20 focus:ring-2 focus:ring-primary-400 focus:border-transparent">
+          </div>
+          <div class="mb-3">
+            <label for="endereco" class="block text-sm font-medium mb-1">Endereço de entrega</label>
+            <input type="text" id="endereco" placeholder="Digite seu endereço" class="w-full px-4 py-3 rounded-xl glass border border-white/20 focus:ring-2 focus:ring-primary-400 focus:border-transparent">
+          </div>
+        </form>
+        
+        <button id="finalizar-pedido" class="btn-accessible w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white text-neutral-900 font-bold hover:bg-gray-100 transition-all focus-ring">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          Finalizar pedido via WhatsApp
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer fornecido pelo cliente -->
+  <footer class="w-full max-w-md mx-auto py-6 px-4 text-center">
+    <div class="flex flex-col items-center">
+      <div class="flex items-center justify-center mb-3">
+        <a href="https://linkado.click" target="_blank" rel="noopener"
+          class="inline-flex items-center gap-2 font-medium text-indigo-700 hover:text-indigo-900 transition-all group">
+          <div class="bg-indigo-100 group-hover:bg-indigo-200 p-2 rounded-lg transition-colors">
+            <img src="../assets/image/FIVE.png" alt="Logo Linkado" class="w-6 h-6 object-contain" />
+          </div>
+          <span class="font-bold text-lg tracking-tight">linkado.click</span>
+        </a>
+      </div>
+
+      <p class="text-gray-600 mb-3 text-sm italic max-w-xs">
+        O link que conecta, converte e cresce.
+      </p>
+
+      <div class="text-sm text-gray-500">
+        © <span id="current-year"></span> Todos os direitos reservados
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal do carrinho -->
+  <div id="modal-carrinho" class="fixed inset-0 z-50 flex items-end justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="fixed inset-0 bg-black/60" id="modal-backdrop"></div>
+    <div class="relative w-full max-w-xl max-h-[85vh] bg-neutral-900 rounded-t-2xl overflow-hidden transform transition-transform duration-300 translate-y-full">
+      <div class="sticky top-0 bg-neutral-900 px-4 py-3 border-b border-white/10 flex items-center justify-between">
+        <h3 class="font-display font-bold text-lg">Seu carrinho</h3>
+        <button id="fechar-modal" class="btn-accessible w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/10">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="p-4 overflow-y-auto">
+        <div id="modal-carrinho-itens" class="space-y-3"></div>
+        <div id="modal-carrinho-vazio" class="py-10 text-center">
+          <i class="fa-solid fa-cart-shopping text-4xl text-white/30 mb-3"></i>
+          <p class="text-white/50">Seu carrinho está vazio</p>
+        </div>
+        <div id="modal-carrinho-total" class="hidden mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+          <span class="font-medium text-lg">Total</span>
+          <span class="font-display font-bold text-xl">Kz 0</span>
+        </div>
+      </div>
+      <div class="sticky bottom-0 p-4 bg-neutral-900 border-t border-white/10">
+        <button id="finalizar-modal" class="btn-accessible w-full py-4 rounded-xl bg-primary-600 font-bold hover:bg-primary-700 transition-all">
+          Finalizar pedido
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast de notificação -->
+  <div id="toast" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 translate-y-20 bg-primary-600 text-white px-5 py-3 rounded-xl shadow-lg flex items-center gap-3 transition-transform duration-300 z-50">
+    <i class="fa-solid fa-check-circle"></i>
+    <span id="toast-message">Produto adicionado ao carrinho!</span>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

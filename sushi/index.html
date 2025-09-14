@@ -357,21 +357,86 @@
 
   <script src="assets/js/script.js"></script>
 
-  <!-- JSON-LD para SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Sushi da Carla",
-    "servesCuisine": "Japanese, Sushi, Sashimi",
-    "telephone": "+244946043956",
-    "priceRange": "Kz 1.200 - Kz 15.000",
-    "sameAs": [
-      "https://www.instagram.com/sushidacarla",
-      "https://www.facebook.com/sushidacarla",
-      "https://www.tiktok.com/@sushidacarla"
-    ]
-  }
-  </script>
+  <!-- JSON-LD corrigido para SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Restaurant",
+      "@id": "https://linkado.click/sushi#restaurant",
+      "name": "Sushi da Carla",
+      "url": "https://linkado.click/sushi",
+      "telephone": "+244946043956",
+      "priceRange": "$$",
+      "servesCuisine": ["Japanese", "Sushi", "Sashimi"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "AO"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "ratingCount": "127"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday", 
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "11:00",
+          "closes": "23:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/sushidacarla",
+        "https://www.facebook.com/sushidacarla",
+        "https://www.tiktok.com/@sushidacarla"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://linkado.click/sushi#webpage",
+      "url": "https://linkado.click/sushi",
+      "name": "SUSHI DA CARLA | Linkado Oficial",
+      "description": "Link único do Sushi da Carla: cardápio com preços, pedidos por WhatsApp, e redes sociais. Culinária japonesa autêntica e fresca.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://linkado.click#website",
+        "name": "Linkado",
+        "url": "https://linkado.click"
+      },
+      "about": {
+        "@id": "https://linkado.click/sushi#restaurant"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Linkado",
+          "item": "https://linkado.click/"
+        },
+        {
+          "@type": "ListItem", 
+          "position": 2,
+          "name": "Sushi da Carla",
+          "item": "https://linkado.click/sushi"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </body>
 </html>

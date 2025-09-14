@@ -11,211 +11,157 @@ http://linkado.click/* https://linkado.click/:splat 301!
 # =========================================================
 # PÁGINA RAIZ
 # =========================================================
-/                       /index.html                   200
+/                       /index.html                   200
 
 # =========================================================
 # REGRAS PARA CADA PERFIL (CANONICAL SEM TRAILING SLASH)
 # =========================================================
 
 # Ana Junju
-/ana_junju               /ana_junju/index.html          200
-/ana_junju/              /ana_junju                     301
-/ana_junju/*             Cache-Control: public, max-age=86400
-
+/ana_junju               /ana_junju/index.html          200
+/ana_junju/              /ana_junju                     301
 
 # Barberia Premium
-/barberia-premium               /barberia-premium/index.html          200
-/barberia-premium/              /barberia-premium                     301
-/barberia-premium/*             Cache-Control: public, max-age=86400
+/barberia-premium               /barberia-premium/index.html          200
+/barberia-premium/              /barberia-premium                     301
 
+# Beleza Pura
+/beleza_pura               /beleza_pura/index.html          200
+/beleza_pura/              /beleza_pura                     301
 
-# Barberia Premium
-/beleza_pura               /beleza_pura/index.html          200
-/beleza_pura/              /beleza_pura                     301
-/beleza_pura/*             Cache-Control: public, max-age=86400
-
-# Barberia Premium
-/bella               /bella/index.html          200
-/bella/              /bella                     301
-/bella/*             Cache-Control: public, max-age=86400
+# Bella
+/bella               /bella/index.html          200
+/bella/              /bella                     301
 
 # Doce Encanto
-/doce_encanto               /doce_encanto/index.html          200
-/doce_encanto/              /doce_encanto                     301
-/doce_encanto/*             Cache-Control: public, max-age=86400
+/doce_encanto               /doce_encanto/index.html          200
+/doce_encanto/              /doce_encanto                     301
 
-
-# Burger 
-/burger               /burger/index.html          200
-/burger/              /burger                     301
-/burger/*             Cache-Control: public, max-age=86400
-
+# Burger
+/burger               /burger/index.html          200
+/burger/              /burger                     301
 
 # Burger Da Mami
-/burgerdamami               /burgerdamami/index.html          200
-/burgerdamami/              /burgerdamami                     301
-/burgerdamami/*             Cache-Control: public, max-age=86400
+/burgerdamami               /burgerdamami/index.html          200
+/burgerdamami/              /burgerdamami                     301
 
 # Burger Da Maura
-/burgerdamaura               /burgerdamaura/index.html          200
-/burgerdamaura/              /burgerdamaura                     301
-/burgerdamaura/*             Cache-Control: public, max-age=86400
-
+/burgerdamaura               /burgerdamaura/index.html          200
+/burgerdamaura/              /burgerdamaura                     301
 
 # Burger Master
-/burger-master               /burger-master/index.html          200
-/burger-master/              /burger-master                     301
-/burger-master/*             Cache-Control: public, max-age=86400
+/burger-master               /burger-master/index.html          200
+/burger-master/              /burger-master                     301
 
-
-# Nao Ta Bom
-/burger_nova_vida         /burger_nova_vida/index.html    200
-/burger_nova_vida/        /burger_nova_vida               301
-/burger_nova_vida/*       Cache-Control: public, max-age=86400
-
+# Burger Nova Vida
+/burger_nova_vida         /burger_nova_vida/index.html    200
+/burger_nova_vida/        /burger_nova_vida               301
 
 # Clinica Fontviva
-/clinica-fontviva       /clinica-fontviva/index.html  200
-/clinica-fontviva/      /clinica-fontviva             301
-/clinica-fontviva/*     Cache-Control: public, max-age=86400
-
+/clinica-fontviva       /clinica-fontviva/index.html  200
+/clinica-fontviva/      /clinica-fontviva             301
 
 # Cudio Dia
-/cudiodia               /cudiodia/index.html          200
-/cudiodia/              /cudiodia                     301
-/cudiodia/*             Cache-Control: public, max-age=86400
-
+/cudiodia               /cudiodia/index.html          200
+/cudiodia/              /cudiodia                     301
 
 # Cold Studio
-/cold_studio            /cold_studio/index.html       200
-/cold_studio/           /cold_studio                  301
-/cold_studio/*          Cache-Control: public, max-age=86400
-
+/cold_studio            /cold_studio/index.html       200
+/cold_studio/           /cold_studio                  301
 
 # Destino Sortudo
-/destino-sortudo        /destino-sortudo/index.html   200
-/destino-sortudo/       /destino-sortudo              301
-/destino-sortudo/*      Cache-Control: public, max-age=86400
-
+/destino-sortudo        /destino-sortudo/index.html   200
+/destino-sortudo/       /destino-sortudo              301
 
 # Dizumba Grande
-/dizumba_grande            /dizumba_grande/index.html       200
-/dizumba_grande/           /dizumba_grande                  301
-/dizumba_grande/*          Cache-Control: public, max-age=86400
-
+/dizumba_grande            /dizumba_grande/index.html       200
+/dizumba_grande/           /dizumba_grande                  301
 
 # Eu Meduzu
-/eu_meduzu            /eu_meduzu/index.html       200
-/eu_meduzu/           /eu_meduzu                  301
-/eu_meduzu/*          Cache-Control: public, max-age=86400
-
+/eu_meduzu            /eu_meduzu/index.html       200
+/eu_meduzu/           /eu_meduzu                  301
 
 # Elisandra Elly
-/elisandra_elly         /elisandra_elly/index.html       200
-/elisandra_elly/        /elisandra_elly                 301
-/elisandra_elly/*       Cache-Control: public, max-age=86400
+/elisandra_elly         /elisandra_elly/index.html       200
+/elisandra_elly/        /elisandra_elly                 301
 
-
-# evolutiva Core
-/evolutiva_core          /evolutiva_core/index.html     200
-/evolutiva_core/         /evolutiva_core                301
-/evolutiva_core/*        Cache-Control: public, max-age=86400
-
+# Evolutiva Core
+/evolutiva_core          /evolutiva_core/index.html     200
+/evolutiva_core/         /evolutiva_core                301
 
 # Franco Francisco
-/franco-francisco       /franco-francisco/index.html  200
-/franco-francisco/      /franco-francisco             301
-/franco-francisco/*     Cache-Control: public, max-age=86400
-
+/franco-francisco       /franco-francisco/index.html  200
+/franco-francisco/      /franco-francisco             301
 
 # Jurema Quiosa
-/jurema-quiosa          /jurema-quiosa/index.html     200
-/jurema-quiosa/         /jurema-quiosa                301
-/jurema-quiosa/*        Cache-Control: public, max-age=86400
-
+/jurema-quiosa          /jurema-quiosa/index.html     200
+/jurema-quiosa/         /jurema-quiosa                301
 
 # MDC Gang
-/mdc_gang               /mdc_gang/index.html          200
-/mdc_gang/              /mdc_gang                     301
-/mdc_gang/*             Cache-Control: public, max-age=86400
+/mdc_gang               /mdc_gang/index.html          200
+/mdc_gang/              /mdc_gang                     301
 
 # Mano Angola
-/mano_angola            /mano_angola/index.html       200
-/mano_angola/           /mano_angola                  301
-/mano_angola/*          Cache-Control: public, max-age=86400
+/mano_angola            /mano_angola/index.html       200
+/mano_angola/           /mano_angola                  301
 
 # Nadira Andrane
-/nadira-andrane         /nadira-andrane/index.html    200
-/nadira-andrane/        /nadira-andrane               301
-/nadira-andrane/*       Cache-Control: public, max-age=86400
+/nadira-andrane         /nadira-andrane/index.html    200
+/nadira-andrane/        /nadira-andrane               301
 
 # Nao Ta Bom
-/naotabom         /naotabom/index.html    200
-/naotabom/        /naotabom               301
-/naotabom/*       Cache-Control: public, max-age=86400
+/naotabom         /naotabom/index.html    200
+/naotabom/        /naotabom               301
 
 # Prosario
-/prosario               /prosario/index.html          200
-/prosario/              /prosario                     301
-/prosario/*             Cache-Control: public, max-age=86400
+/prosario               /prosario/index.html          200
+/prosario/              /prosario                     301
 
 # Piedade Amorim
-/piedade-amorim         /piedade-amorim/index.html    200
-/piedade-amorim/        /piedade-amorim               301
-/piedade-amorim/*       Cache-Control: public, max-age=86400
+/piedade-amorim         /piedade-amorim/index.html    200
+/piedade-amorim/        /piedade-amorim               301
 
-# pizzaria Carla
-/pizzaria_carla         /pizzaria_carla/index.html    200
-/pizzaria_carla/        /pizzaria_carla               301
-/pizzaria_carla/*       Cache-Control: public, max-age=86400
+# Pizzaria Carla
+/pizzaria_carla         /pizzaria_carla/index.html    200
+/pizzaria_carla/        /pizzaria_carla               301
 
 # Pizzaria Sault
-/pizzaria_sault         /pizzaria_sault/index.html    200
-/pizzaria_sault/        /pizzaria_sault               301
-/pizzaria_sault/*       Cache-Control: public, max-age=86400
+/pizzaria_sault         /pizzaria_sault/index.html    200
+/pizzaria_sault/        /pizzaria_sault               301
 
-# Pizzaria Sault
-/perfumaria-chik         /perfumaria-chik/index.html    200
-/perfumaria-chik/        /perfumaria-chik               301
-/perfumaria-chik/*       Cache-Control: public, max-age=86400
+# Perfumaria Chik
+/perfumaria-chik         /perfumaria-chik/index.html    200
+/perfumaria-chik/        /perfumaria-chik               301
 
-# sabor arte
-/sabor-arte               /sabor-arte/index.html          200
-/sabor-arte/              /sabor-arte                     301
-/sabor-arte/*             Cache-Control: public, max-age=86400
+# Sabor Arte
+/sabor-arte               /sabor-arte/index.html          200
+/sabor-arte/              /sabor-arte                     301
 
 # Sabor Pizzaria
-/sabor_pizzaria               /sabor_pizzaria/index.html          200
-/sabor_pizzaria/              /sabor_pizzaria                     301
-/sabor_pizzaria/*             Cache-Control: public, max-age=86400
+/sabor_pizzaria               /sabor_pizzaria/index.html          200
+/sabor_pizzaria/              /sabor_pizzaria                     301
 
 # Samerda
-/samerda               /samerda/index.html          200
-/samerda/              /samerda                     301
-/samerda/*             Cache-Control: public, max-age=86400
+/samerda               /samerda/index.html          200
+/samerda/              /samerda                     301
 
 # Sushi
-/sushi               /sushi/index.html          200
-/sushi/              /sushi                     301
-/sushi/*             Cache-Control: public, max-age=86400
-
+/sushi               /sushi/index.html          200
+/sushi/              /sushi                     301
 
 # Vanilson Gourgel
-/vanilson_gourgel      /vanilson_gourgel/index.html          200
-/vanilson_gourgel/     /vanilson_gourgel                     301
-/vanilson_gourgel/*     Cache-Control: public, max-age=86400
+/vanilson_gourgel      /vanilson_gourgel/index.html          200
+/vanilson_gourgel/     /vanilson_gourgel                     301
 
 # Versa
-/versa               /versa/index.html          200
-/versa/              /versa                      301
-/versa/*             Cache-Control: public, max-age=86400
+/versa               /versa/index.html          200
+/versa/              /versa                      301
 
 # Wizard
-/wizard                 /wizard/index.html            200
-/wizard/                /wizard                       301
-/wizard/*               Cache-Control: public, max-age=86400
+/wizard                 /wizard/index.html            200
+/wizard/                /wizard                       301
 
 # =========================================================
 # PÁGINA DE ERRO 404 PERSONALIZADA
 # =========================================================
-/*                      /404.html                    404
+/*                      /404.html                    404

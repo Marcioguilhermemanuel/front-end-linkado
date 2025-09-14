@@ -30,16 +30,16 @@ http://linkado.click/* https://linkado.click/:splat 301!
 /beleza_pura/              /beleza_pura                     301
 
 # Bella
-/bella               /bella/index.html          200
-/bella/              /bella                     301
+/bella                    /bella/index.html          200
+/bella/                   /bella                     301
 
 # Doce Encanto
 /doce_encanto               /doce_encanto/index.html          200
 /doce_encanto/              /doce_encanto                     301
 
 # Burger
-/burger               /burger/index.html          200
-/burger/              /burger                     301
+/burger                    /burger/index.html          200
+/burger/                   /burger                     301
 
 # Burger Da Mami
 /burgerdamami               /burgerdamami/index.html          200
@@ -146,20 +146,25 @@ http://linkado.click/* https://linkado.click/:splat 301!
 /samerda/              /samerda                     301
 
 # Sushi
-/sushi               /sushi/index.html          200
-/sushi/              /sushi                     301
+/sushi                   /sushi/index.html          200
+/sushi/                  /sushi                     301
 
 # Vanilson Gourgel
 /vanilson_gourgel      /vanilson_gourgel/index.html          200
 /vanilson_gourgel/     /vanilson_gourgel                     301
 
 # Versa
-/versa               /versa/index.html          200
-/versa/              /versa                      301
+/versa                   /versa/index.html          200
+/versa/                  /versa                      301
+
+# Assistente
+/assistente               /assistente/index.html         200
+/assistente/              /assistente                     301
 
 # Wizard
 /wizard                 /wizard/index.html            200
 /wizard/                /wizard                       301
+
 
 # =========================================================
 # PÁGINA DE ERRO 404 PERSONALIZADA

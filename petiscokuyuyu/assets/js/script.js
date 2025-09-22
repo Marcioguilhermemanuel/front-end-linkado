@@ -40,7 +40,7 @@
           nome: 'Cachorro Quente Clássico', 
           desc: 'Pão, salsicha, molhos e batata palha.', 
           preco: 2500,
-          imagem: 'https://images.unsplash.com/photo-1617196035154-1e7b6c0c7c9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80',
+          imagem: 'assets/image/cachoro.jpg.webp',
           popular: false
         }
       ],
@@ -108,7 +108,7 @@
           nome: 'Combo Fahita', 
           desc: 'Fahita + batata + gasosa', 
           preco: 5500,
-          imagem: 'https://images.unsplash.com/photo-1617364066123-6b2017bcc303?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80',
+          imagem: 'assets/image/Combo-fahita-de-frango.jpeg',
           popular: false
         }
       ],
@@ -118,7 +118,7 @@
           nome: 'Batata Frita (dose)', 
           desc: 'Porção de batata frita crocante.', 
           preco: 1500,
-          imagem: 'https://images.unsplash.com/photo-1634034379073-f689b460a3fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80',
+          imagem: 'assets/image/batata.png',
           popular: true
         }
       ],
@@ -128,7 +128,7 @@
           nome: 'Gasosa', 
           desc: 'Coca-Cola, Sprite, Fanta e Sumol.', 
           preco: 850,
-          imagem: 'https://images.unsplash.com/photo-1622483767072-8c6b2ce7e14c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80',
+          imagem: 'assets/image/gasosa.png',
           popular: true
         },
         { 
@@ -136,7 +136,7 @@
           nome: 'Água', 
           desc: 'Água mineral.', 
           preco: 200,
-          imagem: 'https://images.unsplash.com/photo-1548839143-1ac8d1c73c0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80',
+          imagem: 'assets/image/agua.png',
           popular: false
         }
       ]

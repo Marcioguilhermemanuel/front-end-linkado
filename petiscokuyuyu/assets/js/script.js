@@ -27,10 +27,10 @@
         },
         { 
           id: 'Kiame kuyuyu', 
-          nome: 'Hambúrguer Kifica', 
-          desc: 'Pão, carne, queijo flamengo, ovo, fiambre, batata palha, maionese especial.', 
-          preco: 3000,
-          imagem: 'assets/image/Kifica.jpeg',
+          nome: 'Kiame kuyuyu', 
+          desc: 'Pão, carne, queijo flamengo, ovo, hambúrguer de frango.', 
+          preco: 2500 ,
+          imagem: 'assets/image/hamburguer-frango.jpeg',
           popular: false
         }
       ],
@@ -117,6 +117,22 @@
           desc: 'Fahita + batata + gasosa', 
           preco: 5500,
           imagem: 'assets/image/Combo-fahita-de-frango.jpeg',
+          popular: false
+        },
+        { 
+          id: 'Combo love', 
+          nome: 'Combo love', 
+          desc: '2 hambúrguers , uma dose de batata grande, dois refrigerantes', 
+          preco: 10000,
+          imagem: 'assets/image/Combo-love.jpeg',
+          popular: false
+        },
+        { 
+          id: 'Combo kambas/familiar', 
+          nome: 'Combo kambas/familiar', 
+          desc: '4 hambúrgueres kificas, 2 mini hambúrgueres kificas, 3 doses de batatas , 4 refrigerantes , 2 sumos de palhinhas', 
+          preco: 24500,
+          imagem: 'assets/image/kambasfamiliar.jpeg',
           popular: false
         }
       ],

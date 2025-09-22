@@ -129,6 +129,11 @@
     Cache-Control = "public, max-age=86400"
 
 [[headers]]
+  for = "/petiscokuyuyu/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
   for = "/pizzaria_carla/*"
   [headers.values]
     Cache-Control = "public, max-age=86400"

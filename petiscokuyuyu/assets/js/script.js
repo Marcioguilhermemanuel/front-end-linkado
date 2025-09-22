@@ -24,6 +24,14 @@
           preco: 3000,
           imagem: 'assets/image/Kifica.jpeg',
           popular: false
+        },
+        { 
+          id: 'Kiame kuyuyu', 
+          nome: 'Hambúrguer Kifica', 
+          desc: 'Pão, carne, queijo flamengo, ovo, fiambre, batata palha, maionese especial.', 
+          preco: 3000,
+          imagem: 'assets/image/Kifica.jpeg',
+          popular: false
         }
       ],
       cachorros: [

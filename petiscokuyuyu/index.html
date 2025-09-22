@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Petiscos Kuyuyu | O segredo está no tempero!</title>
-  <meta name="description" content="Cardápio digital dos Petiscos Kuyuyu: hambúrgueres artesanais, cachorros-quentes, fahitas e muito mais. O segredo está no tempero!" />
+  <meta name="description" content="Petiscos Kuyuyu - Hamburguers, cachorros-quentes e fahitas com tempero especial. Delivery em Luanda. Peça já pelo WhatsApp!" />
   <meta property="og:title" content="Petiscos Kuyuyu | O segredo está no tempero!" />
-  <meta property="og:description" content="Experimente nossos petiscos com tempero especial. Peça pelo WhatsApp e receba em casa." />
+  <meta property="og:description" content="Experimente nossos petiscos com tempero especial. Hamburguers, cachorros-quentes e fahitas. Delivery em Luanda." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1200&auto=format&fit=crop" />
-  <meta name="theme-color" content="#EC4899" />
+  <meta name="theme-color" content="#4e2624" />
   
   <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -23,47 +23,47 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="shortcut icon" href="../assets/image/FIVE.png" type="image/x-icon">
-  
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
             primary: {
-              50: '#FDF2F8',
-              100: '#FCE7F3',
-              200: '#FBCFE8',
-              300: '#F9A8D4',
-              400: '#F472B6',
-              500: '#EC4899',
-              600: '#DB2777',
-              700: '#BE185D',
-              800: '#9D174D',
-              900: '#831843',
+              50: '#fdf2f2',
+              100: '#fce8e8',
+              200: '#f9d4d4',
+              300: '#f2b4b4',
+              400: '#e88484',
+              500: '#d25235',
+              600: '#b93c2c',
+              700: '#982e25',
+              800: '#7c2923',
+              900: '#672622',
             },
             secondary: {
-              50: '#FAFAFA',
-              100: '#F4F4F5',
-              200: '#E4E4E7',
-              300: '#D4D4D8',
-              400: '#A1A1AA',
-              500: '#71717A',
-              600: '#52525B',
-              700: '#3F3F46',
-              800: '#27272A',
-              900: '#18181B',
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#ffcd53',
+              600: '#d97706',
+              700: '#b45309',
+              800: '#92400E',
+              900: '#78350F',
             },
-            accent: {
-              50: '#FEFCE8',
-              100: '#FEF9C3',
-              200: '#FEF08A',
-              300: '#FDE047',
-              400: '#FACC15',
-              500: '#EAB308',
-              600: '#CA8A04',
-              700: '#A16207',
-              800: '#854D0E',
-              900: '#713F12',
+            neutral: {
+              50: '#fafafa',
+              100: '#f4f4f5',
+              200: '#e4e4e7',
+              300: '#d4d4d8',
+              400: '#a1a1aa',
+              500: '#71717a',
+              600: '#52525b',
+              700: '#3f3f46',
+              800: '#27272a',
+              900: '#18181b',
+              950: '#0a0a0a',
             }
           },
           fontFamily: {
@@ -73,22 +73,30 @@
           animation: {
             'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
             'bounce-light': 'bounce 1s infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
           }
         }
       }
     }
   </script>
+  
 </head>
 
-<body class="min-h-screen bg-black text-white font-body antialiased">
+<body class="min-h-screen bg-neutral-950 text-white font-body antialiased">
   <!-- Header com navegação fixa -->
   <header class="sticky top-0 z-40 glass border-b border-white/10">
     <div class="max-w-xl mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <div class="w-10 h-10 rounded-lg bg-primary-600 flex items-center justify-center">
+        <div class="w-10 h-10 rounded-lg bg-primary-500 flex items-center justify-center glow">
           <i class="fa-solid fa-utensils text-white text-lg"></i>
         </div>
-        <span class="font-display font-bold text-lg">KUYUYU</span>
+        <span class="font-display font-bold text-lg">PETISCOS KUYUYU</span>
       </div>
       
       <div class="flex items-center gap-2">
@@ -97,7 +105,7 @@
         </a>
         <button id="cart-btn" class="btn-accessible relative p-2 rounded-lg hover:bg-white/10 transition-all focus-ring" aria-label="Abrir carrinho">
           <i class="fa-solid fa-cart-shopping text-sm"></i>
-          <span id="cart-badge" class="absolute -top-1 -right-1 w-5 h-5 flex items-center justify-center bg-primary-600 text-xs font-bold rounded-full hidden">0</span>
+          <span id="cart-badge" class="absolute -top-1 -right-1 w-5 h-5 flex items-center justify-center bg-primary-500 text-xs font-bold rounded-full hidden">0</span>
         </button>
       </div>
     </div>
@@ -107,36 +115,36 @@
     <!-- Hero Section -->
     <section class="text-center mb-10">
       <div class="relative mb-6">
-        <div class="w-28 h-28 mx-auto rounded-2xl overflow-hidden border-4 border-white/10 shadow-lg">
-          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
-               alt="Petiscos Kuyuyu - O segredo está no tempero!" 
+        <div class="w-28 h-28 mx-auto rounded-2xl overflow-hidden border-4 border-white/10 shadow-lg glow">
+          <img src="assets/image/logo.jpeg" 
+               alt="Hambúrguer artesanal Petiscos Kuyuyu" 
                class="w-full h-full object-cover">
         </div>
-        <div class="absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center border-2 border-black">
+        <div class="absolute -bottom-2 -right-2 w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center border-2 border-neutral-950 glow">
           <i class="fa-solid fa-star text-white text-sm"></i>
         </div>
       </div>
 
-      <h1 class="font-display text-4xl font-bold mb-2">PETISCOS <span class="text-primary-400">KUYUYU</span></h1>
-      <p class="text-white/80 mb-4 max-w-md mx-auto">O segredo está no tempero!</p>
+      <h1 class="font-display text-4xl font-bold mb-2"><span class="text-secondary-500">PETISCOS</span> KUYUYU</h1>
+      <p class="text-white/80 mb-4 max-w-md mx-auto text-xl font-medium">O segredo está no tempero!!</p>
 
       <div class="flex flex-wrap justify-center gap-2 mb-6">
         <span class="inline-flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-full text-sm">
-          <i class="fa-solid fa-clock text-primary-400"></i>
+          <i class="fa-solid fa-clock text-primary-500"></i>
           Aberto agora (10h-22h)
         </span>
         <span class="inline-flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-full text-sm">
-          <i class="fa-solid fa-star text-primary-400"></i>
-          4.8/5 (189 avaliações)
+          <i class="fa-solid fa-star text-primary-500"></i>
+          Melhor sabor de Luanda
         </span>
         <span class="inline-flex items-center gap-2 bg-white/5 px-3 py-1.5 rounded-full text-sm">
-          <i class="fa-solid fa-truck text-primary-400"></i>
-          Delivery Disponível
+          <i class="fa-solid fa-truck text-primary-500"></i>
+          Delivery em Luanda
         </span>
       </div>
 
       <div class="flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="#pedir" class="btn-accessible inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-primary-600 hover:bg-primary-700 font-semibold transition-all focus-ring">
+        <a href="#pedir" class="btn-accessible inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl gradient-bg hover:opacity-90 font-semibold transition-all focus-ring glow">
           <i class="fa-brands fa-whatsapp text-lg"></i>
           Fazer pedido
         </a>
@@ -149,7 +157,7 @@
 
     <!-- Banner de Oferta -->
     <section class="mb-8" aria-label="Promoção especial">
-      <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary-700 to-accent-700 p-5">
+      <div class="relative overflow-hidden rounded-2xl gradient-bg p-5 glow">
         <div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-white/10"></div>
         <div class="absolute -right-10 -top-10 w-36 h-36 rounded-full bg-white/10"></div>
         
@@ -158,15 +166,14 @@
             <i class="fa-solid fa-percent text-2xl text-white"></i>
           </div>
           <div class="flex-1">
-            <p class="text-sm uppercase tracking-wider text-white/80 mb-1">Combo especial</p>
+            <p class="text-sm uppercase tracking-wider text-white/80 mb-1">Combo mais pedido</p>
             <h3 class="font-display text-xl font-bold mb-1">Combo Kuyuyu</h3>
-            <p class="text-white/90 text-sm">Hambúrguer Kuyuyu + batata + refrigerante</p>
+            <p class="text-white/90 text-sm">Hambúrguer Kuyuyu + batata + gasosa</p>
             <div class="flex items-center gap-2 mt-2">
               <span class="text-lg font-bold">Kz 6.000</span>
-              <span class="text-sm line-through text-white/60">Kz 7.500</span>
             </div>
           </div>
-          <button class="add-promo-btn btn-accessible shrink-0 px-4 py-2 rounded-xl bg-white text-black font-semibold hover:bg-gray-100 transition-all focus-ring" data-id="combo-kuyuyu">
+          <button class="add-promo-btn btn-accessible shrink-0 px-4 py-2 rounded-xl bg-white text-neutral-900 font-semibold hover:bg-gray-100 transition-all focus-ring" data-id="combo-kuyuyu">
             Adicionar
           </button>
         </div>
@@ -189,7 +196,7 @@
 
       <!-- Abas de categorias -->
       <div class="flex gap-2 overflow-x-auto pb-2 mb-5 scrollbar-hide" role="tablist">
-        <button class="category-tab btn-accessible flex-shrink-0 px-4 py-2 rounded-xl bg-primary-600 text-white font-medium text-sm transition-all" data-category="burgers" role="tab" aria-selected="true">
+        <button class="category-tab btn-accessible flex-shrink-0 px-4 py-2 rounded-xl gradient-bg text-white font-medium text-sm transition-all glow" data-category="burgers" role="tab" aria-selected="true">
           <i class="fa-solid fa-burger mr-2"></i> Hamburguers
         </button>
         <button class="category-tab btn-accessible flex-shrink-0 px-4 py-2 rounded-xl glass border border-white/10 font-medium text-sm transition-all" data-category="cachorros" role="tab" aria-selected="false">
@@ -215,88 +222,135 @@
       </div>
     </section>
 
-    <!-- Área de entrega -->
-    <section class="mb-10">
-      <h2 class="font-display text-2xl font-bold mb-4">Área de Entrega</h2>
-      
-      <div class="glass rounded-2xl p-5 border border-white/10">
-        <div class="flex items-start gap-3 mb-4">
-          <i class="fa-solid fa-map-marker-alt text-primary-400 mt-1"></i>
-          <div>
-            <h3 class="font-semibold mb-2">Entregamos na sua área!</h3>
-            <p class="text-white/70 text-sm">Confira os valores de entrega para o seu bairro:</p>
-          </div>
-        </div>
-        
-        <div class="grid grid-cols-2 gap-3 text-sm">
-          <div class="bg-white/5 p-3 rounded-lg">
-            <span class="font-medium">Benfica/Patriota</span>
-            <div class="text-primary-400">Kz 1.000-1.500</div>
-          </div>
-          <div class="bg-white/5 p-3 rounded-lg">
-            <span class="font-medium">Talatona/Futungo</span>
-            <div class="text-primary-400">Kz 1.500</div>
-          </div>
-          <div class="bg-white/5 p-3 rounded-lg">
-            <span class="font-medium">Morro Bento/Nova Vida</span>
-            <div class="text-primary-400">Kz 2.000</div>
-          </div>
-          <div class="bg-white/5 p-3 rounded-lg">
-            <span class="font-medium">Camama/Kilamba</span>
-            <div class="text-primary-400">Kz 2.000-2.500</div>
-          </div>
-          <div class="bg-white/5 p-3 rounded-lg">
-            <span class="font-medium">Corimba/Samba</span>
-            <div class="text-primary-400">Kz 2.000</div>
-          </div>
-          <div class="bg-white/5 p-3 rounded-lg">
-            <span class="font-medium">Gamek/Golf 2</span>
-            <div class="text-primary-400">Kz 2.000</div>
-          </div>
-        </div>
-        
-        <div class="mt-4 text-xs text-white/60">
-          <i class="fa-solid fa-info-circle mr-1"></i> Para Hambúrguer: Entregamos apenas nas áreas listadas acima.
-        </div>
-      </div>
-    </section>
-
     <!-- Sobre e diferenciais -->
     <section class="mb-10">
       <h2 class="font-display text-2xl font-bold mb-4">Por que escolher os Petiscos Kuyuyu?</h2>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div class="glass rounded-2xl p-5 border border-white/10">
-          <div class="w-12 h-12 rounded-xl bg-primary-600/20 flex items-center justify-center mb-3">
-            <i class="fa-solid fa-mortar-pestle text-primary-400 text-xl"></i>
+          <div class="w-12 h-12 rounded-xl bg-primary-500/20 flex items-center justify-center mb-3">
+            <i class="fa-solid fa-mortar-pestle text-primary-500 text-xl"></i>
           </div>
           <h3 class="font-semibold mb-2">Tempero Especial</h3>
           <p class="text-white/70 text-sm">O segredo está no nosso tempero exclusivo que dá sabor único a todos os nossos petiscos.</p>
         </div>
         
         <div class="glass rounded-2xl p-5 border border-white/10">
-          <div class="w-12 h-12 rounded-xl bg-primary-600/20 flex items-center justify-center mb-3">
-            <i class="fa-solid fa-clock text-primary-400 text-xl"></i>
-          </div>
-          <h3 class="font-semibold mb-2">Horário Estendido</h3>
-          <p class="text-white/70 text-sm">Trabalhamos das 10h às 22h, todos os dias, para atender você quando precisar.</p>
-        </div>
-        
-        <div class="glass rounded-2xl p-5 border border-white/10">
-          <div class="w-12 h-12 rounded-xl bg-primary-600/20 flex items-center justify-center mb-3">
-            <i class="fa-solid fa-truck text-primary-400 text-xl"></i>
+          <div class="w-12 h-12 rounded-xl bg-primary-500/20 flex items-center justify-center mb-3">
+            <i class="fa-solid fa-clock-rotate-left text-primary-500 text-xl"></i>
           </div>
           <h3 class="font-semibold mb-2">Entrega Rápida</h3>
-          <p class="text-white/70 text-sm">Entregamos rapidamente em várias áreas da cidade para você saborear ainda quente.</p>
+          <p class="text-white/70 text-sm">Entregamos em toda Luanda para garantir que sua refeição chegue quente e saborosa.</p>
         </div>
         
         <div class="glass rounded-2xl p-5 border border-white/10">
-          <div class="w-12 h-12 rounded-xl bg-primary-600/20 flex items-center justify-center mb-3">
-            <i class="fa-solid fa-heart text-primary-400 text-xl"></i>
+          <div class="w-12 h-12 rounded-xl bg-primary-500/20 flex items-center justify-center mb-3">
+            <i class="fa-solid fa-heart text-primary-500 text-xl"></i>
+          </div>
+          <h3 class="font-semibold mb-2">Ingredientes Frescos</h3>
+          <p class="text-white/70 text-sm">Trabalhamos apenas com ingredientes frescos e de qualidade para garantir o melhor sabor.</p>
+        </div>
+        
+        <div class="glass rounded-2xl p-5 border border-white/10">
+          <div class="w-12 h-12 rounded-xl bg-primary-500/20 flex items-center justify-center mb-3">
+            <i class="fa-solid fa-medal text-primary-500 text-xl"></i>
           </div>
           <h3 class="font-semibold mb-2">Qualidade Garantida</h3>
-          <p class="text-white/70 text-sm">Ingredientes frescos e preparo cuidadoso para garantir a melhor experiência gastronômica.</p>
+          <p class="text-white/70 text-sm">Mais de 5 anos no mercado, sempre inovando e mantendo a qualidade que nossos clientes merecem.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- Áreas de entrega -->
+    <section class="mb-10">
+      <h2 class="font-display text-2xl font-bold mb-4">Áreas de Entrega</h2>
+      
+      <div class="glass rounded-2xl p-5 border border-white/10">
+        <div class="grid grid-cols-2 gap-3 text-sm">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-map-marker-alt text-primary-500"></i>
+            <span>Benfica: Kz 1.000-1.500</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-map-marker-alt text-primary-500"></i>
+            <span>Patriota: Kz 1.000-1.500</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-map-marker-alt text-primary-500"></i>
+            <span>Talatona: Kz 1.500</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-map-marker-alt text-primary-500"></i>
+            <span>Futungo: Kz 1.500</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-map-marker-alt text-primary-500"></i>
+            <span>Morro Bento: Kz 2.000</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-map-marker-alt text-primary-500"></i>
+            <span>Nova Vida: Kz 2.000</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-map-marker-alt text-primary-500"></i>
+            <span>Camama: Kz 2.000-2.500</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-map-marker-alt text-primary-500"></i>
+            <span>Kilamba: Kz 2.000-2.500</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-map-marker-alt text-primary-500"></i>
+            <span>Corimba: Kz 2.000</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-map-marker-alt text-primary-500"></i>
+            <span>Samba: Kz 2.000</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-map-marker-alt text-primary-500"></i>
+            <span>Gamek: Kz 2.000</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-map-marker-alt text-primary-500"></i>
+            <span>Golf 2: Kz 2.000</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Redes sociais -->
+    <section class="mb-10">
+      <h2 class="font-display text-2xl font-bold mb-4">Siga-nos nas redes sociais</h2>
+      
+      <div class="grid grid-cols-2 gap-3">
+        <a href="https://www.instagram.com/petiscos_cuyuyu?igsh=MTJreWFkMnRkOGc5aA==" class="btn-accessible rounded-xl p-4 glass border border-white/10 flex items-center gap-3 transition-all hover:bg-white/5 focus-ring" target="_blank">
+          <div class="w-10 h-10 rounded-lg bg-[#E1306C] flex items-center justify-center">
+            <i class="fa-brands fa-instagram text-white"></i>
+          </div>
+          <span class="font-medium">Instagram</span>
+        </a>
+        
+        <a href="https://www.facebook.com/share/1BWLpKQzxZ/" class="btn-accessible rounded-xl p-4 glass border border-white/10 flex items-center gap-3 transition-all hover:bg-white/5 focus-ring" target="_blank">
+          <div class="w-10 h-10 rounded-lg bg-[#1877F2] flex items-center justify-center">
+            <i class="fa-brands fa-facebook-f text-white"></i>
+          </div>
+          <span class="font-medium">Facebook</span>
+        </a>
+        
+        <a href="https://www.tiktok.com/@petiscos.kuyuyu?_t=ZM-8zwXb1LYMii&_r=1" class="btn-accessible rounded-xl p-4 glass border border-white/10 flex items-center gap-3 transition-all hover:bg-white/5 focus-ring" target="_blank">
+          <div class="w-10 h-10 rounded-lg bg-[#000000] flex items-center justify-center">
+            <i class="fa-brands fa-tiktok text-white"></i>
+          </div>
+          <span class="font-medium">TikTok</span>
+        </a>
+        
+        <a href="tel:923857360" class="btn-accessible rounded-xl p-4 glass border border-white/10 flex items-center gap-3 transition-all hover:bg-white/5 focus-ring">
+          <div class="w-10 h-10 rounded-lg bg-primary-500 flex items-center justify-center">
+            <i class="fa-solid fa-phone text-white"></i>
+          </div>
+          <span class="font-medium">Telefone</span>
+        </a>
       </div>
     </section>
 
@@ -307,14 +361,13 @@
       <div class="rounded-2xl overflow-hidden glass border border-white/10">
         <div class="aspect-video bg-neutral-800 relative">
           <!-- Mapa placeholder - substituir por iframe do Google Maps -->
-          <div class="w-full h-full flex items-center justify-center flex-col">
-            <i class="fa-solid fa-map-location-dot text-4xl text-primary-400 mb-2"></i>
-            <p class="text-white/70">Portão do Patriota</p>
+          <div class="w-full h-full flex items-center justify-center">
+            <i class="fa-solid fa-map-location-dot text-4xl text-primary-500"></i>
           </div>
         </div>
         <div class="p-4">
           <div class="flex items-start gap-3">
-            <i class="fa-solid fa-location-dot text-primary-400 mt-1"></i>
+            <i class="fa-solid fa-location-dot text-primary-500 mt-1"></i>
             <div>
               <h3 class="font-semibold">Petiscos Kuyuyu</h3>
               <p class="text-white/70 text-sm">Portão do Patriota, primeira rua à esquerda no sentido do Colégio Elizângela, antes do hotel Goma</p>
@@ -327,7 +380,7 @@
 
     <!-- Pedido / WhatsApp -->
     <section id="pedir" class="mb-10">
-      <div class="rounded-2xl bg-gradient-to-br from-primary-700 to-primary-800 p-5 text-center">
+      <div class="rounded-2xl gradient-bg p-5 text-center glow">
         <div class="w-16 h-16 mx-auto rounded-full bg-white/10 flex items-center justify-center mb-4">
           <i class="fa-brands fa-whatsapp text-3xl text-white"></i>
         </div>
@@ -349,32 +402,19 @@
         <form class="mb-4 text-left" id="dados-cliente">
           <div class="mb-3">
             <label for="nome" class="block text-sm font-medium mb-1">Seu nome</label>
-            <input type="text" id="nome" placeholder="Digite seu nome" class="w-full px-4 py-3 rounded-xl glass border border-white/20 focus:ring-2 focus:ring-primary-400 focus:border-transparent">
+            <input type="text" id="nome" placeholder="Digite seu nome" class="w-full px-4 py-3 rounded-xl glass border border-white/20 focus:ring-2 focus:ring-primary-500 focus:border-transparent">
           </div>
           <div class="mb-3">
             <label for="endereco" class="block text-sm font-medium mb-1">Endereço de entrega</label>
-            <input type="text" id="endereco" placeholder="Digite seu endereço" class="w-full px-4 py-3 rounded-xl glass border border-white/20 focus:ring-2 focus:ring-primary-400 focus:border-transparent">
+            <input type="text" id="endereco" placeholder="Digite seu endereço" class="w-full px-4 py-3 rounded-xl glass border border-white/20 focus:ring-2 focus:ring-primary-500 focus:border-transparent">
           </div>
           <div class="mb-3">
-            <label for="bairro" class="block text-sm font-medium mb-1">Bairro</label>
-            <select id="bairro" class="w-full px-4 py-3 rounded-xl glass border border-white/20 focus:ring-2 focus:ring-primary-400 focus:border-transparent">
-              <option value="">Selecione seu bairro</option>
-              <option value="Benfica/Patriota">Benfica/Patriota (Kz 1.000-1.500)</option>
-              <option value="Talatona">Talatona (Kz 1.500)</option>
-              <option value="Futungo">Futungo (Kz 1.500)</option>
-              <option value="Morro Bento">Morro Bento (Kz 2.000)</option>
-              <option value="Nova Vida">Nova Vida (Kz 2.000)</option>
-              <option value="Camama">Camama (Kz 2.000-2.500)</option>
-              <option value="Kilamba">Kilamba (Kz 2.000-2.500)</option>
-              <option value="Corimba">Corimba (Kz 2.000)</option>
-              <option value="Samba">Samba (Kz 2.000)</option>
-              <option value="Gamek">Gamek (Kz 2.000)</option>
-              <option value="Golf 2">Golf 2 (Kz 2.000)</option>
-            </select>
+            <label for="observacoes" class="block text-sm font-medium mb-1">Observações</label>
+            <textarea id="observacoes" placeholder="Alguma observação sobre o pedido?" rows="2" class="w-full px-4 py-3 rounded-xl glass border border-white/20 focus:ring-2 focus:ring-primary-500 focus:border-transparent"></textarea>
           </div>
         </form>
         
-        <button id="finalizar-pedido" class="btn-accessible w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white text-black font-bold hover:bg-gray-100 transition-all focus-ring">
+        <button id="finalizar-pedido" class="btn-accessible w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white text-neutral-900 font-bold hover:bg-gray-100 transition-all focus-ring">
           <i class="fa-brands fa-whatsapp text-lg"></i>
           Finalizar pedido via WhatsApp
         </button>
@@ -383,28 +423,27 @@
   </main>
 
   <!-- Footer fornecido pelo cliente -->
-        <footer class="w-full max-w-md mx-auto py-6 px-4 text-center">
+  <footer class="w-full max-w-md mx-auto py-6 px-4 text-center">
+    <div class="flex flex-col items-center">
+      <div class="flex items-center justify-center mb-3">
+        <a href="https://linkado.click" target="_blank"
+          class="inline-flex items-center gap-2 font-medium text-indigo-700 hover:text-indigo-900 transition-all group">
+          <div class="bg-indigo-100 group-hover:bg-indigo-200 p-2 rounded-lg transition-colors">
+            <img src="../assets/image/FIVE.png" alt="Logo Linkado" class="w-6 h-6 object-contain" />
+          </div>
+          <span class="font-bold text-lg tracking-tight">linkado.click</span>
+        </a>
+      </div>
 
-            <div class="flex flex-col items-center">
-                <div class="flex items-center justify-center mb-3">
-                    <a href="https://linkado.click" target="_blank"
-                        class="inline-flex items-center gap-2 font-medium text-indigo-700 hover:text-indigo-900 transition-all group">
-                        <div class="bg-indigo-100 group-hover:bg-indigo-200 p-2 rounded-lg transition-colors">
-                            <img src="../assets/image/FIVE.png" alt="Logo Linkado" class="w-6 h-6 object-contain" />
-                        </div>
-                        <span class="font-bold text-lg tracking-tight">linkado.click</span>
-                    </a>
-                </div>
+      <p class="text-gray-600 mb-3 text-sm italic max-w-xs">
+        O link que conecta, converte e cresce.
+      </p>
 
-                <p class="text-gray-600 mb-3 text-sm italic max-w-xs">
-                    O link que conecta, converte e cresce.
-                </p>
-
-                <div class="text-sm text-gray-500">
-                    © <span id="current-year"></span> Todos os direitos reservados
-                </div>
-            </div>
-        </footer>
+      <div class="text-sm text-gray-500">
+        © <span id="current-year"></span> Todos os direitos reservados
+      </div>
+    </div>
+  </footer>
 
   <!-- Modal do carrinho -->
   <div id="modal-carrinho" class="fixed inset-0 z-50 flex items-end justify-center opacity-0 pointer-events-none transition-opacity duration-300">
@@ -428,7 +467,7 @@
         </div>
       </div>
       <div class="sticky bottom-0 p-4 bg-neutral-900 border-t border-white/10">
-        <button id="finalizar-modal" class="btn-accessible w-full py-4 rounded-xl bg-primary-600 font-bold hover:bg-primary-700 transition-all">
+        <button id="finalizar-modal" class="btn-accessible w-full py-4 rounded-xl gradient-bg font-bold hover:opacity-90 transition-all glow">
           Finalizar pedido
         </button>
       </div>
@@ -436,7 +475,7 @@
   </div>
 
   <!-- Toast de notificação -->
-  <div id="toast" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 translate-y-20 bg-primary-600 text-white px-5 py-3 rounded-xl shadow-lg flex items-center gap-3 transition-transform duration-300 z-50">
+  <div id="toast" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 translate-y-20 gradient-bg text-white px-5 py-3 rounded-xl shadow-lg flex items-center gap-3 transition-transform duration-300 z-50 glow">
     <i class="fa-solid fa-check-circle"></i>
     <span id="toast-message">Produto adicionado ao carrinho!</span>
   </div>

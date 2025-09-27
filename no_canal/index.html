@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-ao">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NO CANAL | Moda Angolana - Catálogo Digital</title>
+  <meta name="description" content="NO CANAL - Sua loja de moda em Angola. Roupas femininas e masculinas, tendências internacionais com estilo angolano. Compre pelo WhatsApp com entrega em Luanda e todo país. Preços em Kwanzas." />
+  <meta name="keywords" content="moda angola, roupas luanda, loja moda angolana, no canal moda, vestuário angola, fashion angola, roupas femininas luanda, roupas masculinas angola" />
+  <meta property="og:title" content="NO CANAL | Moda Angolana - Catálogo Digital" />
+  <meta property="og:description" content="Vista-se com estilo! Descubra as últimas tendências em moda feminina e masculina. Entrega em toda Angola. Peça pelo WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1200&auto=format&fit=crop" />
+  <meta property="og:locale" content="pt_AO" />
+  <meta name="theme-color" content="#8B5CF6" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://nocanal.ao" />
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="shortcut icon" href="../assets/image/FIVE.png" type="image/x-icon">
+
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#FAF5FF',
+              100: '#F3E8FF',
+              200: '#E9D5FF',
+              300: '#D8B4FE',
+              400: '#C084FC',
+              500: '#A855F7',
+              600: '#9333EA',
+              700: '#7E22CE',
+              800: '#6B21A8',
+              900: '#581C87',
+            },
+            accent: {
+              50: '#FFF7ED',
+              100: '#FFEDD5',
+              200: '#FED7AA',
+              300: '#FDBA74',
+              400: '#FB923C',
+              500: '#F97316',
+              600: '#EA580C',
+              700: '#C2410C',
+              800: '#9A3412',
+              900: '#7C2D12',
+            },
+            fashion: {
+              950: '#0A0A0B',
+              900: '#18181B',
+              800: '#27272A',
+              700: '#3F3F46',
+              600: '#52525B',
+              500: '#71717A',
+            }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Montserrat', 'ui-sans-serif', 'system-ui']
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'shimmer': 'shimmer 2s linear infinite',
+            'slide-up': 'slideUp 0.5s ease-out',
+            'toast-in': 'toastIn 0.3s ease-out',
+            'toast-out': 'toastOut 0.3s ease-in',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-1000px 0' },
+              '100%': { backgroundPosition: '1000px 0' }
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(20px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' }
+            },
+            toastIn: {
+              '0%': { transform: 'translateX(-50%) translateY(20px)', opacity: '0' },
+              '100%': { transform: 'translateX(-50%) translateY(0)', opacity: '1' }
+            },
+            toastOut: {
+              '0%': { transform: 'translateX(-50%) translateY(0)', opacity: '1' },
+              '100%': { transform: 'translateX(-50%) translateY(20px)', opacity: '0' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-fashion-950 via-fashion-900 to-fashion-950 text-white font-body antialiased">
+  <!-- Header Fixo com Glassmorphism -->
+  <header class="sticky top-0 z-40 glass-effect border-b border-white/10">
+    <div class="max-w-xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-primary-600 to-accent-500 flex items-center justify-center shadow-lg">
+          <i class="fa-solid fa-shirt text-white text-xl"></i>
+        </div>
+        <div>
+          <span class="font-display font-bold text-xl gradient-text">NO CANAL</span>
+          <p class="text-xs text-white/60">Moda & Estilo</p>
+        </div>
+      </div>
+      <button id="carrinho-btn" class="btn-accessible relative">
+        <div class="w-11 h-11 rounded-full glass-effect flex items-center justify-center hover:bg-white/10 transition-all">
+          <i class="fa-solid fa-shopping-bag text-lg"></i>
+          <span id="carrinho-contador" class="absolute -top-1 -right-1 w-5 h-5 bg-accent-500 rounded-full text-xs font-bold flex items-center justify-center shadow-lg">0</span>
+        </div>
+      </button>
+    </div>
+  </header>
+
+  <main class="max-w-xl mx-auto px-4 pt-6 pb-28">
+    <!-- Hero Section -->
+    <section class="text-center mb-12 animate-slide-up">
+      <div class="relative mb-8">
+        <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-primary-500/30 shadow-2xl animate-float">
+          <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+               alt="NO CANAL - Moda Angolana" 
+               class="w-full h-full object-cover">
+        </div>
+        <div class="absolute -bottom-2 -right-8 w-12 h-12 rounded-full bg-gradient-to-r from-primary-600 to-accent-500 flex items-center justify-center border-3 border-fashion-950 shadow-lg">
+          <i class="fa-solid fa-crown text-white text-sm"></i>
+        </div>
+      </div>
+      
+      <h1 class="font-display text-3xl md:text-4xl font-bold mb-3">
+        <span class="gradient-text">Vista-se com Estilo</span>
+      </h1>
+      <p class="text-white/70 text-sm mb-6 max-w-sm mx-auto">
+        Tendências internacionais com o toque especial angolano. Qualidade e elegância em cada peça.
+      </p>
+      
+      <!-- Status Bar -->
+      <div class="flex items-center justify-center gap-6 text-sm mb-8">
+        <div class="flex items-center gap-2">
+          <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+          <span class="text-white/60">Loja Aberta</span>
+        </div>
+        <div class="flex items-center gap-2 text-white/60">
+          <i class="fa-regular fa-clock text-primary-400"></i>
+          <span>Entrega 24-48h</span>
+        </div>
+      </div>
+
+      <!-- Categorias Rápidas -->
+      <div class="grid grid-cols-3 gap-3 mb-8">
+        <button onclick="scrollToSection('feminino')" class="glass-effect rounded-xl p-3 hover:bg-white/10 transition-all group">
+          <i class="fa-solid fa-person-dress text-2xl mb-2 text-primary-400 group-hover:scale-110 transition-transform"></i>
+          <p class="text-xs text-white/70">Feminino</p>
+        </button>
+        <button onclick="scrollToSection('masculino')" class="glass-effect rounded-xl p-3 hover:bg-white/10 transition-all group">
+          <i class="fa-solid fa-person text-2xl mb-2 text-accent-400 group-hover:scale-110 transition-transform"></i>
+          <p class="text-xs text-white/70">Masculino</p>
+        </button>
+        <button onclick="scrollToSection('acessorios')" class="glass-effect rounded-xl p-3 hover:bg-white/10 transition-all group">
+          <i class="fa-solid fa-gem text-2xl mb-2 text-purple-400 group-hover:scale-110 transition-transform"></i>
+          <p class="text-xs text-white/70">Acessórios</p>
+        </button>
+      </div>
+    </section>
+
+    <!-- Promoção Banner -->
+    <section class="mb-10">
+      <div class="fashion-card rounded-2xl p-6 text-center relative overflow-hidden">
+        <div class="absolute inset-0 shimmer-effect opacity-30"></div>
+        <i class="fa-solid fa-fire text-3xl text-accent-400 mb-3"></i>
+        <h3 class="font-display text-xl font-bold mb-2">Promoção da Semana</h3>
+        <p class="text-white/70 text-sm mb-3">Até 40% OFF em peças selecionadas</p>
+        <div class="inline-flex items-center gap-2 bg-accent-500/20 px-4 py-2 rounded-full">
+          <i class="fa-solid fa-tag"></i>
+          <span class="font-semibold">CANAL40</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seções de Produtos -->
+    <div id="produtos-container" class="space-y-10">
+      <!-- Seções serão renderizadas via JavaScript -->
+    </div>
+  </main>
+
+  <!-- Footer fixo com ações -->
+  <footer class="fixed bottom-0 left-0 right-0 glass-effect border-t border-white/10 z-30">
+    <div class="max-w-xl mx-auto px-4 py-3">
+      <div class="flex items-center justify-around">
+        <button onclick="scrollToSection('feminino')" class="btn-accessible flex flex-col items-center gap-1 text-white/70 hover:text-primary-400 transition-colors">
+          <i class="fa-solid fa-dress text-xl"></i>
+          <span class="text-xs">Feminino</span>
+        </button>
+        <button onclick="scrollToSection('masculino')" class="btn-accessible flex flex-col items-center gap-1 text-white/70 hover:text-accent-400 transition-colors">
+          <i class="fa-solid fa-shirt text-xl"></i>
+          <span class="text-xs">Masculino</span>
+        </button>
+        <button onclick="abrirWhatsApp()" class="btn-accessible">
+          <div class="w-14 h-14 rounded-full bg-gradient-to-r from-primary-600 to-accent-500 flex items-center justify-center shadow-xl btn-glow">
+            <i class="fa-brands fa-whatsapp text-2xl text-white"></i>
+          </div>
+        </button>
+        <button onclick="scrollToSection('acessorios')" class="btn-accessible flex flex-col items-center gap-1 text-white/70 hover:text-purple-400 transition-colors">
+          <i class="fa-solid fa-gem text-xl"></i>
+          <span class="text-xs">Acessórios</span>
+        </button>
+        <button onclick="scrollToSection('promocoes')" class="btn-accessible flex flex-col items-center gap-1 text-white/70 hover:text-accent-400 transition-colors">
+          <i class="fa-solid fa-percent text-xl"></i>
+          <span class="text-xs">Ofertas</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal do Carrinho -->
+  <div id="modal-carrinho" class="fixed inset-0 z-50 flex items-end justify-center opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="fixed inset-0 bg-black/70 backdrop-blur-sm" id="modal-backdrop"></div>
+    <div class="relative w-full max-w-xl max-h-[85vh] bg-fashion-900 rounded-t-3xl overflow-hidden transform transition-transform duration-300 translate-y-full">
+      <div class="sticky top-0 bg-fashion-900 px-4 py-4 border-b border-white/10 flex items-center justify-between">
+        <h3 class="font-display font-bold text-xl gradient-text">Seu Carrinho de Compras</h3>
+        <button id="fechar-modal" class="btn-accessible w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/10 transition-all">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+      <div class="p-4 overflow-y-auto">
+        <div id="modal-carrinho-itens" class="space-y-3"></div>
+        <div id="modal-carrinho-vazio" class="py-16 text-center">
+          <i class="fa-solid fa-shopping-bag text-5xl text-white/20 mb-4"></i>
+          <p class="text-white/50 font-light">Seu carrinho está vazio</p>
+          <p class="text-white/30 text-sm mt-2">Adicione produtos incríveis!</p>
+        </div>
+        <div id="modal-carrinho-total" class="hidden mt-6 pt-4 border-t border-white/10">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-white/60">Subtotal</span>
+            <span id="subtotal-valor" class="font-semibold">Kz 0</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="font-medium text-lg">Total</span>
+            <span id="total-valor" class="font-display font-bold text-2xl gradient-text">Kz 0</span>
+          </div>
+        </div>
+      </div>
+      <div class="sticky bottom-0 p-4 bg-fashion-900 border-t border-white/10">
+        <button id="finalizar-modal" class="btn-accessible w-full py-4 rounded-2xl bg-gradient-to-r from-primary-600 to-accent-500 font-bold hover:shadow-xl transition-all btn-glow">
+          <i class="fa-brands fa-whatsapp mr-2"></i>
+          Finalizar Pedido no WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast de Notificação (inicialmente escondido) -->
+  <div id="toast" class="fixed bottom-24 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-primary-600 to-accent-500 text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 z-50">
+    <i class="fa-solid fa-check-circle"></i>
+    <span id="toast-message">Produto adicionado ao carrinho!</span>
+  </div>
+
+
+ <!-- Footer fornecido pelo cliente -->
+  <footer class="w-full max-w-md mx-auto py-6 px-4 text-center">
+    <div class="flex flex-col items-center">
+      <div class="flex items-center justify-center mb-3">
+        <a href="https://linkado.click" target="_blank"
+          class="inline-flex items-center gap-2 font-medium text-indigo-700 hover:text-indigo-900 transition-all group">
+          <div class="bg-indigo-100 group-hover:bg-indigo-200 p-2 rounded-lg transition-colors">
+            <img src="../assets/image/FIVE.png" alt="Logo Linkado" class="w-6 h-6 object-contain" />
+          </div>
+          <span class="font-bold text-lg tracking-tight">linkado.click</span>
+        </a>
+      </div>
+
+      <p class="text-gray-600 mb-3 text-sm italic max-w-xs">
+        O link que conecta, converte e cresce.
+      </p>
+
+      <div class="text-sm text-gray-500">
+        © <span id="current-year"></span> Todos os direitos reservados
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

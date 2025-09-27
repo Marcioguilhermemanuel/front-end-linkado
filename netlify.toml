@@ -119,6 +119,11 @@
     Cache-Control = "public, max-age=86400"
 
 [[headers]]
+  for = "/no_canal/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
   for = "/prosario/*"
   [headers.values]
     Cache-Control = "public, max-age=86400"
